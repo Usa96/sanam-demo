@@ -34012,30 +34012,233 @@ body.dark {
 
 /* Our businesses section */
 
-.portfolio-logo {
-  text-align: center;
-  padding: 1rem;
-  background-color: #ffffff;
-  border: 1px solid #e6e6e6;
-  transition: transform 0.2s;
+.custom-hover-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: none;
 }
 
-.portfolio-logo:hover {
-  transform: scale(1.05);
-  border-color: #c8b476;
+.custom-hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.portfolio-logo img {
-  max-height: 80px;
-  object-fit: contain;
+.custom-year-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #888;
+}
+
+.custom-card-title {
+  font-size: 1.25rem;
+  color: #007bff;
+}
+
+.custom-card-subtitle {
+  font-size: 1rem;
+  color: #555;
+}
+
+.custom-card-text {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.custom-img-fluid {
+  width: 50px;
+  height: 50px;
+}
+
+.custom-card-body {
+  padding: 15px;
+}
+
+@media (max-width: 768px) {
+  .custom-card-title {
+      font-size: 1.1rem;
+  }
+
+  .custom-year-text {
+      font-size: 1.25rem;
+  }
+}
+
+/* pitch section */
+
+.pitch-container {
+  background-color: #ffffff; /* White background */
+  border-radius: 20px; /* Adjust the radius for more or less rounding */
+  padding: 40px; /* Adjust padding to your preference */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-width: 80%; /* Adjust to match the width of your content */
+  margin: 0 auto; /* Center the container */
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-text {
+  font-size: 2em;
+  font-weight: bold;
+  color: #1a1a1a; /* Dark text color */
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  color: #1a1a1a; /* Dark color for social icons */
+  font-size: 1.5em; /* Adjust size of icons */
+  text-decoration: none;
+}
+
+.cta-button {
+  background-color: #0066ff; /* Blue button color */
+  color: #ffffff; /* White text */
+  padding: 10px 20px;
+  border-radius: 20px; /* Rounded button */
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #004bbd; /* Darker blue on hover */
+}
+
+.custom-carousel-btn {
+  background-color: var(--cnvs-primary-menu-color); /* Primary color for the button */
+  border: none; /* Remove default border */
+  color: #ffffff; /* White icon color */
+  padding: 10px 20px; /* Add padding for a larger click area */
+  border-radius: 50px; /* Make the buttons pill-shaped */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px; /* Add space between buttons */
+}
+
+.custom-carousel-btn .carousel-control-prev-icon,
+.custom-carousel-btn .carousel-control-next-icon {
+  filter: invert(1); /* Invert the icon color to match the button color */
+}
+
+.custom-carousel-btn:hover {
+  background-color: #004bbd; /* Darker blue on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.custom-carousel-btn:focus {
+  outline: none; /* Remove focus outline */
+  box-shadow: 0 0 0 4px rgba(0, 102, 255, 0.3); /* Add a subtle focus ring */
+}
+
+body {
+  background-color: #121212; /* Dark background */
+  color: #ffffff; /* White text color */
+  font-family: Arial, sans-serif;
+}
+
+.company-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.company-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #333;
+  padding-bottom: 20px;
+}
+
+.company-logo img {
+  max-width: 100px;
+  margin-right: 20px;
+}
+
+.company-info {
+  flex-grow: 1;
+}
+
+.company-name {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.company-tagline {
+  font-size: 1em;
+  margin-top: 10px;
+  color: #aaaaaa; /* Slightly lighter text for the tagline */
 }
 
 .company-details {
-  border-top: 1px solid #dee2e6;
-  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid #333;
 }
 
-.company-details h4 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
+.detail-item h4 {
+  font-size: 0.9em;
+  color: #aaaaaa;
+  text-transform: uppercase;
+}
+
+.detail-item p {
+  font-size: 1.2em;
+  margin: 5px 0 0;
+}
+
+.about-company {
+  padding: 40px 0;
+}
+
+.about-company h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.about-company p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.about-company ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.about-company ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.about-company ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #0066ff; /* Blue bullet points */
+}
+
+.about-company a {
+  text-decoration: none;
+  color: #0066ff;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+}
+
+.about-company a span {
+  margin-left: 5px;
+  font-size: 1.2em;
 }
