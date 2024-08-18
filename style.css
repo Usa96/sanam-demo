@@ -34173,12 +34173,12 @@ body.dark {
 }
 
 .company-name {
-  font-size: 2.5em;
+  font-size: 2.5rem;
   margin: 0;
 }
 
 .company-tagline {
-  font-size: 1em;
+  font-size: 1rem;
   margin-top: 10px;
   color: #aaaaaa; /* Slightly lighter text for the tagline */
 }
@@ -34191,13 +34191,13 @@ body.dark {
 }
 
 .detail-item h4 {
-  font-size: 0.9em;
+  font-size: 0.9rem;
   color: #aaaaaa;
   text-transform: uppercase;
 }
 
 .detail-item p {
-  font-size: 1.2em;
+  font-size: 1.2rem;
   margin: 5px 0 0;
 }
 
@@ -34206,7 +34206,7 @@ body.dark {
 }
 
 .about-company h2 {
-  font-size: 2em;
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 
@@ -34243,7 +34243,7 @@ body.dark {
 
 .about-company a span {
   margin-left: 5px;
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 /* ESG section */
@@ -34502,16 +34502,206 @@ body.dark {
   color: #666666; /* Slightly lighter color for the content */
 }
 
-.social-icons {
+/* About us section */
+
+.mission-section {
+  padding: 60px 0;
+  background-color: #ffffff;
+}
+
+.mission-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333333;
+  border-left: 4px solid #007bff;
+  padding-left: 15px;
+}
+
+.mission-description {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: #666666;
+}
+
+.mission-images {
   display: flex;
-  gap: 15px;
+  gap: 20px;
 }
 
-.social-icons a {
-  display: inline-block;
-  transition: transform 0.3s ease;
+.mission-image {
+  width: 48%; /* Each image takes up about half the container */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.social-icons a:hover {
-  transform: scale(1.1);
+@media (max-width: 768px) {
+  .mission-images {
+    flex-direction: column;
+  }
+
+  .mission-image {
+    width: 100%; /* Images take full width on smaller screens */
+  }
+
+  .mission-title {
+    text-align: center;
+    border-left: none;
+    padding-left: 0;
+    border-bottom: 4px solid #007bff;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+}
+
+/* About us - company timeline section */
+
+.history-section {
+  padding: 60px 0;
+  background-color: #f0f2f5;
+}
+
+.sticky-title {
+  position: sticky;
+  top: 100px; /* Adjusted to account for the navbar height */
+}
+
+.history-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333333;
+  border-left: 4px solid #007bff;
+  padding-left: 15px;
+}
+
+.timeline {
+  border-left: 1px solid #ddd;
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+.timeline-item {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.timeline-year {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333333;
+  margin-left: 30px; /* Added margin to avoid overlap with the dots */
+}
+
+.timeline-description {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #666666;
+  margin-left: 30px; /* Ensures alignment with the year */
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -15px; /* Adjusted to align properly with the timeline */
+  top: 5px;
+  width: 12px; /* Smaller dot size */
+  height: 12px; /* Smaller dot size */
+  background-color: #007bff;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .history-title {
+    text-align: center;
+    border-left: none;
+    padding-left: 0;
+    border-bottom: 4px solid #007bff;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  
+  .timeline {
+    margin-left: 0;
+    padding-left: 0;
+    border-left: none;
+  }
+  
+  .timeline-item::before {
+    left: -4px;
+  }
+
+  .timeline-year,
+  .timeline-description {
+    margin-left: 0;
+  }
+}
+
+/* Owner sections */
+
+.partners-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.partner-card {
+  border: 1px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  padding: 20px;
+}
+
+.partner-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.partner-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.partner-info {
+  text-align: left;
+  position: relative;
+}
+
+.partner-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.partner-position {
+  font-size: 1.1rem;
+  color: #cccccc;
+  margin-bottom: 20px;
+}
+
+.partner-link {
+  font-size: 1.5em;
+  color: #ffffff;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.partner-link:hover {
+  color: #007bff;
 }
