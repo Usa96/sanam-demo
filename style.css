@@ -33864,6 +33864,7 @@ body.dark {
   }
 }
 
+/* Footer section */
 .footer {
   background-color: #002C47; /* Dark background color */
   color: #c8b476; /* Light gold color */
@@ -33893,7 +33894,15 @@ body.dark {
 }
 
 .footer .img-fluid {
-  max-width: 20rem; /* Slightly larger logo */
+  max-width: 20rem; /* Maintain the size of the logo */
+  margin: 0 auto; /* Center the logo horizontally */
+}
+
+.footer .logo-container {
+  display: flex;
+  align-items: center; /* Vertically center the logo */
+  justify-content: center; /* Horizontally center the logo */
+  margin-bottom: 20px; /* Add space below the logo */
 }
 
 @media (max-width: 768px) {
@@ -34141,12 +34150,6 @@ body.dark {
   box-shadow: 0 0 0 4px rgba(0, 102, 255, 0.3); /* Add a subtle focus ring */
 }
 
-body {
-  background-color: #121212; /* Dark background */
-  color: #ffffff; /* White text color */
-  font-family: Arial, sans-serif;
-}
-
 .company-section {
   max-width: 1000px;
   margin: 0 auto;
@@ -34241,4 +34244,274 @@ body {
 .about-company a span {
   margin-left: 5px;
   font-size: 1.2em;
+}
+
+/* ESG section */
+
+.esg-section {
+  max-width: 80%px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #fff; /* White background for the section */
+  border-radius: 8px; /* Slightly rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.section-subtitle {
+  color: #B59B68; /* Gold color for the subtitle */
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #2b2b2b; /* Darker color for the main title */
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.esg-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.esg-item {
+  flex: 1;
+  padding: 20px;
+  border-left: 1px solid #ddd;
+}
+
+.esg-item:first-child {
+  border-left: none; /* Remove the left border from the first item */
+}
+
+.esg-item-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #B59B68; /* Gold color for the item titles */
+  margin-bottom: 15px;
+}
+
+.esg-item p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555; /* Slightly lighter color for the paragraphs */
+}
+
+@media (max-width: 768px) {
+  .esg-content {
+    flex-direction: column;
+  }
+
+  .esg-item {
+    border-left: none;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+  }
+
+  .esg-item:first-child {
+    border-top: none;
+  }
+}
+
+/* Case Studies section */
+
+.case-studies-section {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.case-studies-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.case-study-card {
+  background-color: #0E3B59; /* Slightly lighter dark blue for the cards */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease;
+}
+
+.case-study-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.case-study-logo {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.case-study-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.case-study-description {
+  font-size: 1rem;
+  color: #B0C4DE; /* Lighter color for the description */
+  margin-bottom: 20px;
+}
+
+.case-study-subtitle {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #B59B68; /* Gold color for subtitles */
+  margin-bottom: 10px;
+}
+
+.case-study-details {
+  list-style-type: none;
+  padding: 0;
+}
+
+.case-study-details li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  color: #B0C4DE; /* Lighter color for the details */
+}
+
+.case-study-details li i {
+  margin-right: 10px;
+  color: #B59B68; /* Gold color for the icons */
+}
+
+.case-study-details li {
+  font-size: 1rem; /* Base font size for list items */
+  line-height: 1.5; /* Adjust line height for better readability */
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  color: #B0C4DE; /* Lighter color for the details */
+}
+
+.case-study-details li i {
+  font-size: 1rem; /* Font size for icons */
+  margin-right: 10px;
+  color: #B59B68; /* Gold color for the icons */
+}
+
+@media (max-width: 768px) {
+  .case-studies-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* News Section */
+
+.press-releases-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.press-release-item {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 100%; /* Ensure the container doesn't exceed its parent width */
+}
+
+.press-release-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.press-release-item img {
+  width: 100%; /* Make the image take up the full width of its container */
+  height: auto; /* Maintain the aspect ratio */
+  max-height: 300px; /* Limit the maximum height */
+  object-fit: cover; /* Ensure the image is cropped if it exceeds max-height */
+}
+
+.press-release-content {
+  padding: 20px;
+}
+
+.press-release-type {
+  color: #666666;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.press-release-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.press-release-date {
+  color: #999999;
+  font-size: 0.9em;
+}
+
+/* News Single  */
+
+.article-section {
+  max-width: 70%px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.article-header {
+  margin-bottom: 20px;
+}
+
+.article-date {
+  color: #888888;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.article-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #8c7b5b; /* Light gold color */
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.article-image img {
+  width: 100%;
+  height: 50%;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.article-content p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: #666666; /* Slightly lighter color for the content */
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
 }
