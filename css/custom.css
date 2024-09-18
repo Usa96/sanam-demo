@@ -7,10 +7,9 @@
 
 :root {
     --cnvs-header-height-sm: 50px;  /* For small screens */
-    --cnvs-header-height-md: 50px;  /* For medium screens */
+    --cnvs-header-height-md: 7rem;  /* For medium screens */
     --cnvs-header-height-lg: 50px;  /* For large screens */
-    --cnvs-header-height-shrink: 50px;  /* For shrinked headers */
+    --cnvs-header-height-shrink: 5rem;  /* For shrinked headers */
 	--cnvs-counter-lg-font-size: 50px;
     --cnvs-font-size-body: 1.5rem;
 }
-

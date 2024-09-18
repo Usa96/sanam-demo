@@ -19,7 +19,9 @@
 	<link rel="stylesheet" href="css/font-icons.css">
 	<link rel="stylesheet" href="demos/real-estate/css/font-icons.css">
 
-	<!-- Niche Demos -->
+	<!-- Bootstrap CSS -->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
 	<link rel="stylesheet" href="demos/real-estate/real-estate.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
@@ -30,15 +32,6 @@
 	<!-- Document Title
 	============================================= -->
 	<title>Our Businesses</title>
-
-	<style>
-		.accordion.accordion-bg .acctitle,
-		.accordion.accordion-bg .acctitlec {
-			text-transform: uppercase;
-			letter-spacing: 1px;
-			font-weight: 500;
-		}
-	</style>
 
 </head>
 
@@ -51,7 +44,7 @@
 
 		<!-- Header
 		============================================= -->
-		<header id="header" class="full-header header-size-md">
+		<header id="header" class="full-header header-size-md" data-sticky-shrink="true" data-sticky-class="not-dark" data-sticky-offset="full" data-sticky-offset-negative="auto">
 			<div id="header-wrap">
 				<div class="container">
 					<div class="header-row">
@@ -60,10 +53,10 @@
 						============================================= -->
 						<div id="logo">
 							<a href="index.html">
-								<img class="logo-default" srcset="demos/real-estate/images/sanam-logo-emblem.png, demos/real-estate/images/sanam-logo-emblem.png 2x" src="demos/real-estate/images/sanam-logo-emblem.png" alt="Sanam Logo" style="height: 3rem;">
-								<img class="logo-dark" srcset="demos/real-estate/images/sanam-logo-emblem.png, demos/real-estate/images/sanam-logo-emblem.png" src="demos/real-estate/images/sanam-logo-emblem.png" alt="Sanam Real Estate Logo" style="height: 3rem;">
-								<img class="logo-sticky" srcset="demos/real-estate/images/logo.png, demos/real-estate/images/logo.png 2x" src="demos/real-estate/images/logo.png" alt="sanam-logo-emblem" style="height: 3rem;">
-								<img class="logo-mobile" srcset="demos/real-estate/images/logo.png, demos/real-estate/images/logo.png" src="demos/real-estate/images/logo.png" alt="sanam-logo-emblem" style="height: 3rem;">
+								<img class="logo-default" srcset="logo/sanam_logo_v2.png, logo/sanam_logo_v2.png" src="logo/sanam_logo_v2.png" alt="Sanam Logo" >
+								<img class="logo-dark" srcset="logo/sanam_logo_v2.png, logo/sanam_logo_v2.png" src="logo/sanam_logo_v2.png" alt="Sanam Real Estate Logo" >
+								<img class="logo-sticky" srcset="logo/sanam_logo_v2.png, logo/sanam_logo_v2.png" src="logo/sanam_logo_v2.png" alt="Sanam Real Estate Logo" >
+								<img class="logo-mobile" srcset="logo/sanam_logo_v2.png, logo/sanam_logo_v2.png" src="logo/sanam_logo_v2.png" alt="Sanam Real Estate Logo" >
 							</a>
 						</div><!-- #logo end --><!-- #logo end -->
 
@@ -79,11 +72,11 @@
 
 							<ul class="menu-container">
 								<li class="menu-item"><a class="menu-link" href="About.html"><div>About Us</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="Our_Businesses.html"><div>Our Businesses</div></a>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Our Businesses</div></a>
 									<ul class="sub-menu-container">
-										<li class="menu-item"><a class="menu-link" href="#"><div>Private Equity</div></a></li>
-										<li class="menu-item"><a class="menu-link" href="#"><div>Growth Capital</div></a></li>
-										<li class="menu-item"><a class="menu-link" href="#"><div>Real Estate</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="Our_Businesses.html"><div>Private Equity</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="Our_Businesses.html"><div>Growth Capital</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="Our_Businesses.html"><div>Real Estate</div></a></li>
 									</ul>
 								</li>
 								<li class="menu-item"><a class="menu-link" href="#"><div>Impact</div></a>
@@ -129,78 +122,146 @@
 
 		<!-- Content
 		============================================= -->
-		<div class="container my-5 mt-6">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="fancy-title title-bottom-border">
-						<h1>Private Equity</h1>
-					</div>
-					<a href="Portfolio_single.html" class="custom-card-link">
-						<div class="custom-card mb-3 custom-hover-card" data-animate="fadeIn">
-						  <div class="row g-0 align-items-center">
-							<div class="col-md-2 text-center">
-							  <img src="path/to/your/icon1.png" class="custom-img-fluid rounded-circle" alt="...">
-							</div>
-							<div class="col-md-8">
-							  <div class="custom-card-body">
-								<h5 class="custom-card-title">MEDCAP medical center</h5>
-								<p class="custom-card-subtitle">Medical Center</p>
-								<p class="custom-card-text">Lorem ipsum dolor sit amet consectetur iscing elit sed do eiusmod tempor incididunt ut.</p>
-							  </div>
-							</div>
-							<div class="col-md-2 text-center">
-							  <h6 class="custom-year-text">2022</h6>
-							</div>
-						  </div>
-						</div>
-					  </a>
-					  
-					<div class="fancy-title title-bottom-border">
-						<h1>Growth Capital</h1>
-					</div>
-					<div class="custom-card mb-3 custom-hover-card" data-animate="fadeIn">
-						<div class="row g-0 align-items-center">
-							<div class="col-md-2 text-center">
-								<img src="path/to/your/icon2.png" class="custom-img-fluid rounded-circle" alt="...">
-							</div>
-							<div class="col-md-8">
-								<div class="custom-card-body">
-									<h5 class="custom-card-title">Mashrook</h5>
-									<p class="custom-card-subtitle">Social Network</p>
-									<p class="custom-card-text">Lorem ipsum dolor sit amet consectetur iscing elit sed do eiusmod tempor incididunt ut.</p>
-								</div>
-							</div>
-							<div class="col-md-2 text-center">
-								<h6 class="custom-year-text">2020</h6>
+		<section class="portfolio-section py-5">
+			<div>
+				<div class="text-center mb-4">
+					<h2>Portfolio</h2>
+					<p>View our portfolio of investments</p>
+				</div>
+		
+				<!-- Filter Links -->
+				<div class="text-center mb-5">
+					<ul class="portfolio-filter list-inline">
+						<li class="list-inline-item"><a style="font-size: 1rem;" href="#" class="active" data-filter="all">All</a></li>
+						<li class="list-inline-item"><a style="font-size: 1rem;" href="#" data-filter="private-equity">Private Equity</a></li>
+						<li class="list-inline-item"><a style="font-size: 1rem;" href="#" data-filter="growth-capital">Growth Capital</a></li>
+						<li class="list-inline-item"><a style="font-size: 1rem;" href="#" data-filter="real-estate">Real Estate</a></li>
+					</ul>
+				</div>
+		
+				<!-- Portfolio Grid -->
+				<div class="row no-gutters portfolio-grid" >
+
+					<!-- Portfolio Item 1 -->
+					<div class="portfolio-item" data-category="private-equity">
+						<div class="portfolio-content" data-toggle="modal" data-target="#portfolioModalMashrook">
+							<img src="logo/Mashrook_logo.png" class="img-fluid" alt="Mashrook">
+							<div class="hover-panel">
+								<h4>Mashrook</h4>
+								<p>Private Equity</p>
 							</div>
 						</div>
 					</div>
-					<div class="fancy-title title-bottom-border">
-						<h1>Real Estate</h1>
-					</div>
-					<div class="custom-card mb-3 custom-hover-card" data-animate="fadeIn">
-						<div class="row g-0 align-items-center">
-							<div class="col-md-2 text-center">
-								<img src="path/to/your/icon3.png" class="custom-img-fluid rounded-circle" alt="...">
-							</div>
-							<div class="col-md-8">
-								<div class="custom-card-body">
-									<h5 class="custom-card-title">NATMED</h5>
-									<p class="custom-card-subtitle">Consumables</p>
-									<p class="custom-card-text">Lorem ipsum dolor sit amet consectetur iscing elit sed do eiusmod tempor incididunt ut.</p>
+
+					<div class="modal fade" id="portfolioModalMashrook" tabindex="-1" role="dialog" aria-labelledby="portfolioModalLabel" aria-hidden="true" data-animate="fadeIn">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="portfolioModalLabel">Mashrook</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<div class="row">
+										<!-- Left side: Logo and description -->
+										<div class="col-md-7">
+											<img src="logo/Mashrook_logo.png" class="img-fluid mb-3" alt="Mashrook Logo">
+											<p>Mashrook is a leading company in the private equity space, focused on providing innovative solutions for small businesses in the tech sector.</p>
+										</div>
+										<!-- Right side: Key numbers -->
+										<div class="col-md-5 key-numbers">
+											<h5>Key Numbers</h5>
+											<ul class="list-unstyled">
+												<li><strong>Founded:</strong> 2010</li>
+												<li><strong>Type:</strong> Private Equity</li>
+												<li><strong>Industry:</strong> Technology</li>
+												<li><strong>Location:</strong> Kuwait</li>
+												<li><strong>Revenue:</strong> $50M in 2023</li>
+												<li><strong>Employees:</strong> 120</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 								</div>
 							</div>
-							<div class="col-md-2 text-center">
-								<h6 class="custom-year-text">2018</h6>
+						</div>
+					</div>
+
+
+					<!-- Portfolio Item 2 -->
+					<div class="col-md-4 portfolio-item" data-category="growth-capital">
+						<div class="portfolio-content">
+							<img src="logo/tiac_logo.jpg" class="img-fluid" alt="Technical Integrated Aquaculture">
+							<div class="hover-panel">
+								<h4>Technical Integrated Aquaculture</h4>
+								<p>Growth Capital</p>
+							</div>
+						</div>
+					</div>
+		
+					<!-- Portfolio Item 3 -->
+					<div class="col-md-4 portfolio-item" data-category="growth-capital">
+						<div class="portfolio-content">
+							<img src="logo/logo-medical.png" class="img-fluid" alt="MEDCAP Medical Center">
+							<div class="hover-panel"> 
+								<h4>MEDCAP Medical Center</h4>
+								<p>Growth Capital</p>
+							</div>
+						</div>
+					</div>
+		
+					<!-- Portfolio Item 4 -->
+					<div class="col-md-4 portfolio-item" data-category="private-equity">
+						<div class="portfolio-content">
+							<img src="logo/abyan_logo.jpg" class="img-fluid" alt="Abyan Building Construction Company">
+							<div class="hover-panel">
+								<h4>Abyan Building Construction Company</h4>
+								<p>Private Equity</p>
+							</div>
+						</div>
+					</div>
+		
+					<!-- Portfolio Item 5 -->
+					<div class="col-md-4 portfolio-item" data-category="private-equity">
+						<div class="portfolio-content">
+							<img src="logo/ermc_logo.png" class="img-fluid" alt="European Ready Mix Concrete and Contracting Company">
+							<div class="hover-panel"> 
+								<h4>European Ready Mix Concrete and Contracting Company</h4>
+								<p>Private Equity</p>
+							</div>
+						</div>
+					</div>
+		
+					<!-- Portfolio Item 6 -->
+					<div class="col-md-4 portfolio-item" data-category="private-equity">
+						<div class="portfolio-content">
+							<img src="logo/spirit_healthcare.png" class="img-fluid" alt="Spirit Pharmaceuticals Healthcare">
+							<div class="hover-panel"> 
+								<h4>Spirit Pharmaceuticals Healthcare</h4>
+								<p>Private Equity</p>
+							</div>
+						</div>
+					</div>
+		
+					<!-- Portfolio Item 7 -->
+					<div class="col-md-4 portfolio-item" data-category="real-estate">
+						<div class="portfolio-content">
+							<img src="logo/Eradat_Guideline-02.jpg" class="img-fluid" alt="Eradat International Real Estate">
+							<div class="hover-panel">
+								<h4>Eradat International Real Estate</h4>
+								<p>Real Estate</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 
 		<!-- Pitch section -->
-		<div class="pitch-container my-5" data-animate="fadeInDown">
+		<div class="pitch-container my-5" data-animate="fadeInUp">
 			<div class="row align-items-center">
 				<div class="col-lg-8">
 					<h1 class="custom-heading">We invest in the companies of the future, today</h1>
@@ -210,9 +271,6 @@
 				</div>
 			</div>
 		</div>
-		
-		
-
 
 		<!-- Footer
 		============================================= -->
@@ -223,7 +281,7 @@
 					<!-- Logo Section -->
 					<div class="col-md-3 mb-4 mb-md-0 text-center text-md-start">
 						<a href="#" class="d-block mt-4"> <!-- Added margin-top to push the logo down -->
-							<img src="demos/real-estate/images/Sanam_logo_full-removebg.png" alt="Sanam Logo" class="img-fluid">
+							<img src="demos/real-estate/images/Sanam_logo_full-removebg.png" alt="Sanam Logo" class="logo-default">
 						</a>
 						<ul class="list-inline mt-3"> <!-- Added margin-top to push the list down -->
 							<li class="list-inline-item"><a href="#" class="text-light">Fraud Alert</a></li>
@@ -301,32 +359,11 @@
 	============================================= -->
 	<script src="js/plugins.min.js"></script>
 	<script src="js/functions.bundle.js"></script>
-	<script> 
-		function toggleDetails(button) {
-		  const detailsRow = button.closest('tr').nextElementSibling;
-		  const detailsContent = detailsRow.querySelector('.details-content');
-		  const isOpen = detailsRow.classList.contains('open');
-		
-		  if (isOpen) {
-		    detailsContent.style.height = 0;
-		    detailsContent.style.opacity = 0;
-		    setTimeout(() => {
-		      detailsRow.classList.remove('open');
-		      button.textContent = "+";
-		      detailsRow.style.height = "0";
-		      detailsRow.style.opacity = "0";
-		    }, 500); // Match this with the transition time
-		  } else {
-		    detailsRow.classList.add('open');
-		    detailsRow.style.height = detailsContent.scrollHeight + "px";
-		    detailsRow.style.opacity = "1";
-		    detailsContent.style.height = detailsContent.scrollHeight + "px";
-		    detailsContent.style.opacity = "1";
-		    button.textContent = "−";
-		  }
-		}
-
-	</script>
+	<script src="js/script.js"></script>
+	<!-- jQuery and Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 </body>
 </html>
