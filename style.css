@@ -34159,49 +34159,7 @@ body.dark {
 /* Our Businesses Modal Section */
 
 /* Modal Styling */
-.modal-content {
-  padding: 20px;
-}
 
-.modal-body {
-  display: flex;
-  align-items: flex-start; /* Align top */
-}
-
-.modal-logo {
-  width: 150px; /* Fixed width */
-  height: 150px; /* Fixed height */
-  object-fit: contain; /* Ensures the image fits within the defined size without distortion */
-  display: block;
-  margin-bottom: 15px;
-}
-
-.modal-body p {
-  font-size: 1rem;
-  margin-top: 15px;
-  color: #555;
-}
-
-.modal-body h5 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
-.modal-body ul {
-  font-size: 1rem;
-  list-style: none;
-  padding-left: 0;
-}
-
-.modal-body ul li {
-  margin-bottom: 10px;
-}
-
-.modal-body ul li strong {
-  font-weight: 700;
-  color: #333;
-}
 
 /* Key Numbers pushed to the right */
 .key-numbers {
@@ -34803,13 +34761,28 @@ body.dark {
   margin-bottom: 40px;
 }
 
+/* Modal styling */
+
+
+/* Gap between rows */
+.first-row {
+  margin-bottom: 40px;
+}
+
+/* Align second row to center */
+.second-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adds space between cards */
+}
+
 .partner-card {
   border: 1px solid #333;
-  border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   padding: 20px;
+  cursor: pointer; /* Makes the card clickable */
 }
 
 .partner-card:hover {
@@ -34817,43 +34790,25 @@ body.dark {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-.partner-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
+/* Other styling */
+/* Modal default hidden state */
 
-.partner-info {
-  text-align: left;
-  position: relative;
-}
 
-.partner-name {
-  font-size: 1.5rem;
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
   font-weight: bold;
-  margin-bottom: 10px;
+  cursor: pointer;
 }
 
-.partner-position {
-  font-size: 1.1rem;
-  color: #cccccc;
-  margin-bottom: 20px;
+/* Hover state for close button */
+.close:hover {
+  color: #000;
 }
 
-.partner-link {
-  font-size: 1.5em;
-  color: #ffffff;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
 
-.partner-link:hover {
-  color: #007bff;
-}
 
 .custom-sharepoint-icon {
   display: flex;
@@ -34900,3 +34855,146 @@ body.dark {
   transition: all 0.3s ease;
 }
 
+.value-section {
+  background: linear-gradient(180deg, #f0f4c3, #dcedc8); /* Light gradient background */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.value-section h1 {
+  font-size: 2.5rem;
+  color: #1a237e;
+  margin-bottom: 10px;
+}
+
+.value-section p {
+  font-size: 1.2rem;
+  color: #616161;
+  margin-bottom: 40px;
+}
+
+.value-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.value-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-10px);
+}
+
+.value-card img {
+  width: 50px;
+  margin-bottom: 20px;
+}
+
+.value-card h3 {
+  font-size: 1.5rem;
+  color: #1a237e;
+  margin-bottom: 10px;
+}
+
+.value-card p {
+  font-size: 1rem;
+  color: #757575;
+}
+
+@media (max-width: 768px) {
+  .value-cards {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+    /* Philosophy section with background image */
+    .philosophy-section {
+      position: relative;
+      background-image: url('images/philosophies_bg.jpg'); /* Add the correct background image path */
+      background-size: cover;
+      background-position: center;
+      padding: 100px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .philosophy-subtitle {
+    text-align: left;
+    font-size: 0.875rem; /* Smaller font size */
+    font-weight: bold;
+    color: #666; /* Grey color */
+    text-transform: uppercase; /* Makes text uppercase */
+    letter-spacing: 2px; /* Adds some spacing between letters */
+    margin-bottom: 10px; /* Adds space between subtitle and title */
+}
+  /* Overlay to create white background for content */
+  .philosophy-overlay {
+      background-color: rgba(255, 255, 255, 0.9); /* White with transparency */
+      padding: 50px;
+      max-width: 1200px;
+      width: 100%;
+      border-radius: 8px;
+  }
+  /* Title styling */
+  .philosophy-title {
+      text-align: left;
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #333;
+  }
+  /* Philosophy grid layout */
+  .philosophy-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, auto);
+      gap: 20px;
+      margin-top: 20px;
+  }
+  /* Each philosophy block */
+  .philosophy-item {
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: left;
+  }
+  /* Number and title styling */
+  .philosophy-item h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #0077b6; /* Blue for the title */
+  }
+  /* Number above the title */
+  .philosophy-item::before {
+      content: attr(data-number);
+      display: block;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #666;
+      margin-bottom: 10px;
+  }
+  /* Text description inside each block */
+  .philosophy-item p {
+      font-size: 1rem;
+      color: #666;
+  }
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+      .philosophy-grid {
+          grid-template-columns: 1fr;
+      }
+      .philosophy-title {
+          text-align: center;
+      }
+  }
