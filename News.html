@@ -18,6 +18,7 @@
 	<!-- Font Icons -->
 	<link rel="stylesheet" href="css/font-icons.css">
 	<link rel="stylesheet" href="demos/real-estate/css/font-icons.css">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 
 	<!-- Niche Demos -->
 	<link rel="stylesheet" href="demos/real-estate/real-estate.css">
@@ -121,220 +122,601 @@
 		<section class="news-section">
 			<div class="container">
 				<div class="news-grid">
+
 					<!-- News Item 1 -->
-					<div class="news-item">
-						<img src="images/news/Sanam_capital_incorp.jpeg" alt="Revolutionising industries through venture capital" class="news-image">
-						<div class="news-content">
-							<span class="news-category">UPDATES</span>
-							<span class="news-date">June 24, 2024</span>
-							<h3 class="news-title">Revolutionising industries through venture capital</h3>
-							<a href="#" class="news-link">Read article</a>
-						</div>
-					</div>
-		
-					<!-- News Item 2 -->
-					<div class="news-item">
-						<img src="images/news/EVLI_FUND_MANAGEMENT.png" alt="Unlocking success in venture capital" class="news-image">
-						<div class="news-content">
-							<span class="news-category">NEWS</span>
-							<span class="news-date">May 28, 2024</span>
-							<h3 class="news-title">Unlocking success in venture capital</h3>
-							<a href="#" class="news-link">Read article</a>
-						</div>
-					</div>
-		
-					<!-- News Item 3 -->
-					<div class="news-item">
-						<img src="images/news/SanamFinResults2023.png" alt="Navigating the startup ecosystem" class="news-image">
-						<div class="news-content">
-							<span class="news-category">NEWS</span>
-							<span class="news-date">March 17, 2024</span>
-							<h3 class="news-title">Navigating the startup ecosystem</h3>
-							<a href="#" class="news-link">Read article</a>
-						</div>
-					</div>
+<div class="news-item">
+    <img src="images/news/Sanam_capital_incorp.jpeg" alt="Revolutionising industries through venture capital" class="news-image">
+    <div class="news-content">
+        <span class="news-category">UPDATES</span>
+        <span class="news-date">June 24, 2024</span>
+        <h3 class="news-title">Revolutionising industries through venture capital</h3>
+        <a href="#" class="news-link" data-toggle="modal" data-target="#newsModal1">Read article</a>
+    </div>
+</div>
+
+<!-- Modal for News Item 1 -->
+<div class="modal fade" id="newsModal1" tabindex="-1" role="dialog" aria-labelledby="newsModalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newsModalLabel1">Revolutionising industries through venture capital</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Venture capital is transforming industries by injecting innovation, new business models, and technologies that fuel growth. Learn how Sanam Capital is leading this transformation in various sectors.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- News Item 2 -->
+<div class="news-item">
+    <img src="images/news/EVLI_FUND_MANAGEMENT.png" alt="Unlocking success in venture capital" class="news-image">
+    <div class="news-content">
+        <span class="news-category">NEWS</span>
+        <span class="news-date">May 28, 2024</span>
+        <h3 class="news-title">Unlocking success in venture capital</h3>
+        <a href="#" class="news-link" data-toggle="modal" data-target="#newsModal2">Read article</a>
+    </div>
+</div>
+
+<!-- Modal for News Item 2 -->
+<div class="modal fade" id="newsModal2" tabindex="-1" role="dialog" aria-labelledby="newsModalLabel2" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newsModalLabel2">Unlocking success in venture capital</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Success in venture capital requires a strategic approach, deep market understanding, and a focus on sustainable growth. Discover the key factors that have propelled Sanam's success in this competitive field.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- News Item 3 -->
+<div class="news-item">
+    <img src="images/news/SanamFinResults2023.png" alt="Navigating the startup ecosystem" class="news-image">
+    <div class="news-content">
+        <span class="news-category">NEWS</span>
+        <span class="news-date">March 17, 2024</span>
+        <h3 class="news-title">Navigating the startup ecosystem</h3>
+        <a href="#" class="news-link" data-toggle="modal" data-target="#newsModal3">Read article</a>
+    </div>
+</div>
+
+<!-- Modal for News Item 3 -->
+<div class="modal fade" id="newsModal3" tabindex="-1" role="dialog" aria-labelledby="newsModalLabel3" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newsModalLabel3">Navigating the startup ecosystem</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>The startup ecosystem is both challenging and rewarding. Explore how Sanam is leveraging its expertise to help startups thrive and navigate the complexities of early-stage development.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 		
 					<!-- News Item 4 -->
-					<div class="news-item">
-						<img src="images/news/SanamLimitedCapitalIncrease.png" alt="Venture capital trends shaping the future" class="news-image">
-						<div class="news-content">
-							<span class="news-category">NEWS</span>
-							<span class="news-date">February 12, 2024</span>
-							<h3 class="news-title">Venture capital trends shaping the future</h3>
-							<a href="#" class="news-link">Read article</a>
-						</div>
-					</div>
-		
-					<!-- News Item 5 -->
-					<div class="news-item">
-						<img src="images/news/Capital_increase.png" alt="The role of venture capital in tech innovation" class="news-image">
-						<div class="news-content">
-							<span class="news-category">NEWS</span>
-							<span class="news-date">January 21, 2024</span>
-							<h3 class="news-title">The role of venture capital in tech innovation</h3>
-							<a href="#" class="news-link">Read article</a>
-						</div>
-					</div>
-		
-					<!-- News Item 6 -->
-					<div class="news-item">
-						<img src="images/news/11-May-2023.png" alt="Strategic venture capital investments for growth" class="news-image">
-						<div class="news-content">
-							<span class="news-category">UPDATES</span>
-							<span class="news-date">December 15, 2023</span>
-							<h3 class="news-title">Strategic venture capital investments for growth</h3>
-							<a href="#" class="news-link">Read article</a>
-						</div>
-					</div>
-		
-					<!-- News Item 7 -->
-					<div class="news-item">
-						<img src="images/news/9_August_2023_Partnership Eradat.png" alt="How venture capital is reshaping the finance industry" class="news-image">
-						<div class="news-content">
-							<span class="news-category">NEWS</span>
-							<span class="news-date">November 30, 2023</span>
-							<h3 class="news-title">How venture capital is reshaping the finance industry</h3>
-							<a href="#" class="news-link">Read article</a>
-						</div>
-					</div>
-		
-					<!-- News Item 8 -->
-					<div class="news-item">
-						<img src="images/news/9_August_2023.png" alt="Venture capital strategies for emerging markets" class="news-image">
-						<div class="news-content">
-							<span class="news-category">UPDATES</span>
-							<span class="news-date">October 24, 2023</span>
-							<h3 class="news-title">Venture capital strategies for emerging markets</h3>
-							<a href="#" class="news-link">Read article</a>
-						</div>
-					</div>
+<div class="news-item">
+    <img src="images/news/SanamLimitedCapitalIncrease.png" alt="Venture capital trends shaping the future" class="news-image">
+    <div class="news-content">
+        <span class="news-category">NEWS</span>
+        <span class="news-date">February 12, 2024</span>
+        <h3 class="news-title">Venture capital trends shaping the future</h3>
+        <a href="#" class="news-link" data-toggle="modal" data-target="#newsModal4">Read article</a>
+    </div>
+</div>
+
+<!-- Modal for News Item 4 -->
+<div class="modal fade" id="newsModal4" tabindex="-1" role="dialog" aria-labelledby="newsModalLabel4" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newsModalLabel4">Venture capital trends shaping the future</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Discover the latest venture capital trends that are shaping industries and driving future innovation. Sanam Capital’s investments are positioned to capitalize on these emerging trends.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- News Item 5 -->
+<div class="news-item">
+    <img src="images/news/Capital_increase.png" alt="The role of venture capital in tech innovation" class="news-image">
+    <div class="news-content">
+        <span class="news-category">NEWS</span>
+        <span class="news-date">January 21, 2024</span>
+        <h3 class="news-title">The role of venture capital in tech innovation</h3>
+        <a href="#" class="news-link" data-toggle="modal" data-target="#newsModal5">Read article</a>
+    </div>
+</div>
+
+<!-- Modal for News Item 5 -->
+<div class="modal fade" id="newsModal5" tabindex="-1" role="dialog" aria-labelledby="newsModalLabel5" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newsModalLabel5">The role of venture capital in tech innovation</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Venture capital plays a crucial role in fostering technological advancements. Explore how Sanam is driving tech innovation by backing groundbreaking startups and emerging companies.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- News Item 6 -->
+<div class="news-item">
+    <img src="images/news/11-May-2023.png" alt="Strategic venture capital investments for growth" class="news-image">
+    <div class="news-content">
+        <span class="news-category">UPDATES</span>
+        <span class="news-date">December 15, 2023</span>
+        <h3 class="news-title">Strategic venture capital investments for growth</h3>
+        <a href="#" class="news-link" data-toggle="modal" data-target="#newsModal6">Read article</a>
+    </div>
+</div>
+
+<!-- Modal for News Item 6 -->
+<div class="modal fade" id="newsModal6" tabindex="-1" role="dialog" aria-labelledby="newsModalLabel6" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newsModalLabel6">Strategic venture capital investments for growth</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Sanam’s strategic investments in venture capital are geared toward long-term growth, supporting innovative businesses that are leading the charge in various sectors.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- News Item 7 -->
+<div class="news-item">
+    <img src="images/news/9_August_2023_Partnership Eradat.png" alt="How venture capital is reshaping the finance industry" class="news-image">
+    <div class="news-content">
+        <span class="news-category">NEWS</span>
+        <span class="news-date">November 30, 2023</span>
+        <h3 class="news-title">How venture capital is reshaping the finance industry</h3>
+        <a href="#" class="news-link" data-toggle="modal" data-target="#newsModal7">Read article</a>
+    </div>
+</div>
+
+<!-- Modal for News Item 7 -->
+<div class="modal fade" id="newsModal7" tabindex="-1" role="dialog" aria-labelledby="newsModalLabel7" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newsModalLabel7">How venture capital is reshaping the finance industry</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>The finance industry is undergoing significant changes, driven by venture capital. Learn how Sanam is helping reshape the landscape by funding innovative financial technologies and solutions.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- News Item 8 -->
+<div class="news-item">
+    <img src="images/news/9_August_2023.png" alt="Venture capital strategies for emerging markets" class="news-image">
+    <div class="news-content">
+        <span class="news-category">UPDATES</span>
+        <span class="news-date">October 24, 2023</span>
+        <h3 class="news-title">Venture capital strategies for emerging markets</h3>
+        <a href="#" class="news-link" data-toggle="modal" data-target="#newsModal8">Read article</a>
+    </div>
+</div>
+
+<!-- Modal for News Item 8 -->
+<div class="modal fade" id="newsModal8" tabindex="-1" role="dialog" aria-labelledby="newsModalLabel8" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newsModalLabel8">Venture capital strategies for emerging markets</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Emerging markets are fertile ground for venture capital. Explore how Sanam is using strategic approaches to tap into the opportunities in these growing economies.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 		
 					<!-- News Item 9 -->
-					<div class="news-item">
-						<img src="images/news/27_July_2023.png" alt="Investment opportunities in the digital economy" class="news-image">
-						<div class="news-content">
-							<span class="news-category">UPDATES</span>
-							<span class="news-date">September 15, 2023</span>
-							<h3 class="news-title">Investment opportunities in the digital economy</h3>
-							<a href="#" class="news-link">Read article</a>
-						</div>
-					</div>
-		
-					<!-- News Item 10 -->
-					<div class="news-item">
-						<img src="images/news/17_July_2023_Raas_Al_Maal.png" alt="Accelerating growth with strategic investments" class="news-image">
-						<div class="news-content">
-							<span class="news-category">NEWS</span>
-							<span class="news-date">August 22, 2023</span>
-							<h3 class="news-title">Accelerating growth with strategic investments</h3>
-							<a href="#" class="news-link">Read article</a>
-						</div>
-					</div>
-		
-					<!-- News Item 11 -->
-					<div class="news-item">
-						<img src="images/news/17_July_2023.png" alt="Navigating uncertainty in the venture capital world" class="news-image">
-						<div class="news-content">
-							<span class="news-category">UPDATES</span>
-							<span class="news-date">July 30, 2023</span>
-							<h3 class="news-title">Navigating uncertainty in the venture capital world</h3>
-							<a href="#" class="news-link">Read article</a>
-						</div>
-					</div>
-		
-					<!-- News Item 12 -->
-					<div class="news-item">
-						<img src="images/news/13_July_2023.png" alt="How venture capital is driving innovation" class="news-image">
-						<div class="news-content">
-							<span class="news-category">NEWS</span>
-							<span class="news-date">June 15, 2023</span>
-							<h3 class="news-title">How venture capital is driving innovation</h3>
-							<a href="#" class="news-link">Read article</a>
-						</div>
-					</div>
-		
-					<!-- News Item 13 -->
-					<div class="news-item">
-						<img src="images/news/7_June_2023.png" alt="Growth strategies in venture capital investments" class="news-image">
-						<div class="news-content">
-							<span class="news-category">UPDATES</span>
-							<span class="news-date">May 10, 2023</span>
-							<h3 class="news-title">Growth strategies in venture capital investments</h3>
-							<a href="#" class="news-link">Read article</a>
-						</div>
-					</div>
-		
-					<!-- News Item 14 -->
-					<div class="news-item">
-						<img src="images/news/11-May-2023.png" alt="Harnessing the power of venture capital for expansion" class="news-image">
-						<div class="news-content">
-							<span class="news-category">NEWS</span>
-							<span class="news-date">April 1, 2023</span>
-							<h3 class="news-title">Harnessing the power of venture capital for expansion</h3>
-							<a href="#" class="news-link">Read article</a>
-						</div>
-					</div>
-		
-					<!-- News Item 15 -->
-					<div class="news-item">
-						<img src="images/news/release_6.png" alt="The future of venture capital investments" class="news-image">
-						<div class="news-content">
-							<span class="news-category">UPDATES</span>
-							<span class="news-date">March 20, 2023</span>
-							<h3 class="news-title">The future of venture capital investments</h3>
-							<a href="#" class="news-link">Read article</a>
-						</div>
-					</div>
-		
-					<!-- News Item 16 -->
-					<div class="news-item">
-						<img src="images/news/release_2.jpg" alt="Building sustainable businesses with venture capital" class="news-image">
-						<div class="news-content">
-							<span class="news-category">NEWS</span>
-							<span class="news-date">February 25, 2023</span>
-							<h3 class="news-title">Building sustainable businesses with venture capital</h3>
-							<a href="#" class="news-link">Read article</a>
-						</div>
-					</div>
-		
-					<!-- News Item 17 -->
-					<div class="news-item">
-						<img src="images/news/release_1.jpg" alt="Strategic investments for long-term growth" class="news-image">
-						<div class="news-content">
-							<span class="news-category">UPDATES</span>
-							<span class="news-date">January 10, 2023</span>
-							<h3 class="news-title">Strategic investments for long-term growth</h3>
-							<a href="#" class="news-link">Read article</a>
-						</div>
-					</div>
-		
-					<!-- News Item 18 -->
-					<div class="news-item">
-						<img src="image18.jpg" alt="Revolutionising the finance world through venture capital" class="news-image">
-						<div class="news-content">
-							<span class="news-category">NEWS</span>
-							<span class="news-date">December 15, 2022</span>
-							<h3 class="news-title">Revolutionising the finance world through venture capital</h3>
-							<a href="#" class="news-link">Read article</a>
-						</div>
-					</div>
-		
-					<!-- News Item 19 -->
-					<div class="news-item">
-						<img src="image19.jpg" alt="Empowering startups with strategic venture capital investments" class="news-image">
-						<div class="news-content">
-							<span class="news-category">UPDATES</span>
-							<span class="news-date">November 1, 2022</span>
-							<h3 class="news-title">Empowering startups with strategic venture capital investments</h3>
-							<a href="#" class="news-link">Read article</a>
-						</div>
-					</div>
+<div class="news-item">
+    <img src="images/news/27_July_2023.png" alt="Investment opportunities in the digital economy" class="news-image">
+    <div class="news-content">
+        <span class="news-category">UPDATES</span>
+        <span class="news-date">September 15, 2023</span>
+        <h3 class="news-title">Investment opportunities in the digital economy</h3>
+        <a href="#" class="news-link" data-toggle="modal" data-target="#newsModal9">Read article</a>
+    </div>
+</div>
+
+<!-- Modal for News Item 9 -->
+<div class="modal fade" id="newsModal9" tabindex="-1" role="dialog" aria-labelledby="newsModalLabel9" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newsModalLabel9">Investment opportunities in the digital economy</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Sanam Capital explores the digital economy's rapid growth, highlighting key investment opportunities in this evolving landscape.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- News Item 10 -->
+<div class="news-item">
+    <img src="images/news/17_July_2023_Raas_Al_Maal.png" alt="Accelerating growth with strategic investments" class="news-image">
+    <div class="news-content">
+        <span class="news-category">NEWS</span>
+        <span class="news-date">August 22, 2023</span>
+        <h3 class="news-title">Accelerating growth with strategic investments</h3>
+        <a href="#" class="news-link" data-toggle="modal" data-target="#newsModal10">Read article</a>
+    </div>
+</div>
+
+<!-- Modal for News Item 10 -->
+<div class="modal fade" id="newsModal10" tabindex="-1" role="dialog" aria-labelledby="newsModalLabel10" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newsModalLabel10">Accelerating growth with strategic investments</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Learn how Sanam is strategically investing to accelerate business growth across multiple sectors.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- News Item 11 -->
+<div class="news-item">
+    <img src="images/news/17_July_2023.png" alt="Navigating uncertainty in the venture capital world" class="news-image">
+    <div class="news-content">
+        <span class="news-category">UPDATES</span>
+        <span class="news-date">July 30, 2023</span>
+        <h3 class="news-title">Navigating uncertainty in the venture capital world</h3>
+        <a href="#" class="news-link" data-toggle="modal" data-target="#newsModal11">Read article</a>
+    </div>
+</div>
+
+<!-- Modal for News Item 11 -->
+<div class="modal fade" id="newsModal11" tabindex="-1" role="dialog" aria-labelledby="newsModalLabel11" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newsModalLabel11">Navigating uncertainty in the venture capital world</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Uncertainty is inevitable in the venture capital space, but Sanam Capital is equipped with strategies to navigate it.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- News Item 12 -->
+<div class="news-item">
+    <img src="images/news/13_July_2023.png" alt="How venture capital is driving innovation" class="news-image">
+    <div class="news-content">
+        <span class="news-category">NEWS</span>
+        <span class="news-date">June 15, 2023</span>
+        <h3 class="news-title">How venture capital is driving innovation</h3>
+        <a href="#" class="news-link" data-toggle="modal" data-target="#newsModal12">Read article</a>
+    </div>
+</div>
+
+<!-- Modal for News Item 12 -->
+<div class="modal fade" id="newsModal12" tabindex="-1" role="dialog" aria-labelledby="newsModalLabel12" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newsModalLabel12">How venture capital is driving innovation</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Venture capital is a driving force behind innovation across industries. Discover how Sanam Capital is leading the charge.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- News Item 13 -->
+<div class="news-item">
+    <img src="images/news/7_June_2023.png" alt="Growth strategies in venture capital investments" class="news-image">
+    <div class="news-content">
+        <span class="news-category">UPDATES</span>
+        <span class="news-date">May 10, 2023</span>
+        <h3 class="news-title">Growth strategies in venture capital investments</h3>
+        <a href="#" class="news-link" data-toggle="modal" data-target="#newsModal13">Read article</a>
+    </div>
+</div>
+
+<!-- Modal for News Item 13 -->
+<div class="modal fade" id="newsModal13" tabindex="-1" role="dialog" aria-labelledby="newsModalLabel13" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newsModalLabel13">Growth strategies in venture capital investments</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Sanam Capital’s growth strategies in venture capital focus on high-potential industries and long-term sustainable investments.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- News Item 14 -->
+<div class="news-item">
+    <img src="images/news/11-May-2023.png" alt="Harnessing the power of venture capital for expansion" class="news-image">
+    <div class="news-content">
+        <span class="news-category">NEWS</span>
+        <span class="news-date">April 1, 2023</span>
+        <h3 class="news-title">Harnessing the power of venture capital for expansion</h3>
+        <a href="#" class="news-link" data-toggle="modal" data-target="#newsModal14">Read article</a>
+    </div>
+</div>
+
+<!-- Modal for News Item 14 -->
+<div class="modal fade" id="newsModal14" tabindex="-1" role="dialog" aria-labelledby="newsModalLabel14" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newsModalLabel14">Harnessing the power of venture capital for expansion</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Expanding your business? Learn how Sanam Capital harnesses venture capital to power business growth and expansion efforts.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- News Item 15 -->
+<div class="news-item">
+    <img src="images/news/release_6.png" alt="The future of venture capital investments" class="news-image">
+    <div class="news-content">
+        <span class="news-category">UPDATES</span>
+        <span class="news-date">March 20, 2023</span>
+        <h3 class="news-title">The future of venture capital investments</h3>
+        <a href="#" class="news-link" data-toggle="modal" data-target="#newsModal15">Read article</a>
+    </div>
+</div>
+
+<!-- Modal for News Item 15 -->
+<div class="modal fade" id="newsModal15" tabindex="-1" role="dialog" aria-labelledby="newsModalLabel15" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newsModalLabel15">The future of venture capital investments</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>The future of venture capital is bright, with new industries and technologies paving the way. Learn how Sanam is staying ahead of the curve.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- News Item 16 -->
+<div class="news-item">
+    <img src="images/news/release_2.jpg" alt="Building sustainable businesses with venture capital" class="news-image">
+    <div class="news-content">
+        <span class="news-category">NEWS</span>
+        <span class="news-date">February 25, 2023</span>
+        <h3 class="news-title">Building sustainable businesses with venture capital</h3>
+        <a href="#" class="news-link" data-toggle="modal" data-target="#newsModal16">Read article</a>
+    </div>
+</div>
+
+<!-- Modal for News Item 16 -->
+<div class="modal fade" id="newsModal16" tabindex="-1" role="dialog" aria-labelledby="newsModalLabel16" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newsModalLabel16">Building sustainable businesses with venture capital</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Sustainability is key to long-term success. Learn how Sanam Capital fosters sustainable business models through venture capital investments.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- News Item 17 -->
+<div class="news-item">
+    <img src="images/news/release_1.jpg" alt="Strategic investments for long-term growth" class="news-image">
+    <div class="news-content">
+        <span class="news-category">UPDATES</span>
+        <span class="news-date">January 10, 2023</span>
+        <h3 class="news-title">Strategic investments for long-term growth</h3>
+        <a href="#" class="news-link" data-toggle="modal" data-target="#newsModal17">Read article</a>
+    </div>
+</div>
+
+<!-- Modal for News Item 17 -->
+<div class="modal fade" id="newsModal17" tabindex="-1" role="dialog" aria-labelledby="newsModalLabel17" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newsModalLabel17">Strategic investments for long-term growth</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Sanam Capital is known for making strategic investments aimed at ensuring long-term, sustainable growth across industries.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- News Item 18 -->
+<div class="news-item">
+    <img src="image18.jpg" alt="Revolutionising the finance world through venture capital" class="news-image">
+    <div class="news-content">
+        <span class="news-category">NEWS</span>
+        <span class="news-date">December 15, 2022</span>
+        <h3 class="news-title">Revolutionising the finance world through venture capital</h3>
+        <a href="#" class="news-link" data-toggle="modal" data-target="#newsModal18">Read article</a>
+    </div>
+</div>
+
+<!-- Modal for News Item 18 -->
+<div class="modal fade" id="newsModal18" tabindex="-1" role="dialog" aria-labelledby="newsModalLabel18" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newsModalLabel18">Revolutionising the finance world through venture capital</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Sanam Capital is revolutionising the finance world through innovative venture capital investments that shape the future of financial services.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- News Item 19 -->
+<div class="news-item">
+    <img src="image19.jpg" alt="Empowering startups with strategic venture capital investments" class="news-image">
+    <div class="news-content">
+        <span class="news-category">UPDATES</span>
+        <span class="news-date">November 1, 2022</span>
+        <h3 class="news-title">Empowering startups with strategic venture capital investments</h3>
+        <a href="#" class="news-link" data-toggle="modal" data-target="#newsModal19">Read article</a>
+    </div>
+</div>
+
+<!-- Modal for News Item 19 -->
+<div class="modal fade" id="newsModal19" tabindex="-1" role="dialog" aria-labelledby="newsModalLabel19" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newsModalLabel19">Empowering startups with strategic venture capital investments</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Sanam Capital empowers startups through strategic investments that enable them to scale and innovate within competitive markets.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 				</div>
 			</div>
 		</section>
-		
-		
-
 
 		<!-- Footer
 		============================================= -->
@@ -431,32 +813,8 @@
 	============================================= -->
 	<script src="js/plugins.min.js"></script>
 	<script src="js/functions.bundle.js"></script>
-	<script> 
-		function toggleDetails(button) {
-		  const detailsRow = button.closest('tr').nextElementSibling;
-		  const detailsContent = detailsRow.querySelector('.details-content');
-		  const isOpen = detailsRow.classList.contains('open');
-		
-		  if (isOpen) {
-		    detailsContent.style.height = 0;
-		    detailsContent.style.opacity = 0;
-		    setTimeout(() => {
-		      detailsRow.classList.remove('open');
-		      button.textContent = "+";
-		      detailsRow.style.height = "0";
-		      detailsRow.style.opacity = "0";
-		    }, 500); // Match this with the transition time
-		  } else {
-		    detailsRow.classList.add('open');
-		    detailsRow.style.height = detailsContent.scrollHeight + "px";
-		    detailsRow.style.opacity = "1";
-		    detailsContent.style.height = detailsContent.scrollHeight + "px";
-		    detailsContent.style.opacity = "1";
-		    button.textContent = "−";
-		  }
-		}
-
-	</script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

@@ -71,7 +71,7 @@
 
 		<!-- Header
 		============================================= -->
-		<header id="header" class="full-header header-size-md">
+		<header id="header" class="full-header header-size-md" data-sticky-shrink="true" data-sticky-class="not-dark" data-sticky-offset="full" data-sticky-offset-negative="auto">
 			<div id="header-wrap">
 				<div class="container">
 					<div class="header-row">
@@ -80,10 +80,10 @@
 						============================================= -->
 						<div id="logo">
 							<a href="index.html">
-								<img class="logo-default" srcset="demos/real-estate/images/sanam-logo-emblem.png, demos/real-estate/images/sanam-logo-emblem.png 2x" src="demos/real-estate/images/sanam-logo-emblem.png" alt="Sanam Logo" style="height: 3rem;">
-								<img class="logo-dark" srcset="demos/real-estate/images/sanam-logo-emblem.png, demos/real-estate/images/sanam-logo-emblem.png" src="demos/real-estate/images/sanam-logo-emblem.png" alt="Sanam Real Estate Logo" style="height: 3rem;">
-								<img class="logo-sticky" srcset="demos/real-estate/images/logo.png, demos/real-estate/images/logo.png 2x" src="demos/real-estate/images/logo.png" alt="sanam-logo-emblem" style="height: 3rem;">
-								<img class="logo-mobile" srcset="demos/real-estate/images/logo.png, demos/real-estate/images/logo.png" src="demos/real-estate/images/logo.png" alt="sanam-logo-emblem" style="height: 3rem;">
+								<img class="logo-default" srcset="logo/sanam_logo_v2.png, logo/sanam_logo_v2.png" src="logo/sanam_logo_v2.png" alt="Sanam Logo" >
+								<img class="logo-dark" srcset="logo/sanam_logo_v2.png, logo/sanam_logo_v2.png" src="logo/sanam_logo_v2.png" alt="Sanam Real Estate Logo" >
+								<img class="logo-sticky" srcset="logo/sanam_logo_v2.png, logo/sanam_logo_v2.png" src="logo/sanam_logo_v2.png" alt="Sanam Real Estate Logo" >
+								<img class="logo-mobile" srcset="logo/sanam_logo_v2.png, logo/sanam_logo_v2.png" src="logo/sanam_logo_v2.png" alt="Sanam Real Estate Logo" >
 							</a>
 						</div><!-- #logo end --><!-- #logo end -->
 
@@ -100,11 +100,6 @@
 							<ul class="menu-container">
 								<li class="menu-item"><a class="menu-link" href="About.html"><div>About Us</div></a></li>
 								<li class="menu-item"><a class="menu-link" href="Our_Businesses.html"><div>Our Businesses</div></a>
-									<ul class="sub-menu-container">
-										<li class="menu-item"><a class="menu-link" href="#"><div>Private Equity</div></a></li>
-										<li class="menu-item"><a class="menu-link" href="#"><div>Growth Capital</div></a></li>
-										<li class="menu-item"><a class="menu-link" href="#"><div>Real Estate</div></a></li>
-									</ul>
 								</li>
 								<li class="menu-item"><a class="menu-link" href="#"><div>Impact</div></a>
 									<ul class="sub-menu-container">
@@ -153,122 +148,59 @@
 		<section id="content">
 			<div class="content-wrap">
 				<div class="container">
-
-					<div style="position: relative;">
-						<img src="demos/real-estate/images/contact/1.jpg" alt="Image" class="contact-image">
-						<div class="contact-section dark bg-color">
-							<div class="p-5 p-lg-0" style="font-size: 15px; line-height: 1.7;">
-								<address style="line-height: 1.7;">
-								<span class="fw-light">Address:</span><br>
-								<span class="h6 text-white ls-1 fw-normal">
-									Kuwait City<br>
-									Salhia, Muhammad Al Thannayan Al Ghanem Street, Salhiya Complex,<br>
-									Gate 1, Floor 5.
-									P.O Box 491 SOUK DAKHLI 15254 KUWAIT
-								</span>
-								</address>
-								<span class="fw-light">Phone Number:</span><br>
-								<a href="tel:(1)(8547)632521" class="h6 text-white ls-1 fw-normal">T: +965 22396666</a><br><br>
-
-								<span class="fw-light">Email:</span><br>
-								<a href="mailto:no-reply@semicolonweb.com?Subject=Hello%20again" class="h6 text-white ls-1 fw-normal">info@sanam.com</a>
-							</div>
-						</div>
-					</div>
-					<div class="clear mt-5"></div>
-
-					<div class="row align-items-stretch mx-0 mt-6" style="box-shadow: 0 0 40px rgba(0,0,0,.06)">
-						<div class="col-md-6 px-0 min-vh-25">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3477.2741409219493!2d47.96616807528247!3d29.362261329451307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf854c05f9ac27%3A0x796afba15a86ff9e!2sSalhiya%20Mall!5e0!3m2!1sen!2skw!4v1723979272002!5m2!1sen!2skw" width="100%" height="80%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-						  </div>
-						  
-						<div class="col-md-6">
-							<div class="col-padding">
-								<div class="quick-contact-widget form-widget">
-
-									<h3 class="text-capitalize ls-1 fw-normal">Contact Us</h3>
-
-									<div class="form-result"></div>
-
-									<form id="quick-contact-form" name="quick-contact-form" action="include/form.php" method="post" class="quick-contact-form mb-0">
-
-										<div class="form-process">
-											<div class="css3-spinner">
-												<div class="css3-spinner-scaler"></div>
-											</div>
-										</div>
-
-										<input type="text" class="required form-control mb-2" id="quick-contact-form-name" name="quick-contact-form-name" value="" placeholder="Full Name">
-
-										<input type="email" class="required form-control email mb-2" id="quick-contact-form-email" name="quick-contact-form-email" value="" placeholder="Email Address">
-
-										<input type="text" class="required form-control mb-2" id="quick-contact-form-phone" name="quick-contact-form-phone" value="" placeholder="Phone Number (+1-555-2221)">
-
-										<textarea class="required form-control mb-2 short-textarea" id="quick-contact-form-message" name="quick-contact-form-message" rows="5" cols="30" placeholder="What are you Looking for? (Ex: Villa on the Beach)"></textarea>
-
-										<input type="text" class="d-none" id="quick-contact-form-botcheck" name="quick-contact-form-botcheck" value="">
-										<input type="hidden" name="prefix" value="quick-contact-form-">
-
-										<button type="submit" id="quick-contact-form-submit" name="quick-contact-form-submit" class="button button-small button-rounded m-0" value="submit">Send Email</button>
-
-									</form>
-
+		
+					<div class="row align-items-stretch col-mb-50">
+						<!-- Google Map Section -->
+						<div class="col-lg-6 min-vh-50">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13908.74296833338!2d47.9673477!3d29.3648502!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf85210d2426bf%3A0x6fde0341685b7412!2sSanam%20Real%20Estate%20Company!5e0!3m2!1sen!2skw!4v1726933881521!5m2!1sen!2skw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						</div><!-- Google Map End -->
+		
+						<div class="col-lg-6">
+		
+							<div class="row col-mb-50 mb-0">
+								<!-- Contact Info -->
+								<div class="col-md-5">
+		
+									<address>
+										<strong>Headquarters:</strong><br>
+										Kuwait City<br>
+										Salhia, Muhammad Al Thannayan Al Ghanem Street, Salhiya Complex,<br>
+										Gate 1, Floor 5.<br>
+										P.O Box 491 SOUK DAKHLI 15254 KUWAIT<br>
+									</address>
+									<abbr title="Phone Number"><strong>Phone:</strong></abbr> +965 22396666<br>
+									<abbr title="Email Address"><strong>Email:</strong></abbr> <a href="mailto:info@sanam.com">info@sanam.com</a>
+		
 								</div>
+		
 							</div>
 						</div>
 					</div>
-
+		
 				</div>
 			</div><!-- .content-wrap end -->
 		</section><!-- #content end -->
+		
 
 		<!-- Footer
 		============================================= -->
-		<footer class="footer" >
+		<footer class="footer" style="font-size: medium;">
 			<div class="container-fluid">
 				<div class="row">
 					<!-- Logo Section -->
 					<div class="col-md-3 mb-4 mb-md-0 text-center text-md-start">
-						<a href="#" class="d-block mt-4"> <!-- Added margin-top to push the logo down -->
-							<img src="demos/real-estate/images/Sanam_logo_full-removebg.png" alt="Sanam Logo" class="img-fluid">
+						<a href="#" class="d-block mt-4">
+							<img src="demos/real-estate/images/Sanam_logo_full-removebg.png" alt="Sanam Logo" class="logo-default">
 						</a>
-						<ul class="list-inline mt-3"> <!-- Added margin-top to push the list down -->
-							<li class="list-inline-item"><a href="#" class="text-light">Fraud Alert</a></li>
-							<li class="list-inline-item"><a href="#" class="text-light">Privacy Policy</a></li>
-							<li class="list-inline-item"><a href="#" class="text-light">Terms & Conditions</a></li>
-						</ul>
 					</div>
-					
-
-					<!-- Navigation Links Section -->
-					<div class="col-md-9 text-md-end">
-						<div class="row justify-content-md-end">
-							<!-- First Column -->
-							<div class="col-6 col-md-4">
-								<ul class="list-unstyled text-md-end">
-									<li><a href="#" class="text-light">What We Do</a></li>
-									<li><a href="#" class="text-light">Value Creation</a></li>
-									<li><a href="#" class="text-light">Board of Directors</a></li>
-									<li><a href="#" class="text-light">Our Management</a></li>
-								</ul>
-							</div>
-							<!-- Second Column -->
-							<div class="col-6 col-md-4">
-								<ul class="list-unstyled text-md-end">
-									<li><a href="#" class="text-light">Private Equity</a></li>
-									<li><a href="#" class="text-light">Growth Capital</a></li>
-									<li><a href="#" class="text-light">Real Estate</a></li>
-									<li><a href="#" class="text-light">Our Portfolio</a></li>
-								</ul>
-							</div>
-							<!-- Third Column with Hover Effects -->
-							<div class="col-12 col-md-4">
-								<ul class="list-unstyled text-md-end">
-									<li><a href="#" class="text-light hover-effect">Insights</a></li>
-									<li><a href="#" class="text-light hover-effect">Thought Leadership</a></li>
-									<li><a href="#" class="text-light hover-effect">Media</a></li>
-								</ul>
-								<div class="d-flex justify-content-md-end justify-content-start">
+		
+					<!-- Media Links & Social Icons Section -->
+					<div class="col-md-9">
+						<div class="row">
+							<!-- Media Links -->
+							<div class="col-md-6 text-md-end mb-4">
+								<!-- Social Icons -->
+								<div class="d-flex justify-content-md-end justify-content-center mt-3 align-items-center">
 									<a href="#" class="social-icon h-bg-linkedin">
 										<i class="fa-brands fa-linkedin"></i>
 										<i class="fa-brands fa-linkedin"></i>
@@ -277,18 +209,54 @@
 										<i class="bi-instagram"></i>
 										<i class="bi-instagram"></i>
 									</a>
-									<div class="social-icons">
-										<a href="https://yoursharepointlink.com" target="_blank" aria-label="SharePoint">
-											<img src="sharepoint.ico" alt="SharePoint" width="30" height="30">
-										</a>
-									</div>									
+									<a href="https://yoursharepointlink.com" target="_blank" aria-label="SharePoint" class="social-icon">
+										<img src="logo/Microsoft_Office_SharePoint_(2019–present).svg" alt="SharePoint Icon" width="32" height="32">
+									</a>
 								</div>
-							</div>							
+							</div>
+							
+		
+							<!-- Stock Price Widget -->
+							<div class="col-md-6 text-md-end">
+								<div class="stock-price-widget text-center text-md-end">
+									<span class="d-block">SANAM - KSE</span>
+									<span class="d-block h4 mb-0">0.213 KWD</span>
+									<span class="d-block text-danger">-0.001 (-0.47%)</span>
+									<span class="d-block">Data delayed by 15 minutes</span>
+								</div>
+							</div>
 						</div>
 					</div>
-					
 				</div>
 		
+				<!-- Navigation Links Section -->
+				<div class="row py-5">
+					<div class="col-md-3 py-2">
+						<!-- Investor Relations Links -->
+						<ul class="list-unstyled">
+							<li><a href="#"> Profile</a></li>
+							<li><a href="#"> Leadership</a></li>
+						</ul>
+					</div>
+		
+					<div class="col-md-3 py-2">
+						<!-- Investments Links -->
+						<ul class="list-unstyled">
+							<li><a href="#"> Disclosures</a></li>
+							<li><a href="#"> Financial Statements</a></li>
+							<li><a href="#"> Stock Price Information</a></li>
+						</ul>
+					</div>
+		
+					<div class="col-md-3 py-2">
+						<!-- Investments Links -->
+						<ul class="list-unstyled">
+							<li><a href="#">Investments</a></li>
+						</ul>
+					</div>
+				</div>
+		
+				<!-- Footer Bottom -->
 				<div class="row mt-4">
 					<div class="col-12 text-center">
 						<hr class="border-top border-light">

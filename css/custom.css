@@ -13,3 +13,12 @@
 	--cnvs-counter-lg-font-size: 50px;
     --cnvs-font-size-body: 1.5rem;
 }
+
+.portfolio-img {
+    max-width: 150px; /* Adjust the size as needed */
+    max-height: auto; /* Ensures the height adjusts automatically */
+    margin: 10px; /* Optional: adds some spacing between images */
+    display: inline-block; /* Keeps the images in a row */
+    vertical-align: middle; /* Aligns images properly */
+  }
+  
