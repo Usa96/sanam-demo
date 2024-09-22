@@ -13276,7 +13276,7 @@ textarea.form-control-lg {
 }
 :root {
   --cnvs-themecolor:	#1abc9c;
-  --cnvs-themecolor-rgb:	26, 188, 156;
+  --cnvs-themecolor-rgb:	#B17457;
   --bs-link-color:	var(--cnvs-themecolor);
   --bs-link-color-rgb:	var(--cnvs-themecolor-rgb);
   --bs-link-hover-color:	var(--cnvs-heading-color);
@@ -14673,7 +14673,7 @@ span.middot {
 }
 .object-top {
   -o-object-position: top !important;
-     object-position: top !important;
+  object-position: top !important;
 }
 
 .bg-top {
@@ -28054,7 +28054,7 @@ h3.titular-title, .titular-title.h3 {
 .title-block {
   --cnvs-title-block-padding: 20px;
   --cnvs-title-block-color: var(--cnvs-heading-color);
-  --cnvs-title-block-border: 7px;
+  --cnvs-title-block-border: 0px;
   --cnvs-title-block-border-color: var(--cnvs-themecolor);
   --cnvs-title-block-subtitle-color: var(--cnvs-contrast-700);
   padding: 2px 0 3px var(--cnvs-title-block-padding);
@@ -33736,8 +33736,8 @@ body.dark {
 .news-category {
   display: inline-block;
   padding: 4px 8px;
-  background-color: #e0f7fa;
-  color: #007bff;
+  background-color: #FFDBB5;
+  color: #654520;
   font-size: 12px;
   font-weight: bold;
   border-radius: 4px;
@@ -33759,7 +33759,7 @@ body.dark {
 
 .news-link {
   display: inline-block;
-  color: #007bff;
+  color: #654520;
   text-decoration: none;
   font-weight: bold;
   margin-top: 15px;
@@ -34973,7 +34973,7 @@ body.dark {
   .philosophy-item h3 {
       font-size: 1.5rem;
       margin-bottom: 10px;
-      color: #0077b6; /* Blue for the title */
+
   }
   /* Number above the title */
   .philosophy-item::before {
