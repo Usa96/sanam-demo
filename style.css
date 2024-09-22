@@ -750,10 +750,11 @@ progress {
 }
 
 .container-fluid {
-  width: 80%; /* Full width for .container-fluid */
-  margin-left: 10%;
-  margin-right: 2%;
+  width: 80% !important; /* Full width for .container-fluid */
+  margin-left: 10% !important;
+  margin-right: 2% !important;
 }
+
 
 @media (min-width: 576px) {
   .container-sm, .container {
@@ -33917,18 +33918,19 @@ body.dark {
 }
 
 .footer .list-unstyled {
-  margin-bottom: 1.5rem; /* Add margin to each link section */
+  margin-bottom: 1.5rem !important; /* Add margin to each link section */
 }
 
 .list-unstyled a {
-  text-decoration: none;
-  color: #fff;
-  transition: color 0.3s ease;
+  text-decoration: none !important;
+  color: #fff !important;
+  transition: color 0.3s ease !important;
 }
 
 .list-unstyled a:hover {
-  color: #ddd;
+  color: #ddd !important;
 }
+
 
 .footer hr {
   border-color: #333;

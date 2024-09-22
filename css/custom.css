@@ -6,7 +6,7 @@
 -----------------------------------------------------------------*/
 
 :root {
-    --cnvs-header-height-sm: 50px;  /* For small screens */
+    --cnvs-header-height-sm: 5rem;  /* For small screens */
     --cnvs-header-height-md: 7rem;  /* For medium screens */
     --cnvs-header-height-lg: 50px;  /* For large screens */
     --cnvs-header-height-shrink: 5rem;  /* For shrinked headers */
@@ -20,70 +20,4 @@
     margin: 10px; /* Optional: adds some spacing between images */
     display: inline-block; /* Keeps the images in a row */
     vertical-align: middle; /* Aligns images properly */
-}
-
-/* Modal container customization */
-.homepage-news-modal .modal-dialog {
-    max-width: 800px; /* Set custom width for modal */
-    margin: 1.75rem auto; /* Center the modal vertically */
-}
-
-.homepage-news-modal .modal-content {
-    background-color: #f8f9fa; /* Set background color */
-    border-radius: 8px; /* Add rounded corners */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow effect */
-}
-
-/* Modal header customization */
-.homepage-news-modal .modal-header {
-    background-color: #343a40; /* Set header background color */
-    color: white; /* Change text color */
-    border-bottom: 1px solid #dee2e6;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-}
-
-.homepage-news-modal .modal-header h5 {
-    font-size: 1.25rem;
-    font-weight: 600;
-}
-
-.homepage-news-modal .btn-close {
-    background-color: transparent;
-    border: none;
-    font-size: 1.25rem;
-    color: white;
-}
-
-/* Modal body customization */
-.homepage-news-modal .modal-body {
-    padding: 20px;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #212529;
-}
-
-/* Modal footer customization */
-.homepage-news-modal .modal-footer {
-    padding: 15px;
-    text-align: right;
-    border-top: 1px solid #dee2e6;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-}
-
-.homepage-news-modal .modal-footer .btn {
-    background-color: #343a40;
-    color: white;
-    border-radius: 4px;
-    padding: 8px 16px;
-}
-
-.homepage-news-modal .modal-footer .btn:hover {
-    background-color: #495057;
-}
-
-/* Z-index to ensure modal appears on top */
-.homepage-news-modal {
-    z-index: 1055 !important;
 }
