@@ -34260,46 +34260,6 @@ body.dark {
   box-shadow: 0 0 0 4px rgba(0, 102, 255, 0.3); /* Add a subtle focus ring */
 }
 
-.company-section {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-.company-header {
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid #333;
-  padding-bottom: 20px;
-}
-
-.company-logo img {
-  max-width: 100px;
-  margin-right: 20px;
-}
-
-.company-info {
-  flex-grow: 1;
-}
-
-.company-name {
-  font-size: 2.5rem;
-  margin: 0;
-}
-
-.company-tagline {
-  font-size: 1rem;
-  margin-top: 10px;
-  color: #aaaaaa; /* Slightly lighter text for the tagline */
-}
-
-.company-details {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 0;
-  border-bottom: 1px solid #333;
-}
-
 .detail-item h4 {
   font-size: 0.9rem;
   color: #aaaaaa;
@@ -35001,3 +34961,134 @@ body.dark {
           text-align: center;
       }
   }
+
+  .investment-section {
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .investment-section h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 50px;
+    color: #2b2b2b;
+  }
+  
+  .investments-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .investment-item {
+    width: 22%;
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+  
+  .investment-item img {
+    width: auto;
+    height: 10rem;
+    margin-bottom: 20px;
+  }
+  
+  .investment-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #2b2b2b;
+  }
+  
+  .investment-item p {
+    font-size: 0.9em;
+    color: #6c6c6c;
+    margin-bottom: 15px;
+  }
+  
+  .investment-item a {
+    display: inline-block;
+    color: #0071bc;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .investment-item a:hover {
+    text-decoration: underline;
+  }
+  
+  .opportunity-section {
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* Increase the gap between sections */
+  }
+  
+  .opportunity-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  
+  .opportunity-text {
+    width: 50%;
+    text-align: center; /* Center align the text */
+  }
+  
+  .opportunity-text h3 {
+    color: #B08542;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .opportunity-text h2 {
+    font-size: 2.2em;
+    color: #2b2b2b;
+    margin-bottom: 20px;
+  }
+  
+  .opportunity-text p {
+    font-size: 1em;
+    color: #4a4a4a;
+    line-height: 1.6;
+  }
+  
+  .opportunity-image {
+    width: 50%; /* Ensures it takes up half of the space */
+    display: flex;
+    justify-content: center; /* Centers the image */
+  }
+  
+  .opportunity-image img {
+    width: 100%;
+    height: 100%;
+    max-width: 500px; /* Ensure the image has a maximum size */
+    max-height: 500px; /* Ensure a square aspect ratio */
+    object-fit: cover; /* This keeps the image aspect ratio while filling the space */
+  }
+  
+  /* For smaller screens, stack the items vertically */
+  @media (max-width: 768px) {
+    .opportunity-item {
+      flex-direction: column;
+    }
+    
+    .opportunity-item.reverse-row {
+      flex-direction: column;
+    }
+  
+    .opportunity-text,
+    .opportunity-image {
+      width: 100%;
+    }
+    
+    .opportunity-image img {
+      max-width: 100%;
+      max-height: auto; /* Adjusts the image size for smaller screens */
+    }
+  }
+  
+  

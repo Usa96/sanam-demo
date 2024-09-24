@@ -21,3 +21,146 @@
     display: inline-block; /* Keeps the images in a row */
     vertical-align: middle; /* Aligns images properly */
 }
+
+/* Hide default Bootstrap backdrop */
+.modal-backdrop.show {
+    display: none;
+}
+
+  /* Custom modal styling */
+.custom-modal-slide-in .modal-dialog {
+    max-width: 50vw; /* Ensure it covers half the width */
+    margin: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
+}
+
+.custom-modal-slide-in.show .modal-dialog {
+    transform: translateX(0);
+}
+
+  /* Optional: Add padding or other styling to the modal */
+.modal-content {
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+  /* Close button styling */
+.modal-header .close {
+    font-size: 1.5rem;
+    line-height: 1;
+    padding: 0.75rem;
+    margin: 0;
+}
+
+  /* Add animation to the body of the modal when it slides in */
+.slide-in-from-right {
+    animation: slideIn 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+    0% {
+    transform: translateX(100%);
+    }
+    100% {
+    transform: translateX(0);
+    }
+}
+
+/* Flex layout for logo and content */
+.company-layout {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  /* Logo column */
+  .company-logo {
+    flex: 0 0 150px; /* Fixed width for logo */
+    margin-right: 30px; /* Adds space between logo and content */
+  }
+  
+  .company-logo img {
+    max-width: 100%; /* Ensures the logo fits within its column */
+    height: auto;
+  }
+  
+  /* Main content section */
+  .company-section {
+    flex-grow: 1;
+  }
+  
+  /* Company name and tagline */
+  .company-header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .company-name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .company-tagline {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 10px;
+  }
+  
+  /* Details section */
+  .company-details {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .detail-item {
+    flex: 1;
+  }
+  
+  .detail-item h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #999;
+    margin-bottom: 5px;
+  }
+  
+  .detail-item p {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 700;
+  }
+  
+  /* Company description */
+  .company-description {
+    padding-top: 20px;
+  }
+  
+  .company-description p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  /* Location and website */
+  .company-location {
+    margin-top: 10px;
+    font-size: 0.85rem;
+  }
+  
+  .company-website {
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .company-website:hover {
+    text-decoration: underline;
+  }
