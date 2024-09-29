@@ -4522,6 +4522,7 @@ textarea.form-control-lg {
 .card-img-top,
 .card-img-bottom {
   width: 100%;
+  height: 80%;
 }
 
 .card-img,
@@ -33732,7 +33733,7 @@ body.dark {
 
 .news-content {
   padding: 20px;
-  height: 15.5vh;
+  height: auto;
 }
 
 .news-category {
@@ -33753,7 +33754,7 @@ body.dark {
 }
 
 .news-title {
-  font-size: 18px; /* Slightly larger for more prominence */
+  font-size: 14px; /* Slightly larger for more prominence */
   margin: 10px 0;
   color: #333;
   font-weight: bold;
@@ -34711,6 +34712,10 @@ body.dark {
 .partners-section {
   padding: 60px 0;
   text-align: center;
+}
+
+.partner-position {
+  color: tan;
 }
 
 .section-title {

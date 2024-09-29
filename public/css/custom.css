@@ -164,3 +164,18 @@
   .company-website:hover {
     text-decoration: underline;
   }
+
+  .partner-name {
+    font-size: large;
+    margin-top: 20px;
+  }
+
+  .partner-image {
+    height: 15rem;
+    width: auto;
+  }
+
+  .partner-title {
+    font-size: medium;
+    margin-top: 20px;
+  }
