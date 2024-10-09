@@ -25,3 +25,13 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+function changeLanguage(language) {
+	// Change the language according to the selection
+	// Example: Redirect to different URL for each language
+	if (language === 'ar') {
+		window.location.href = 'index_ar.html';  // Assuming you have an Arabic version of your website
+	} else {
+		window.location.href = 'index.html';  // Default English version
+	}
+}

@@ -13277,7 +13277,7 @@ textarea.form-control-lg {
   }
 }
 :root {
-  --cnvs-themecolor:	#1abc9c;
+  --cnvs-themecolor:	#B17457;
   --cnvs-themecolor-rgb:	#B17457;
   --bs-link-color:	var(--cnvs-themecolor);
   --bs-link-color-rgb:	var(--cnvs-themecolor-rgb);
@@ -13679,6 +13679,7 @@ textarea.form-control-lg {
   transform: translate3d(0px, var(--cnvs-parallax-value), 0px);
   transition: transform 0.1s linear;
   will-change: transform;
+  filter: brightness(75%);
 }
 .parallax[data-parallax-to=bottom] {
   --cnvs-parallax-factor: 1px;
@@ -26625,8 +26626,6 @@ td.actions {
 -----------------------------------------------------------------------------------*/
 .clients-grid {
   --cnvs-clients-grid-padding: 20px;
-  --cnvs-clients-grid-border-size: 1px;
-  --cnvs-clients-grid-border-style: dashed;
   --cnvs-clients-grid-border-color: rgba(var(--cnvs-contrast-rgb), 0.15);
   --cnvs-clients-img-opacity: 0.6;
   position: relative;
@@ -34751,6 +34750,9 @@ body.dark {
   position: relative;
   padding: 20px;
   cursor: pointer; /* Makes the card clickable */
+  width: auto;
+  height: auto;
+  display: inline-block;
 }
 
 .partner-card:hover {

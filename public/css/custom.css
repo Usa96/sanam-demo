@@ -6,12 +6,13 @@
 -----------------------------------------------------------------*/
 
 :root {
-    --cnvs-header-height-sm: 5rem;  /* For small screens */
-    --cnvs-header-height-md: 7rem;  /* For medium screens */
-    --cnvs-header-height-lg: 50px;  /* For large screens */
-    --cnvs-header-height-shrink: 5rem;  /* For shrinked headers */
+  --cnvs-header-height-sm: 10rem;
+  --cnvs-header-height-sm: 7rem;  /* For small screens */
+  --cnvs-header-height-md: 7rem;  /* For medium screens */
+  --cnvs-header-height-lg: 50px;  /* For large screens */
+  --cnvs-header-height-shrink: 5rem;  /* For shrinked headers */
 	--cnvs-counter-lg-font-size: 50px;
-    --cnvs-font-size-body: 1.5rem;
+  --cnvs-font-size-body: 1.5rem;
 }
 
 .portfolio-img {
@@ -157,7 +158,7 @@
   
   .company-website {
     font-weight: bold;
-    color: #007bff;
+    color: #b38900;
     text-decoration: none;
   }
   
@@ -165,17 +166,279 @@
     text-decoration: underline;
   }
 
-  .partner-name {
-    font-size: large;
-    margin-top: 20px;
+  .language-switcher {
+    margin-left: 20px;  /* Adjust position */
+  }
+  
+  .language-switcher select {
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  
+/* Specific class for real estate items */
+.real-estate-cover {
+  position: relative;
+  overflow: hidden;
+  height: 100%; /* Make sure it takes full height of the container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.real-estate-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Make the image cover the entire container */
+}
+
+.portfolio-grid .real-estate-cover {
+  width: 33.33%; /* 3 items per row */
+  height: 300px; /* Adjust the height as per your requirement */
+  padding: 10px;
+}
+
+.real-estate-item {
+  display: block;
+  height: 300px; /* Adjust height as per your requirement */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; /* Ensure the background image doesn't repeat */
+  text-decoration: none;
+}
+
+.heading-block {
+  background: rgba(0, 0, 0, 0.5); /* Optional, to make the text stand out on images */
+  padding: 10px;
+}
+
+.prop-img {
+  height: 30rem;
+  width: auto;
+}
+
+.real-estate-portfolio {
+  padding: 50px 0;
+}
+
+.real-estate-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.real-estate-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.real-estate-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.real-estate-img {
+  width: 100%;
+  height: 250px; /* Set a fixed height */
+  overflow: hidden;
+  position: relative;
+}
+
+.real-estate-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the whole area */
+  transition: transform 0.3s ease;
+}
+
+.real-estate-card:hover .real-estate-img img {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.real-estate-info {
+  padding: 15px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.real-estate-info h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.real-estate-card:hover .real-estate-info h3 {
+  color: #b38900; /* Change color on hover */
+}
+
+.esg-section {
+  padding: 50px 0;
+  background-color: #f8f9fa;
+  font-family: 'Arial', sans-serif;
+}
+
+.esg-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.esg-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.esg-section .btn-outline-primary {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: 2px solid #b38900;
+  color: #b38900;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.esg-section .btn-outline-primary:hover {
+  background-color: #b38900;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .esg-section h2 {
+      font-size: 1.5rem;
   }
 
-  .partner-image {
-    height: 15rem;
-    width: auto;
+  .esg-section p {
+      font-size: 0.9rem;
   }
+}
 
-  .partner-title {
-    font-size: medium;
-    margin-top: 20px;
-  }
+.pri-section {
+  padding: 50px 0;
+  background-color: #f8f9fa;
+}
+
+.pri-logo {
+  max-width: 20rem;
+  margin-bottom: 20px;
+}
+
+.pri-description {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.pri-link {
+  font-size: 1rem;
+  color: #b38900;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.pri-link:hover {
+  color: #b38900;
+}
+
+/* UN Global Compact Section */
+.un-global-compact, .kgc-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.un-heading, .kgc-heading {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.un-logo img, .kgc-logo img {
+  max-width: 200px;
+  margin: 20px auto;
+}
+
+.un-text, .kgc-text {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.un-link, .kgc-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #b38900;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.un-link:hover, .kgc-link:hover {
+  background-color: #b38900;
+}
+
+.partners-section {
+  padding: 40px 0;
+}
+
+.partner-card {
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.partner-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.partner-image {
+  width: 100%;
+  height: 20rem; /* Adjust height for standard sizing */
+  object-fit: cover; /* Ensures images are uniform */
+  border-radius: 10px;
+}
+
+.partner-info {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.partner-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.partner-position {
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Modal customization */
+.modal-title {
+  font-size: 1.5rem;
+}
+
+.modal-body {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
