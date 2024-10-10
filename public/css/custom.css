@@ -543,3 +543,71 @@
   height: 100%;
   border: 0;
 }
+
+/* Container and layout */
+.download-section {
+  padding: 40px;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.file-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* File card styling */
+.file-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.file-card:hover {
+  transform: translateY(-10px);
+}
+
+/* File icon */
+.file-icon {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+/* File name and size */
+.file-name {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.file-size {
+  font-size: 0.9em;
+  margin-bottom: 20px;
+  color: #777;
+}
+
+/* Download button */
+.download-btn {
+  background-color: #b38900;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #f1f1f1; /* Keep the same background hover color or adjust as needed */
+  color: #000; /* Change the text color to #b38900 on hover */
+}
+

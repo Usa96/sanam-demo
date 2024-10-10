@@ -34251,8 +34251,7 @@ body.dark {
 }
 
 .custom-carousel-btn:hover {
-  background-color: #004bbd; /* Darker blue on hover */
-  transform: scale(1.1); /* Slightly enlarge on hover */
+  color: #b38900; /* Change text color to the gold shade on hover */
 }
 
 .custom-carousel-btn:focus {
