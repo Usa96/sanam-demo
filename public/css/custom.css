@@ -611,3 +611,30 @@
   color: #000; /* Change the text color to #b38900 on hover */
 }
 
+.custom-sidebar a {
+  display: block;
+  color: #444;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  border-bottom: 1px solid #ddd;
+}
+
+.custom-sidebar a:hover, .custom-sidebar a.active {
+  background-color: #ccc;
+  color: #000;
+}
+
+.custom-widget {
+  display: none;
+}
+
+.custom-widget.active-widget {
+  display: block;
+}
+
+.custom-iframe-container {
+  width: 100%;
+  height: 600px;
+  border: none;
+}

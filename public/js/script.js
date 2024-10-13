@@ -35,3 +35,27 @@ function changeLanguage(language) {
 		window.location.href = 'index.html';  // Default English version
 	}
 }
+
+var sidebarLinks = document.getElementsByClassName("sidebar-link");
+    var widgets = document.getElementsByClassName("custom-widget");
+
+    for (var i = 0; i < sidebarLinks.length; i++) {
+        sidebarLinks[i].addEventListener("click", function(event) {
+            event.preventDefault();
+
+            // Remove 'active' class from all sidebar links
+            for (var j = 0; j < sidebarLinks.length; j++) {
+                sidebarLinks[j].classList.remove("active");
+            }
+            this.classList.add("active");
+
+            // Hide all widgets
+            for (var k = 0; k < widgets.length; k++) {
+                widgets[k].classList.remove("active-widget");
+            }
+
+            // Show the selected widget
+            var widgetId = this.getAttribute("data-widget");
+            document.getElementById(widgetId).classList.add("active-widget");
+        });
+    }
