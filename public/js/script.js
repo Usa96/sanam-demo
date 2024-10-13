@@ -36,17 +36,20 @@ function changeLanguage(language) {
 	}
 }
 
-var sidebarLinks = document.getElementsByClassName("sidebar-link");
+document.addEventListener("DOMContentLoaded", function() {
+    var sidebarLinks = document.getElementsByClassName("sidebar-link");
     var widgets = document.getElementsByClassName("custom-widget");
 
+    // Loop through each sidebar link
     for (var i = 0; i < sidebarLinks.length; i++) {
         sidebarLinks[i].addEventListener("click", function(event) {
-            event.preventDefault();
+            event.preventDefault();  // Prevent the default link behavior
 
-            // Remove 'active' class from all sidebar links
+            // Remove the 'active' class from all sidebar links
             for (var j = 0; j < sidebarLinks.length; j++) {
                 sidebarLinks[j].classList.remove("active");
             }
+            // Add the 'active' class to the clicked link
             this.classList.add("active");
 
             // Hide all widgets
@@ -54,8 +57,11 @@ var sidebarLinks = document.getElementsByClassName("sidebar-link");
                 widgets[k].classList.remove("active-widget");
             }
 
-            // Show the selected widget
+            // Get the data-widget attribute of the clicked link
             var widgetId = this.getAttribute("data-widget");
+
+            // Show the corresponding widget
             document.getElementById(widgetId).classList.add("active-widget");
         });
     }
+});
