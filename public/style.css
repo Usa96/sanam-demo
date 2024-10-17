@@ -13675,7 +13675,7 @@ textarea.form-control-lg {
   width: var(--cnvs-parallax-width) !important;
   height: var(--cnvs-parallax-height) !important;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transform: translate3d(0px, var(--cnvs-parallax-value), 0px);
   transition: transform 0.1s linear;
   will-change: transform;
@@ -26832,7 +26832,7 @@ td.actions {
 .team-image > a,
 .team-image img {
   display: block;
-  width: 100%;
+
 }
 .team-desc {
   text-align: var(--cnvs-team-desc-align);
