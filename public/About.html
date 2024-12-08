@@ -35,6 +35,59 @@
 	============================================= -->
 	<title>About Us - Sanam Real Estate</title>
 
+	<style>
+		.team-person {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.person-container {
+			border-radius: 50%;
+			height: 312px;
+			-webkit-tap-highlight-color: transparent;
+			transform: scale(0.48);
+			transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+			width: 400px;
+		}
+		.person-container:hover {
+			transform: scale(0.54);
+		}
+		.person-container-inner {
+			position: relative;
+			clip-path: path( "M 390,400 C 390,504.9341 304.9341,590 200,590 95.065898,590 10,504.9341 10,400 V 10 H 200 390 Z" );
+			transform-origin: 50%;
+			top: -200px;
+		}
+		.person-circle {
+			border-radius: 50%;
+			cursor: pointer;
+			height: 380px;
+			left: 10px;
+			pointer-events: none;
+			position: absolute;
+			top: 210px;
+			width: 380px;
+		}
+		.person-img {
+			pointer-events: none;
+			position: relative;
+			transform: translateY(20px) scale(1.16);
+			transform-origin: 50% bottom;
+			transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+			width: 380px;
+			left: 22px;
+			top: 164px;
+		}
+		.person-container:hover .person-img {
+			transform: translateY(0) scale(1.2);
+		}
+		.person-divider {
+			height: 1px;
+			width: 160px;
+		}
+
+	</style>
+
 </head>
 
 <body class="stretched" data-menu-breakpoint="1200">
@@ -235,59 +288,89 @@
 			</div>
 		</section>
 
-		<section id="content">
-			<div class="content-wrap">
+		<section id="content" style="background-color: #f0f2f5;">
+			<div class="content-wrap min-vh-100 d-flex align-items-center">
 				<div class="container">
+
+					<div class="row justify-content-center mb-5">
+						<div class="col-xl-6 col-lg-8 text-center">
+							<h3 class="h1 fw-bold mb-3">Leadership</h3>
+						</div>
+					</div>
+
 					<div class="row col-mb-50 mb-0">
-						<div class="col-lg-3 col-md-6">
+
+						<div class="col-lg-4 col-md-6">
+
 							<div class="team">
 								<div class="team-image">
-									<img src="images/BOD/1.png" alt="John Doe">
+									<img src="images/Waleed_Al_Sumait-removebg-preview.png" alt="John Doe" class="rounded-6">
 								</div>
 								<div class="team-desc">
 									<div class="team-title"><h4>Waleed Hamad Al Sumait</h4><span>Chairman</span></div>
 								</div>
 							</div>
+
 						</div>
 
-						<div class="col-lg-3 col-md-6">
+						<div class="col-lg-4 col-md-6">
+
 							<div class="team">
 								<div class="team-image">
-									<img src="images/BOD/2.png" alt="Josh Clark">
+									<img src="images/Dr._Sulaiman_Al_Abduljader_-_Vice_Chairman___CEO__1_-removebg-preview.png" alt="John Doe" class="rounded-6">
 								</div>
 								<div class="team-desc">
-									<div class="team-title"><h4>Dr. Sulaiman Tareq Al Abduljader</h4><span>Vice Chairman & CEO</span></div>
+									<div class="team-title"><h4>Dr. Sulaiman Tareq Al Abduljader</h4><span>Vice Chairman and Chief Executive Officer</span></div>
 								</div>
 							</div>
+
 						</div>
 
-						<div class="col-lg-3 col-md-6">
+						<div class="col-lg-4 col-md-6">
+
 							<div class="team">
 								<div class="team-image">
-									<img src="images/BOD/3-1.png" alt="Mary Jane">
+									<img src="images/Saad_Al_Muneefi-removebg-preview.png" alt="John Doe" class="rounded-6">
 								</div>
 								<div class="team-desc">
-									<div class="team-title"><h4>Mr. Bandar Al Jarallah</h4><span>Independent Board Member</span></div>
+									<div class="team-title"><h4>Mr Saad Al Munaifi</h4><span>Board Member</span></div>
 								</div>
 							</div>
+
 						</div>
 
-						<div class="col-lg-3 col-md-6">
+						<div class="col-lg-4 col-md-6">
+
 							<div class="team">
 								<div class="team-image">
-									<img src="images/BOD/4.png" alt="Nix Maxwell">
+									<img src="images/Sulaiman_Al_Furaih-removebg-preview.png" alt="John Doe" class="rounded-6">
 								</div>
 								<div class="team-desc">
-									<div class="team-title"><h4>Mr. Saad Al Munaifi</h4><span>Board Member</span></div>
+									<div class="team-title"><h4>Mr. Sulaiman Al Furaih</h4><span>Board Member</span></div>
 								</div>
 							</div>
+
+						</div>
+
+						<div class="col-lg-4 col-md-6">
+
+							<div class="team">
+								<div class="team-image">
+									<img src="images/BOD/Mr. Bandar Al Jarallah - Independent Memebr.png" alt="John Doe" class="rounded-6" style="padding-top: 2.5rem;">
+								</div>
+								<div class="team-desc">
+									<div class="team-title"><h4>Mr. Bandar Al Jarallah </h4><span>Board Member</span></div>
+								</div>
+							</div>
+
 						</div>
 
 					</div>
 
 				</div>
 			</div>
-		</section>
+		</section><!-- #content end -->
+
 
 		<div class="info-section mt-4 mb-4">
 			<div class="container">

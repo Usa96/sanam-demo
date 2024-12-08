@@ -15,6 +15,13 @@
   --cnvs-font-size-body: 1.5rem;
 }
 
+.is-expanded-menu .mega-menu-style-2 .sub-menu-container:not(.mega-menu-dropdown) .menu-item:not(.mega-menu-title):hover > .menu-link {
+  --cnvs-primary-menu-submenu-hover-bg: #fff;
+  --cnvs-primary-menu-submenu-hover-padding-offset: 0.375rem;
+  padding-right: 0.25rem;
+  border-radius: 0.25rem;
+}
+
 .portfolio-img {
     max-width: 150px; /* Adjust the size as needed */
     max-height: auto; /* Ensures the height adjusts automatically */
@@ -444,7 +451,6 @@
 
 .info-section {
   padding: 50px 0;
-  background-color: #f9f9f9;
 }
 
 .info-item {
