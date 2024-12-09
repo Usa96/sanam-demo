@@ -18141,7 +18141,7 @@ body:not(.is-expanded-menu) .mobile-menu-overlay .menu-container {
 
 .is-expanded-menu {
   /* ----------------------------------------------------------------
-  	Mega Menu
+Mega Menu
   -----------------------------------------------------------------*/
   /* Sub-Menu On-Click Dropdown */
   /* Primary Menu - Style 2
@@ -18157,7 +18157,7 @@ body:not(.is-expanded-menu) .mobile-menu-overlay .menu-container {
   /* Primary Menu - Sub Title
   -----------------------------------------------------------------*/
   /* ----------------------------------------------------------------
-  	Side Header
+  Side Header
   -----------------------------------------------------------------*/
   /* Side Header - Push Header
   -----------------------------------------------------------------*/
@@ -18492,7 +18492,7 @@ body:not(.is-expanded-menu) .mobile-menu-overlay .menu-container {
 }
 .is-expanded-menu .sub-title .menu-container > .menu-item:hover > .menu-link span,
 .is-expanded-menu .sub-title .menu-container > .menu-item.current > .menu-link span {
-  color: #FFF;
+  color: var(--cnvs-contrast-200);
 }
 .is-expanded-menu .sub-title .menu-container > .menu-item:hover > .menu-link::after,
 .is-expanded-menu .sub-title .menu-container > .menu-item.current > .menu-link::after {

@@ -644,3 +644,212 @@
   height: 600px;
   border: none;
 }
+
+/* Target submenu under "Our Businesses" */
+.menu-item:nth-child(2) .sub-menu-container {
+  background-color: #C7A17A; /* Light gray or any color of your choice */
+}
+
+/* Target submenu under "Impact" */
+.menu-item:nth-child(3) .sub-menu-container {
+  background-color: #C7A17A; /* Light green or any color of your choice */
+}
+
+@media (max-width: 576px) {
+  .responsive-logo {
+      max-width: 80px;       /* Limit the logo size for mobile view */
+      height: auto;          /* Maintain aspect ratio */
+      margin-bottom: 15px;   /* Add spacing below each logo */
+  }
+
+  .logo-text {
+      font-size: 1rem;       /* Slightly reduce font size for mobile */
+  }
+
+  .logo-section .col-md-4 {
+      margin-bottom: 30px;   /* Add vertical spacing between columns */
+  }
+}
+
+/* Custom Side Panel */
+.custom-side-panel {
+  position: fixed;
+  top: 0;
+  left: -60%;          /* Hidden by default */
+  width: 30%;          /* Covers 60% of the screen */
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.2);
+  z-index: 2002;       /* High z-index to avoid conflicts */
+  overflow-y: auto;
+  transition: left 0.5s ease; /* Smooth slide-in transition */
+}
+
+/* Custom Side Panel Content */
+.custom-side-panel-content {
+  padding: 30px;
+  color: #333;
+  padding: 50px 30px 30px; /* Top padding increased to 50px, sides and bottom remain 30px */
+  text-align: justify;
+}
+
+/* Custom Close Button */
+.custom-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Custom Background Overlay */
+.custom-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay with transparency */
+  z-index: 2001;        /* Below the side panel */
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease; /* Smooth fade-in transition */
+}
+
+/* Show the Custom Overlay with Transition */
+.custom-overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Prevent Body Scroll when Custom Modal is Open */
+body.custom-modal-open {
+  overflow: hidden;
+}
+
+/* Custom Team Member Image Styling */
+.custom-team-image img {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.custom-team-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Custom Section Background */
+.custom-section-bg {
+  background-color: #f0f2f5;
+}
+
+.custom-team-title h4 {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 15px; /* Add space above the name */
+  margin-bottom: 5px; /* Slight space below the name */
+}
+
+.custom-team-title span {
+  display: block; /* Makes span take full width to center-align */
+  text-align: center;
+  font-weight: normal;
+  font-size: 1rem;
+  margin-bottom: 15px; /* Add space below the description */
+}
+
+.custom-panel-image {
+  text-align: center;
+  margin-bottom: 20px; /* Space below the image */
+}
+
+.custom-panel-image img {
+  max-width: 70%;    /* Adjust the image size as needed */
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
+@media (max-width: 768px) {
+  .custom-side-panel {
+      width: 100%;       /* Full width on mobile */
+      left: -100%;       /* Hidden by default */
+      height: 100%;      /* Full height on mobile */
+      border-radius: 0;  /* Remove any rounded corners */
+  }
+
+  .custom-side-panel-content {
+      padding: 20px;     /* Reduce padding for mobile view */
+  }
+
+  .custom-close-btn {
+      font-size: 2rem;
+      top: 15px;
+      right: 20px;
+  }
+}
+
+.custom-pitch-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #000;      /* Black background */
+  color: #fff;                 /* White text color */
+  text-decoration: none;       /* Remove underline */
+  border-radius: 5px;          /* Optional: Rounded corners */
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-pitch-button i {
+  margin-left: 8px;            /* Space between text and icon */
+}
+
+/* Hover State: Keep button black */
+.custom-pitch-button:hover {
+  background-color: #000;      /* Black background on hover */
+  color: #fff;                 /* Keep text white on hover */
+}
+
+.case-study {
+  line-height: 1.6;
+  color: #333;
+  margin: 20px;
+  max-width: 800px;
+  margin: auto;
+  text-align: justify;
+} 
+
+.challenge {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-left: 4px solid #A67D5D;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.challenge-box {
+  background-color: #F2E6D9;  /* Soft cream background */
+  padding: 20px;
+  border-left: 5px solid #603F26;  /* Dark brown accent on the left */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  margin-bottom: 20px;
+}
+
+.challenge p {
+  margin: 5px 0;
+}
+
+.key-takeaways {
+  background-color: #F2E6D9;
+  padding: 15px;
+  border: 1px solid #F2E6D9;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.case-study-container {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+}
