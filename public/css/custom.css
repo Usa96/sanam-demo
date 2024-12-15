@@ -514,7 +514,7 @@
 
 /* Styling for the right-side image */
 .portfolio-image {
-  width: 60%;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: stretch;
@@ -853,3 +853,17 @@ body.custom-modal-open {
   padding-left: 50px;
   padding-right: 50px;
 }
+
+.primary-menu .sub-menu-container {
+  background-color: #603F26 !important;
+}
+
+/* Optional: Adjust submenu item background to match */
+.primary-menu .sub-menu-container .menu-item {
+  background-color: inherit; /* Ensures items use the submenu background */
+}
+
+.primary-menu .sub-menu-container .menu-link:hover {
+  color: #ffffff !important;            /* White text color on hover */
+}
+
