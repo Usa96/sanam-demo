@@ -854,16 +854,21 @@ body.custom-modal-open {
   padding-right: 50px;
 }
 
+.is-expanded-menu .mega-menu-style-2 .sub-menu-container:not(.mega-menu-dropdown) .menu-item:not(.mega-menu-title):hover > .menu-link {
+    background-color: #ffffff; /* White background on hover */
+    --cnvs-primary-menu-submenu-hover-padding-offset: 0.375rem;
+    padding-right: 0.25rem;
+    border-radius: 0.25rem;
+}
+
+/* Submenu Background Color Change */
 .primary-menu .sub-menu-container {
-  background-color: #603F26 !important;
+  background-color: #603F26 !important; /* White background */
+  border-radius: 0.25rem !important;    /* Rounded corners */
 }
 
-/* Optional: Adjust submenu item background to match */
-.primary-menu .sub-menu-container .menu-item {
-  background-color: inherit; /* Ensures items use the submenu background */
+/* Submenu Link Hover State */
+.primary-menu .sub-menu-container .menu-item .menu-link:hover {
+  color: #fff !important;            /* Complementary text color */
+  border-radius: 0.25rem !important;    /* Maintain rounded corners */
 }
-
-.primary-menu .sub-menu-container .menu-link:hover {
-  color: #ffffff !important;            /* White text color on hover */
-}
-
