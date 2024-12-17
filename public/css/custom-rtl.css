@@ -1,0 +1,66 @@
+/* Apply styles only when the html direction is RTL */
+html[dir="rtl"] .header-row {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+
+/* Style the primary menu */
+html[dir="rtl"] .primary-menu .menu-container {
+    display: flex !important;
+    gap: 1.5rem !important; /* Adds spacing between menu items */
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Language switcher styling */
+html[dir="rtl"] .language-switcher {
+    margin-right: 1rem !important; /* Adjust margin for RTL */
+    margin-left: 0 !important;
+}
+
+html[dir="rtl"] .language-switcher select {
+    padding: 0.25rem 0.5rem !important;
+    border: 1px solid #ccc !important;
+    background-color: #fff !important;
+    border-radius: 0.25rem !important;
+    cursor: pointer !important;
+}
+
+/* Fix for submenu positioning */
+html[dir="rtl"] .primary-menu .sub-menu-container {
+    background-color: #ffffff !important;
+    border-radius: 0.25rem !important;
+    padding: 0.5rem 0 !important;
+}
+
+/* Style submenu links */
+html[dir="rtl"] .primary-menu .sub-menu-container .menu-item .menu-link {
+    padding: 0.5rem 1rem !important;
+}
+
+/* Adjust the hamburger menu button */
+html[dir="rtl"] .primary-menu-trigger {
+    display: none !important; /* Hide by default on larger screens */
+}
+
+/* Responsive breakpoint for smaller screens */
+@media (max-width: 768px) {
+    html[dir="rtl"] .primary-menu-trigger {
+        display: block !important; /* Show hamburger on mobile */
+    }
+
+    html[dir="rtl"] .primary-menu .menu-container {
+        flex-direction: column !important;
+        display: none !important; /* Hide menu by default on mobile */
+    }
+
+    html[dir="rtl"] .primary-menu.open .menu-container {
+        display: flex !important; /* Show the menu when open */
+    }
+
+    html[dir="rtl"] .header-row {
+        flex-wrap: wrap !important;
+    }
+}
