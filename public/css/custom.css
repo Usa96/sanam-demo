@@ -84,67 +84,46 @@
 /* Company Layout */
 .company-layout {
   display: flex;
-  
   align-items: flex-start;
-  gap: 40px; /* Space between left and right sections */
-}
-
-.left-section {
-  flex: 0 0 250px; /* Set a fixed width for the left section */
-}
-
-.right-section {
-  flex: 1; /* Take remaining space */
+  gap: 10px; /* Reduced space between left and right sections */
 }
 
 /* Left Section: Logo and Table */
-.company-left {
-  flex: 0 0 200px; /* Fixed width for the left section */
-  margin-right: 30px; /* Space between left and right sections */
-  text-align: center; /* Center-align the content horizontally */
-  text-align: center;
-  margin-bottom: 20px;
+.company-left-section {
+  flex: 0 0 500px; /* Fixed width for the left section */
+}
+
+.company-logo {
+  text-align: left; /* Align logo to the left */
+  margin-bottom: 10px; /* Reduce space below the logo */
 }
 
 .company-logo img {
-  max-width: 40%;
+  max-width: 50%; /* Ensure the logo takes full width of the container */
   height: auto;
-  align-content: center;
-  display: block;
-  margin: 0 auto;
+  display: block; /* Ensure block display for left alignment */
 }
 
-.company-layout .row {
-  margin-top: 20px;
-}
-
-.company-details {
-  margin-top: 20px;
-}
-
+/* Company Details Table */
 .company-details-table {
-  margin-top: 10px;
-}
-
-.company-details-table table {
-  width: 100%;
-  font-size: 0.75rem;
+  width: 100%; /* Full width within the left section */
+  font-size: 0.9rem;
 }
 
 .company-details-table th {
   background-color: #f8f9fa;
   font-weight: bold;
-  padding: 10px;
+  padding: 8px;
   width: 40%;
 }
 
 .company-details-table td {
-  padding: 10px;
+  padding: 8px;
 }
 
 /* Right Section: Company Name and Description */
 .company-section {
-  flex-grow: 1;
+  flex: 1;
 }
 
 /* Company Name */
@@ -156,7 +135,7 @@
 
 /* Company Description */
 .company-description {
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .company-description p {
@@ -165,32 +144,66 @@
   text-align: justify;
 }
 
-/* Company Location */
-.company-location {
-  margin-top: 10px;
-  font-size: 0.85rem;
-}
-
+/* Company Website Button */
 .company-website {
   display: inline-block;
   font-weight: bold;
-  color: #fff; /* Initial white text color */
-  background-color: #603F26; /* Initial brown background */
+  color: #fff;
+  background-color: #603F26;
   text-decoration: none;
-  padding: 10px 20px; /* Padding for button shape */
-  border-radius: 5px; /* Rounded corners */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .company-website:hover {
-  background-color: #fff; /* White background on hover */
-  color: #000; /* Black text on hover */
-  text-decoration: none; /* No underline on hover */
-}
-
-.company-website:hover {
+  background-color: #fff;
+  color: #000;
   text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+  .company-layout {
+    flex-direction: column; /* Stack sections vertically */
+    gap: 20px; /* Add spacing between stacked sections */
+  }
+
+  .company-left-section {
+    width: 100%; /* Full width for the left section */
+    margin-right: 0; /* Remove the right margin */
+    text-align: center; /* Center-align the content */
+  }
+
+  .company-logo img {
+    max-width: 150px; /* Set a reasonable max-width for the logo */
+    margin: 0 auto; /* Center the logo */
+  }
+
+  .company-details-table {
+    width: 100%; /* Ensure the table takes full width */
+    font-size: 1rem; /* Increase font size for readability */
+  }
+
+  .company-section {
+    width: 100%; /* Full width for the right section */
+  }
+
+  .company-name {
+    text-align: center; /* Center the company name */
+  }
+
+  .company-description {
+    text-align: justify; /* Justify the text */
+    padding: 0 10px; /* Add horizontal padding */
+  }
+
+  .company-website {
+    display: block; /* Make the button full-width */
+    width: fit-content;
+    margin: 10px auto; /* Center the button with margin */
+  }
+}
+
 
 
 
@@ -496,6 +509,7 @@
 
 /* Container for the portfolio */
 /* Portfolio Container Styling */
+/* Portfolio Container */
 .portfolio-container {
   display: flex;
   flex-wrap: wrap;
@@ -505,37 +519,23 @@
   padding: 0 20px;
 }
 
-/* Align Left Table and Right Content */
-.portfolio-details,
-.portfolio-description {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Align content from the top */
-  height: 100%; /* Ensure equal height */
-}
-
 /* Table Styling */
-.portfolio-details table {
-  margin: 0; /* Removes any additional margin */
-  height: 100%; /* Ensures full alignment */
+.portfolio-details .table {
+  width: 100%; /* Ensure the table takes full width of its container */
+  max-width: 400px; /* Set a fixed max-width for the table */
+  margin: 0 auto; /* Center the table within its container if needed */
 }
 
-.table th, 
-.table td {
+/* Table Cell Styling */
+.portfolio-details .table th,
+.portfolio-details .table td {
   padding: 10px 15px;
-  vertical-align: top; /* Ensures top alignment for table content */
+  vertical-align: top;
 }
 
-/* Portfolio Description */
 .portfolio-description {
-  display: flex;
-  align-items: flex-start; /* Aligns the text to match the top of the table */
-  line-height: 1.6;
-  font-size: 1.1em;
-  color: #333;
   text-align: justify;
 }
-
 
 .map-container {
   position: relative;
