@@ -81,109 +81,119 @@
 }
 
 /* Flex layout for logo and content */
+/* Company Layout */
 .company-layout {
-    display: flex;
-    align-items: flex-start;
-  }
+  display: flex;
   
-  /* Logo column */
-  .company-logo {
-    flex: 0 0 150px; /* Fixed width for logo */
-    margin-right: 30px; /* Adds space between logo and content */
-  }
-  
-  .company-logo img {
-    max-width: 100%; /* Ensures the logo fits within its column */
-    height: auto;
-  }
-  
-  /* Main content section */
-  .company-section {
-    flex-grow: 1;
-  }
-  
-  /* Company name and tagline */
-  .company-header {
-    padding-bottom: 20px;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .company-name {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #333;
-  }
-  
-  .company-tagline {
-    font-size: 1.2rem;
-    color: #666;
-    margin-top: 10px;
-  }
-  
-  /* Details section */
-  .company-details {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .detail-item {
-    flex: 1;
-  }
-  
-  .detail-item h4 {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #999;
-    margin-bottom: 5px;
-  }
-  
-  .detail-item p {
-    font-size: 1.2rem;
-    color: #333;
-    font-weight: 700;
-  }
-  
-  /* Company description */
-  .company-description {
-    padding-top: 20px;
-  }
-  
-  .company-description p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #555;
-  }
-  
-  /* Location and website */
-  .company-location {
-    margin-top: 10px;
-    font-size: 0.85rem;
-  }
-  
-  .company-website {
-    font-weight: bold;
-    color: #b38900;
-    text-decoration: none;
-  }
-  
-  .company-website:hover {
-    text-decoration: underline;
-  }
+  align-items: flex-start;
+  gap: 40px; /* Space between left and right sections */
+}
 
-  .language-switcher {
-    margin-left: 20px;  /* Adjust position */
-  }
-  
-  .language-switcher select {
-    padding: 5px;
-    border-radius: 3px;
-    border: 1px solid #ccc;
-    font-size: 14px;
-  }
-  
+.left-section {
+  flex: 0 0 250px; /* Set a fixed width for the left section */
+}
+
+.right-section {
+  flex: 1; /* Take remaining space */
+}
+
+/* Left Section: Logo and Table */
+.company-left {
+  flex: 0 0 200px; /* Fixed width for the left section */
+  margin-right: 30px; /* Space between left and right sections */
+  text-align: center; /* Center-align the content horizontally */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.company-logo img {
+  max-width: 40%;
+  height: auto;
+  align-content: center;
+  display: block;
+  margin: 0 auto;
+}
+
+.company-layout .row {
+  margin-top: 20px;
+}
+
+.company-details {
+  margin-top: 20px;
+}
+
+.company-details-table {
+  margin-top: 10px;
+}
+
+.company-details-table table {
+  width: 100%;
+  font-size: 0.75rem;
+}
+
+.company-details-table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  padding: 10px;
+  width: 40%;
+}
+
+.company-details-table td {
+  padding: 10px;
+}
+
+/* Right Section: Company Name and Description */
+.company-section {
+  flex-grow: 1;
+}
+
+/* Company Name */
+.company-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Company Description */
+.company-description {
+  padding-top: 20px;
+}
+
+.company-description p {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Company Location */
+.company-location {
+  margin-top: 10px;
+  font-size: 0.85rem;
+}
+
+.company-website {
+  display: inline-block;
+  font-weight: bold;
+  color: #fff; /* Initial white text color */
+  background-color: #603F26; /* Initial brown background */
+  text-decoration: none;
+  padding: 10px 20px; /* Padding for button shape */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.company-website:hover {
+  background-color: #fff; /* White background on hover */
+  color: #000; /* Black text on hover */
+  text-decoration: none; /* No underline on hover */
+}
+
+.company-website:hover {
+  text-decoration: underline;
+}
+
+
+
 /* Specific class for real estate items */
 .real-estate-cover {
   position: relative;
@@ -282,7 +292,7 @@
 }
 
 .real-estate-card:hover .real-estate-info h3 {
-  color: #b38900; /* Change color on hover */
+  color: #603F26; /* Change color on hover */
 }
 
 .esg-section {
@@ -454,7 +464,7 @@
 }
 
 .info-item {
-  margin-bottom: 30px;
+  margin: 50px;
 }
 
 .info-icon {
@@ -485,58 +495,47 @@
 }
 
 /* Container for the portfolio */
+/* Portfolio Container Styling */
 .portfolio-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: stretch; /* This ensures both elements stretch to the same height */
-  padding: 40px 40px 40px 0; /* Padding on the left only */
-  margin: 40px auto; /* Keep auto margins for centering */
+  margin: 40px auto;
   max-width: 1200px;
+  padding: 0 20px;
 }
 
-/* Styling for the left side text details */
-.portfolio-details {
-  width: 40%;
-  line-height: 1.6;
-}
-
-.portfolio-header h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  font-weight: 400;
-}
-
-.portfolio-details p {
-  font-size: 1.2em;
-  margin: 10px 0;
-  color: #333;
-}
-
-/* Styling for the right-side image */
-.portfolio-image {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: stretch;
-}
-
-.portfolio-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 5px;
-}
-
-/* Description below the portfolio */
+/* Align Left Table and Right Content */
+.portfolio-details,
 .portfolio-description {
-  margin-top: 20px;
-  padding: 0 40px;
-  font-size: 1.1em;
-  max-width: 1200px;
-  margin: auto;
-  color: #333;
-  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content from the top */
+  height: 100%; /* Ensure equal height */
 }
+
+/* Table Styling */
+.portfolio-details table {
+  margin: 0; /* Removes any additional margin */
+  height: 100%; /* Ensures full alignment */
+}
+
+.table th, 
+.table td {
+  padding: 10px 15px;
+  vertical-align: top; /* Ensures top alignment for table content */
+}
+
+/* Portfolio Description */
+.portfolio-description {
+  display: flex;
+  align-items: flex-start; /* Aligns the text to match the top of the table */
+  line-height: 1.6;
+  font-size: 1.1em;
+  color: #333;
+  text-align: justify;
+}
+
 
 .map-container {
   position: relative;
@@ -591,7 +590,7 @@
 /* File name and size */
 .file-name {
   font-size: 1.2em;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   color: #333;
 }
 
@@ -603,7 +602,7 @@
 
 /* Download button */
 .download-btn {
-  background-color: #b38900;
+  background-color: #603F26;
   color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
@@ -872,4 +871,48 @@ body.custom-modal-open {
 .primary-menu .sub-menu-container .menu-item .menu-link:hover {
   color: #fff !important;            /* Complementary text color */
   border-radius: 0.25rem !important;    /* Maintain rounded corners */
+}
+
+#header #header-wrap .container {
+  max-width: 100% !important;
+  margin: 0px auto;
+}
+
+.sub-menu-trigger:hover {
+  transform: scale(1.1); /* Slight scale-up effect */
+}
+
+/* Brown Button Styling */
+.btn-brown {
+  color: #fff;                  /* White text color */
+  background-color: #8C6A4F;    /* Brown background color */
+  border: 1px solid #603F26;    /* Brown border */
+  padding: 10px 20px;           /* Vertical and horizontal padding */
+  font-size: 16px;              /* Font size */
+  text-align: center;           /* Center-align text */
+  text-decoration: none;        /* Remove underline if it's a link */
+  display: inline-block;        /* Allow button to size based on content */
+  border-radius: 5px;           /* Rounded corners */
+  cursor: pointer;              /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect */
+.btn-brown:hover {
+  background-color: #fff;    /* Darker brown on hover */
+  color: #000;                  /* Maintain white text on hover */
+  border-color: #4f321e;        /* Border color matches hover background */
+}
+
+/* Active State */
+.btn-brown:active {
+  background-color: #3d2817;    /* Even darker brown on click */
+  border-color: #3d2817;
+}
+
+.info-container {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
 }

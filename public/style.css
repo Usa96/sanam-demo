@@ -34321,7 +34321,7 @@ body.dark {
 
 .custom-carousel-btn:focus {
   outline: none; /* Remove focus outline */
-  box-shadow: 0 0 0 4px rgba(0, 102, 255, 0.3); /* Add a subtle focus ring */
+  box-shadow: 0 0 0 4px rgba(96, 63, 38, 0.3)  ; /* Add a subtle focus ring */
 }
 
 .detail-item h4 {
