@@ -17728,6 +17728,10 @@ body:not(.is-expanded-menu):not(.primary-menu-open) .semi-transparent.transparen
       position: static;
       box-shadow: none;
   }
+
+  .sub-menu-container .menu-link {
+    color: white !important;
+  }
 }
 .is-expanded-menu .primary-menu-trigger,
 .is-expanded-menu #page-menu-trigger {
@@ -17865,6 +17869,9 @@ body:not(.top-search-open) .top-search-parent .primary-menu-trigger {
 @media (prefers-reduced-motion: reduce) {
   .menu-item .sub-menu-trigger {
     transition: none;
+  }
+  .sub-menu-trigger::before {
+    padding-top: 10px;
   }
 }
 
@@ -18091,7 +18098,7 @@ body:not(.is-expanded-menu) #header:not(.sticky-header) .mobile-menu-off-canvas 
   margin: 0 !important;
   left: 0 !important;
   top: 0 !important;
-  padding: 35px 25px 60px !important;
+  padding: 20px 15px 40px !important;
   background-color: var(--cnvs-header-bg);
   border-right: 1px solid var(--cnvs-header-border-color) !important;
   overflow-y: scroll;
@@ -26703,22 +26710,22 @@ td.actions {
   padding: var(--cnvs-clients-grid-padding) 0;
   -webkit-backface-visibility: hidden;
 }
-.clients-grid > .col a {
+/* .clients-grid > .col a {
   display: block;
   width: 75%;
   margin-left: auto;
   margin-right: auto;
   opacity: var(--cnvs-clients-img-opacity);
   transition: all 0.5s ease;
-}
+} */
 @media (prefers-reduced-motion: reduce) {
   .clients-grid > .col a {
     transition: none;
   }
 }
-.clients-grid > .col a:hover {
+/* .clients-grid > .col a:hover {
   opacity: 1;
-}
+} */
 .clients-grid > .col img {
   width: 100%;
   display: block;
@@ -34848,18 +34855,21 @@ body.dark {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
+  width: auto;
   height: 40px;
-  background-color: #0078d4; /* SharePoint blue color */
-  border-radius: 50%; /* Circular icon */
+  background-color: #000; /* SharePoint blue color */
   color: white;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   text-align: center;
 }
 
 .custom-sharepoint-icon:hover {
-  background-color: #005a9e;
+  background-color: #fff;
+  color: #000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 5%;
+  padding: 0 5px;
 }
 
 /* Center the 'S' for SharePoint */

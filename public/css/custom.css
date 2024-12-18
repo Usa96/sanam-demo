@@ -85,23 +85,30 @@
 .company-layout {
   display: flex;
   align-items: flex-start;
-  gap: 10px; /* Reduced space between left and right sections */
+  gap: 20px; /* Space between sections */
 }
 
 /* Left Section: Logo and Table */
 .company-left-section {
-  flex: 0 0 500px; /* Fixed width for the left section */
-}
+  width: 50%; /* Ensure equal width */
+  box-sizing: border-box; /* Include padding and border in the width */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
-.company-logo {
-  text-align: left; /* Align logo to the left */
-  margin-bottom: 10px; /* Reduce space below the logo */
 }
 
 .company-logo img {
-  max-width: 50%; /* Ensure the logo takes full width of the container */
+  max-width: 60%; /* Limit the logo size to 60% of the container */
+  height: auto;   /* Maintain the aspect ratio */
+  display: block;
+  margin: 0 0; /* Center the logo horizontally */
+}
+
+.company-logo img {
+  max-width: 50%; /* Prevent the image from taking too much space */
   height: auto;
-  display: block; /* Ensure block display for left alignment */
+  display: block;
 }
 
 /* Company Details Table */
@@ -111,11 +118,13 @@
 }
 
 .company-details-table th {
-  background-color: #f8f9fa;
+  background-color: rgba(139, 111, 86, 0.8); /* Semi-transparent version of #8B6F56 */
   font-weight: bold;
   padding: 8px;
   width: 40%;
+  color: #fff;
 }
+
 
 .company-details-table td {
   padding: 8px;
@@ -123,10 +132,10 @@
 
 /* Right Section: Company Name and Description */
 .company-section {
-  flex: 1;
+  width: 50%; /* Ensure equal width */
+  box-sizing: border-box;
 }
 
-/* Company Name */
 .company-name {
   font-size: 2rem;
   font-weight: 700;
@@ -162,47 +171,54 @@
   text-decoration: underline;
 }
 
+
 @media (max-width: 768px) {
+  .container {
+    width: 100% !important;
+  }
+  
   .company-layout {
-    flex-direction: column; /* Stack sections vertically */
-    gap: 20px; /* Add spacing between stacked sections */
+    flex-direction: column;
+    width: 100vw; /* Full viewport width */
+    max-width: 100%; /* Ensure it doesn't exceed the screen width */
+    padding: 0; /* Remove unnecessary padding */
+    margin: 0; /* Remove default margins */
   }
 
-  .company-left-section {
-    width: 100%; /* Full width for the left section */
-    margin-right: 0; /* Remove the right margin */
-    text-align: center; /* Center-align the content */
+  .company-left-section,
+  .company-section {
+    width: 100%; /* Ensure sections take full width */
+    margin: 0; /* Remove margins */
+    padding: 0 10px; /* Minimal horizontal padding to avoid content sticking to edges */
   }
 
   .company-logo img {
-    max-width: 150px; /* Set a reasonable max-width for the logo */
-    margin: 0 auto; /* Center the logo */
+    max-width: 100%; /* Allow the logo to expand to full width */
   }
 
   .company-details-table {
-    width: 100%; /* Ensure the table takes full width */
-    font-size: 1rem; /* Increase font size for readability */
-  }
-
-  .company-section {
-    width: 100%; /* Full width for the right section */
+    width: 100%; /* Full width for the table */
+    font-size: 1rem;
+    table-layout: auto; /* Let the table expand naturally */
   }
 
   .company-name {
-    text-align: center; /* Center the company name */
+    font-size: 1.5rem; /* Maintain readability */
+    text-align: center;
   }
 
   .company-description {
-    text-align: justify; /* Justify the text */
-    padding: 0 10px; /* Add horizontal padding */
+    width: 100%; /* Ensure full width */
+    text-align: justify;
+    padding: 0 10px; /* Minimal padding */
   }
 
   .company-website {
-    display: block; /* Make the button full-width */
-    width: fit-content;
-    margin: 10px auto; /* Center the button with margin */
+    width: 100%; /* Button takes full width */
+    margin: 10px 0; /* Minimal vertical margin */
   }
 }
+
 
 
 
@@ -602,7 +618,7 @@
 
 /* Download button */
 .download-btn {
-  background-color: #603F26;
+  background-color: #8C6A4F;
   color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
@@ -788,6 +804,9 @@ body.custom-modal-open {
   }
 }
 
+
+
+
 .custom-pitch-button {
   display: inline-block;
   padding: 10px 20px;
@@ -915,4 +934,30 @@ body.custom-modal-open {
   max-width: 100%;
   padding-left: 50px;
   padding-right: 50px;
+}
+
+/* thought leadership section view reports links alignment correction */
+
+@media (max-width: 768px) {
+  .btn.btn-link.text-dark.ps-0 {
+      width: auto !important;
+      display: inline-block !important;
+  }
+}
+
+/* fix the footer logo alignment to the center */
+
+@media (max-width: 768px) {
+  .col-md-3.mb-4.mb-md-0.text-start.text-md-start {
+      text-align: center !important;
+  }
+}
+
+.circle-icon {
+  width: 40px;           /* Fixed width */
+  height: 40px;          /* Fixed height */
+  line-height: 40px;     /* Align icon vertically */
+  text-align: center;    /* Align icon horizontally */
+  border-radius: 50%;    /* Make it a circle */
+  display: inline-block; /* Keep it inline and maintain block properties */
 }

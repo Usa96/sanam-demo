@@ -128,3 +128,23 @@ function customClosePanel() {
     document.getElementById("custom-overlay").classList.remove("active");
     document.body.classList.remove("custom-modal-open");
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const wordsToCapitalize = [
+        { regex: /\bsanams\b/gi, replacement: 'SANAMs' },
+        { regex: /\bsanam\b/gi, replacement: 'SANAM' },
+        { regex: /\beradat\b/gi, replacement: 'ERADAT' }
+    ];
+
+    function capitalizeWords(node) {
+        if (node.nodeType === Node.TEXT_NODE) {
+            wordsToCapitalize.forEach(({ regex, replacement }) => {
+                node.textContent = node.textContent.replace(regex, replacement);
+            });
+        } else {
+            node.childNodes.forEach(capitalizeWords);
+        }
+    }
+
+    capitalizeWords(document.body);
+});
