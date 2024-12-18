@@ -35227,6 +35227,9 @@ body.dark {
       width: 100% !important;
       height: auto !important;
   }
+  .custom-widget-display {
+      padding: 0 !important;
+  }
 }
 
 /* Navigation Links */
