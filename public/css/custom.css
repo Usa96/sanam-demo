@@ -646,6 +646,19 @@
   color: #000;
 }
 
+@media (max-width: 768px) {
+  .custom-sidebar a {
+    padding: 8px 10px;    /* Smaller padding for mobile */
+    font-size: 14px;      /* Reduce font size for mobile */
+  }
+
+  .custom-sidebar a:hover,
+  .custom-sidebar a.active {
+    background-color: #ddd;  /* Slightly lighter hover color for mobile */
+    color: #000;
+  }
+}
+
 .custom-widget {
   display: none;
 }
@@ -661,29 +674,47 @@
 }
 
 @media (max-width: 768px) {
-  /* Make each widget take full width */
-  .custom-widget {
-    display: none; /* Hide all widgets by default */
-    width: 100%;
-    margin-bottom: 20px; /* Add space between widgets */
-  }
-
-  /* Ensure the active widget is shown */
-  .custom-widget.active-widget {
-    display: block;
-  }
-
-  /* Adjust iframe height for smaller screens */
-  .custom-iframe-container {
-    height: 600px;
-    width: 100vh;
-    max-width: 100%;
-  }
-
-  /* Sidebar Links Styling */
-  .custom-sidebar a {
-    font-size: 16px; /* Slightly reduce font size */
-    padding: 8px;    /* Adjust padding for better touch interaction */
+  @media (max-width: 768px) {
+    /* Target the widget container */
+    .custom-widget {
+      font-size: 0.5rem; /* Reduce base font size for mobile */
+    }
+  
+    /* Reduce headings size */
+    .custom-widget h2,
+    .custom-widget h3,
+    .custom-widget h4 {
+      font-size: 0.7rem; /* Smaller headings for mobile */
+    }
+  
+    /* Reduce paragraph font size */
+    .custom-widget p {
+      font-size: 0.6rem; /* Smaller paragraph text */
+    }
+  
+    /* Share price display */
+    .custom-widget .share-price {
+      font-size: 1rem; /* Slightly reduced share price size */
+    }
+  
+    /* Change and percentage change text */
+    .custom-widget .change,
+    .custom-widget .percentage-change {
+      font-size: 0.8rem; /* Smaller change indicators */
+    }
+  
+    /* Historical prices text */
+    .custom-widget .historical-prices {
+      font-size: 0.75rem; /* Smaller historical prices text */
+    }
+  
+    /* Metadata elements */
+    .custom-widget .symbol,
+    .custom-widget .isin-code,
+    .custom-widget .exchange,
+    .custom-widget .sector {
+      font-size: 0.7rem; /* Smaller metadata text */
+    }
   }
 }
 
