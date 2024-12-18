@@ -658,7 +658,33 @@
   width: 100%;
   height: 600px;
   border: none;
+}
 
+@media (max-width: 768px) {
+  /* Make each widget take full width */
+  .custom-widget {
+    display: none; /* Hide all widgets by default */
+    width: 100%;
+    margin-bottom: 20px; /* Add space between widgets */
+  }
+
+  /* Ensure the active widget is shown */
+  .custom-widget.active-widget {
+    display: block;
+  }
+
+  /* Adjust iframe height for smaller screens */
+  .custom-iframe-container {
+    height: 600px;
+    width: 100vh;
+    max-width: 100%;
+  }
+
+  /* Sidebar Links Styling */
+  .custom-sidebar a {
+    font-size: 16px; /* Slightly reduce font size */
+    padding: 8px;    /* Adjust padding for better touch interaction */
+  }
 }
 
 /* Target submenu under "Our Businesses" */
@@ -960,4 +986,26 @@ body.custom-modal-open {
   text-align: center;    /* Align icon horizontally */
   border-radius: 50%;    /* Make it a circle */
   display: inline-block; /* Keep it inline and maintain block properties */
+}
+
+@media (max-width: 768px) {
+  /* Smaller font size for the heading */
+  .custom-heading {
+    font-size: 1.5rem; /* Adjust the size to fit smaller screens */
+    text-align: center; /* Center-align the heading on mobile */
+  }
+
+  /* Button adjustments */
+  .custom-pitch-button {
+    font-size: 1rem; /* Reduce font size for button */
+    display: block; /* Make the button full-width */
+    text-align: center; /* Center the button text */
+    margin-top: 15px; /* Add spacing between heading and button */
+  }
+
+  /* Adjust container alignment */
+  .pitch-container .row {
+    flex-direction: column; /* Stack elements vertically */
+    text-align: center; /* Center-align all content */
+  }
 }
