@@ -105,12 +105,6 @@
   margin: 0 0; /* Center the logo horizontally */
 }
 
-.company-logo img {
-  max-width: 50%; /* Prevent the image from taking too much space */
-  height: auto;
-  display: block;
-}
-
 /* Company Details Table */
 .company-details-table {
   width: 100%; /* Full width within the left section */
@@ -192,8 +186,10 @@
     padding: 0 10px; /* Minimal horizontal padding to avoid content sticking to edges */
   }
 
-  .company-logo img {
-    max-width: 100%; /* Allow the logo to expand to full width */
+  .company-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .company-details-table {
