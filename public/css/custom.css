@@ -323,7 +323,7 @@
 .esg-section {
   padding: 50px 0;
   background-color: #f8f9fa;
-  font-family: 'Arial', sans-serif;
+  text-align: justify;
 }
 
 .esg-section h2 {
@@ -1016,5 +1016,20 @@ body.custom-modal-open {
   .pitch-container .row {
     flex-direction: column; /* Stack elements vertically */
     text-align: center; /* Center-align all content */
+  }
+}
+
+/* Media Query for Mobile View */
+@media (max-width: 768px) {
+  .pri-section, .un-global-compact, .kgc-section {
+      padding: 15px;
+  }
+
+  .pri-logo, .un-logo img, .kgc-logo img {
+      max-width: 80%; /* Slightly reduce logo size on smaller screens */
+  }
+
+  .pri-description, .un-text, .kgc-text {
+      font-size: 1rem; /* Adjust font size for readability on mobile */
   }
 }
