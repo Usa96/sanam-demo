@@ -17888,7 +17888,7 @@ body:not(.top-search-open) .top-search-parent .primary-menu-trigger {
 }
 
 .menu-link {
-  --cnvs-primary-menu-padding-y: 14px;
+  /* --cnvs-primary-menu-padding-y: 14px; */
   --cnvs-primary-menu-padding-x: 5px;
   display: block;
   line-height: 22px;
@@ -18108,6 +18108,7 @@ body:not(.is-expanded-menu) #header:not(.sticky-header) .mobile-menu-off-canvas 
   z-index: -1;
   transition: 0.3s ease-in-out, opacity 0.2s ease !important;
 }
+
 @media (prefers-reduced-motion: reduce) {
   body:not(.is-expanded-menu) #header:not(.sticky-header) .mobile-menu-off-canvas .menu-container {
     transition: none;
@@ -18131,7 +18132,7 @@ body:not(.is-expanded-menu) .mobile-menu-overlay .menu-container {
   position: absolute;
   z-index: 99;
   width: 100%;
-  min-height: 25vh;
+  min-height: 10vh;
   height: auto;
   max-height: 60vh !important;
   margin: 0 !important;
@@ -18338,8 +18339,8 @@ Mega Menu
 }
 .is-expanded-menu .mega-menu-style-2 .mega-menu-title > .menu-link {
   --cnvs-primary-menu-submenu-tt: uppercase;
-  --cnvs-primary-menu-submenu-font-weight: 700;
-  --cnvs-primary-menu-submenu-hover-font-weight: 700;
+  --cnvs-primary-menu-submenu-font-weight: 500;
+  --cnvs-primary-menu-submenu-hover-font-weight: 500;
   --cnvs-primary-menu-font: var(--cnvs-primary-font);
   font-size: calc(var(--cnvs-primary-menu-submenu-font-size) * 1.1);
   letter-spacing: 1px;
@@ -33895,7 +33896,7 @@ body.dark {
 
 /* Increase the font size of the sub-menu links */
 .primary-menu .sub-menu-container .menu-link {
-  font-size: 1rem; /* Adjust the sub-menu font size */
+  font-size: 0.75rem; /* Adjust the sub-menu font size */
 }
 
 /* Additional styling to adjust padding if needed */
