@@ -13679,7 +13679,7 @@ textarea.form-control-lg {
   transform: translate3d(0px, var(--cnvs-parallax-value), 0px);
   transition: transform 0.1s linear;
   will-change: transform;
-  filter: brightness(75%);
+  filter: brightness(50%);
 }
 .parallax[data-parallax-to=bottom] {
   --cnvs-parallax-factor: 1px;
