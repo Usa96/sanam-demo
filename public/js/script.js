@@ -180,3 +180,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
     capitalizeWords(document.body);
 });
+
+// Function to switch language
+function switchLanguage() {
+    const currentURL = window.location.href; // Get the current page URL
+    const isArabic = currentURL.includes('ar_'); // Check if the page is Arabic
+  
+    let newURL;
+  
+    if (isArabic) {
+      // If Arabic, switch to English
+      newURL = currentURL.replace('ar_', ''); // Remove 'ar_' from the file name
+    } else {
+      // If English, switch to Arabic
+      const path = currentURL.split('/').pop(); // Get the file name
+      newURL = currentURL.replace(path, `ar_${path}`); // Add 'ar_' to the file name
+    }
+  
+    window.location.href = newURL; // Redirect to the new URL
+  }
+  
+  // Add event listener to the language toggle button
+  const languageToggle = document.getElementById('language-toggle');
+  if (languageToggle) {
+    languageToggle.addEventListener('click', switchLanguage);
+  }
+  
