@@ -334,7 +334,6 @@
   padding: 15px; /* Padding for content */
   text-align: left; /* Align the text to the left for LTR */
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
-  direction: ltr; /* Force LTR direction */
   transition: bottom 0.3s ease-in-out; /* Smooth sliding effect */
 }
 
@@ -344,7 +343,7 @@
   font-size: 1.2rem; /* Adjust font size for the title */
   font-weight: bold; /* Bold for emphasis */
   color: #fff; /* Ensure white text color */
-  text-align: left; /* Align text for LTR */
+  text-align: center; /* Align text for LTR */
 }
 
 .real-estate-info p {
