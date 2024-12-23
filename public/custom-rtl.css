@@ -59,11 +59,16 @@
   }
   
     /* Close button styling */
-  .modal-header .close {
-      font-size: 1.5rem;
-      line-height: 1;
-      padding: 0.75rem;
-      margin: 0;
+    .modal-header .close {
+      float: left !important; /* Position the button to the left for Arabic */
+      font-size: 1.5rem !important; /* Ensure consistent font size */
+      line-height: 1 !important; /* Ensure proper line height */
+      padding: 0.75rem !important; /* Add consistent padding */
+      margin: 0 !important; /* Remove unnecessary margins */
+      color: #000 !important; /* Set the color to black */
+      cursor: pointer !important; /* Pointer cursor on hover */
+      background: none !important; /* Remove any background */
+      border: none !important; /* Remove borders */
   }
   
     /* Add animation to the body of the modal when it slides in */
@@ -268,65 +273,75 @@
     width: auto;
   }
   
-  .real-estate-portfolio {
-    padding: 50px 0;
-  }
-  
-  .real-estate-items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .real-estate-card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-  }
-  
-  .real-estate-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  .real-estate-img {
-    width: 100%;
-    height: 250px; /* Set a fixed height */
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .real-estate-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the image covers the whole area */
-    transition: transform 0.3s ease;
-  }
-  
-  .real-estate-card:hover .real-estate-img img {
-    transform: scale(1.1); /* Zoom effect on hover */
-  }
-  
-  .real-estate-info {
-    padding: 15px;
-    text-align: center;
-    background-color: #fff;
-  }
-  
-  .real-estate-info h3 {
-    margin: 0;
-    font-size: 18px;
-    color: #333;
-    font-weight: 600;
-    transition: color 0.3s ease;
-  }
-  
-  .real-estate-card:hover .real-estate-info h3 {
-    color: #603F26; /* Change color on hover */
-  }
+  /* Real Estate Portfolio */
+.real-estate-portfolio {
+  position: relative;
+  overflow: hidden; /* Ensure no overflow */
+}
+
+/* Real Estate Card Styling */
+.real-estate-card {
+  position: relative; /* Position elements relative to the card */
+  overflow: hidden; /* Ensure inner content doesn't overflow */
+  height: 350px; /* Fixed height for consistency */
+  border: 1px solid #ddd; /* Add a subtle border */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+  transition: transform 0.3s ease-in-out; /* Smooth zoom on hover */
+}
+
+.real-estate-card:hover {
+  transform: scale(1.02); /* Slight zoom effect on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Real Estate Image Styling */
+.real-estate-img {
+  position: absolute; /* Position behind the info panel */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.real-estate-img img {
+  width: 100%; /* Stretch to fit the width */
+  height: 100%; /* Stretch to fit the height */
+  object-fit: cover; /* Ensure the image covers the area proportionally */
+}
+
+/* Real Estate Info Panel */
+.real-estate-info {
+  position: absolute; /* Position at the bottom of the card */
+  bottom: -100px; /* Start hidden below the card */
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Black semi-transparent background */
+  color: #fff; /* White text for contrast */
+  padding: 15px; /* Padding for content */
+  text-align: center; /* Center the text */
+  transition: bottom 0.3s ease-in-out; /* Smooth sliding effect */
+}
+
+/* Real Estate Info Text */
+.real-estate-info h3 {
+  margin: 0;
+  font-size: 1.2rem; /* Adjusted font size */
+  font-weight: bold; /* Bold for emphasis */
+  color: #fff; /* Ensure white text color */
+}
+
+.real-estate-info p {
+  margin: 5px 0 0; /* Add spacing above the paragraph */
+  font-size: 1rem; /* Adjust font size for description */
+  color: #ccc; /* Slightly lighter text color for secondary text */
+}
+
+/* Hover Effect: Slide Up the Info Panel */
+.real-estate-card:hover .real-estate-info {
+  bottom: 0; /* Bring the panel into view on hover */
+}
+
   
   .esg-section {
     padding: 50px 0;
@@ -545,6 +560,7 @@
     width: 100%; /* Ensure the table takes full width of its container */
     max-width: 400px; /* Set a fixed max-width for the table */
     margin: 0 auto; /* Center the table within its container if needed */
+    font-size: 1rem;
   }
   
   /* Table Cell Styling */
@@ -564,6 +580,7 @@
   
   .portfolio-description {
     text-align: justify;
+    font-size: 1rem;
   }
   
   .map-container {
@@ -759,6 +776,7 @@
     color: #333;
     padding: 50px 30px 30px; /* Top padding increased to 50px, sides and bottom remain 30px */
     text-align: justify;
+    font-size: 1rem;
   }
   
   /* Custom Close Button */
@@ -837,24 +855,23 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
   }
   
-  @media (max-width: 768px) {
-    .custom-side-panel {
-        width: 100%;       /* Full width on mobile */
-        right: -100%;       /* Hidden by default */
-        height: 100%;      /* Full height on mobile */
-        border-radius: 0;  /* Remove any rounded corners */
-    }
-  
-    .custom-side-panel-content {
-        padding: 20px;     /* Reduce padding for mobile view */
-    }
-  
-    .custom-close-btn {
-        font-size: 2rem;
-        top: 15px;
-        left: 20px;
-    }
+  /* Mobile view adjustments */
+@media (max-width: 768px) {
+  .custom-side-panel {
+      width: 100%;       /* Full width on mobile */
+      right: -100%;      /* Ensure it's fully hidden */
+      height: 100%;      /* Full height */
+      border-radius: 0;  /* No rounded corners */
+      transition: right 0.5s ease; /* Smooth transition */
   }
+
+  .custom-close-btn {
+      font-size: 2rem;   /* Adjust close button size */
+      top: 15px;
+      left: 20px;        /* Place close button on the left */
+  }
+}
+
   
   .custom-pitch-button {
     display: inline-block;
@@ -865,6 +882,7 @@
     border-radius: 5px;          /* Optional: Rounded corners */
     font-weight: bold;
     transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1rem;
   }
   
   .custom-pitch-button i {
@@ -1192,3 +1210,17 @@
       font-size: 1.5rem; /* Adjust the size as needed */
     }
   }
+
+  /* Default icon size */
+.info-icon {
+  font-size: 2rem; /* Reduce the size from fa-4x (default ~3rem) */
+  color: #333; /* Optional: Adjust the color of the icons */
+  margin-bottom: 15px; /* Add some space below the icon */
+}
+
+/* Adjust icon size for mobile screens */
+@media (max-width: 768px) {
+  .info-icon {
+      font-size: 2rem; /* Further reduce size on smaller screens */
+  }
+}

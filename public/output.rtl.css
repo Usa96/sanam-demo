@@ -20854,6 +20854,7 @@ body:not(.has-plugin-html5video) .video-wrap video {
 .page-title-parallax .container {
   position: relative;
   z-index: 2;
+  width: 60%;
 }
 .page-title-parallax span {
   font-size: var(--cnvs-page-title-parallax-subtitle-size);
