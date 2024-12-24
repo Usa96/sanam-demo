@@ -7,6 +7,9 @@
  * Copyright 2011-2023 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+
+
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -20085,21 +20088,28 @@ body:not(.has-plugin-html5video) .video-wrap video {
 
 .video-overlay,
 .video-placeholder {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  z-index: 5;
-  background: transparent url("images/grid.png") repeat;
-  transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0 !important; /* Align the element to the left edge */
+    z-index: 5;
+    background: transparent url("images/grid.png") repeat;
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
 }
 
 .video-placeholder {
   z-index: 4;
   background-repeat: no-repeat !important;
 }
+
+.video-wrap video {
+  position: relative; /* Ensure proper positioning */
+  left: unset !important; /* Unset inline style */
+}
+
+
 
 /* Slider Caption
 -----------------------------------------------------------------*/
@@ -20134,7 +20144,7 @@ body:not(.has-plugin-html5video) .video-wrap video {
   letter-spacing: 0;
   text-transform: none;
   font-weight: 600;
-  line-height: 1;
+  line-height: 1.5;
   margin-bottom: 0;
 }
 @media (max-width: 767.98px) {
@@ -34164,7 +34174,7 @@ body.dark {
 
 .hover-panel h4 {
   margin: 0;
-  font-size: 1.2rem; /* Adjusted font size */
+  font-size: 1rem; /* Adjusted font size */
   color: #fff;
 }
 
@@ -34468,7 +34478,7 @@ body.dark {
 }
 
 .case-study-description {
-  font-size: 1rem;
+  font-size: 1rem !important;
   color: #B0C4DE; /* Lighter color for the description */
   margin-bottom: 20px;
 }
@@ -34498,7 +34508,7 @@ body.dark {
 }
 
 .case-study-details li {
-  font-size: 1rem; /* Base font size for list items */
+  font-size: 1rem !important; /* Base font size for list items */
   line-height: 1.5; /* Adjust line height for better readability */
   margin-bottom: 10px;
   display: flex;
@@ -34507,7 +34517,7 @@ body.dark {
 }
 
 .case-study-details li i {
-  font-size: 1rem; /* Font size for icons */
+  font-size: 1rem !important; /* Font size for icons */
   margin-left: 10px;
   color: #B59B68; /* Gold color for the icons */
 }
@@ -35222,3 +35232,8 @@ body.dark {
   font-size: 0.9rem;
 }
 
+.sub-menu-trigger i,
+.sub-menu-trigger .fa,
+.fa-solid {
+    font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Pro', FontAwesome, sans-serif !important;
+}

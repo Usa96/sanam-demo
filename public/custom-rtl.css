@@ -5,6 +5,54 @@
 	Overwriting Default Theme Styles for Better Handling Updates
 -----------------------------------------------------------------*/
 
+/* Define font-faces for each weight */
+@font-face {
+  font-family: 'Noto Kufi Arabic';
+  src: url('Noto_Kufi_Arabic/NotoKufiArabic-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Kufi Arabic';
+  src: url('Noto_Kufi_Arabic/NotoKufiArabic-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Kufi Arabic';
+  src: url('Noto_Kufi_Arabic/NotoKufiArabic-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Add more font weights as needed */
+
+/* Apply the font globally */
+* {
+  font-family: 'Noto Kufi Arabic', sans-serif !important;
+}
+
+/* Apply font globally */
+* {
+  font-family: 'Noto Kufi Arabic', sans-serif !important;
+}
+
+/* Exclude font-family for social media icons */
+footer i {
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", sans-serif !important;
+  font-weight: 900; /* Adjust this if necessary for specific icon weights */
+}
+
+/* Force Font Awesome for icons in info-section */
+.info-section a i, /* Icons within anchors in info-section */
+.info-section .info-icon { /* Icons directly under info-section */
+    font-family: "Font Awesome 5 Free" !important; /* Use Font Awesome font */
+    font-weight: 900; /* Apply solid weight for Font Awesome */
+    font-style: normal; /* Ensure no unintended styles are applied */
+}
+
 :root {
     --cnvs-header-height-sm: 10rem;
     --cnvs-header-height-sm: 7rem;  /* For small screens */
@@ -104,11 +152,20 @@
   }
   
   .company-logo img {
-    max-width: 60%; /* Limit the logo size to 60% of the container */
+    max-width: 100%; /* Limit the logo size to 60% of the container */
     height: auto;   /* Maintain the aspect ratio */
     display: block;
     margin: 0 0; /* Center the logo horizontally */
   }
+
+  @media (max-width: 768px) {
+    .company-logo img {
+        max-width: 70%; /* Adjust logo size for mobile */
+        height: auto; /* Maintain aspect ratio */
+        margin: 0 auto; /* Center the logo */
+    }
+}
+
   
   /* Company Details Table */
   .company-details-table {
@@ -203,7 +260,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
-    }
+      max-width: 100%; /* Prevents unnecessary stretching */
+      margin: 0 auto; /* Centers the logo */
+  }
   
     .company-details-table {
       width: 100%; /* Full width for the table */
@@ -1223,4 +1282,21 @@
   .info-icon {
       font-size: 2rem; /* Further reduce size on smaller screens */
   }
+}
+
+.case-study {
+  font-size: 1rem; /* This makes the font size equivalent to 16px */
+}
+
+.case-study h2,
+.case-study h3 {
+  font-size: 1.2rem; /* Slightly larger for headings */
+}
+
+.case-study p {
+  font-size: 1rem; /* Keeps paragraphs consistent with the base size */
+}
+
+.case-study a {
+  font-size: 1rem; /* Ensures links within the case-study section follow the same size */
 }
