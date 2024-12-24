@@ -160,7 +160,8 @@ footer i {
 
   @media (max-width: 768px) {
     .company-logo img {
-        max-width: 70%; /* Adjust logo size for mobile */
+        max-width: 100% !important; /* Adjust logo size for mobile */
+        width: 52% !important;
         height: auto; /* Maintain aspect ratio */
         margin: 0 auto; /* Center the logo */
     }
