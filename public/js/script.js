@@ -234,5 +234,3 @@ const languageToggle = document.getElementById('language-toggle');
 if (languageToggle) {
     languageToggle.addEventListener('click', switchLanguage);
 }
-
-
