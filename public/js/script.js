@@ -209,18 +209,25 @@ document.addEventListener("DOMContentLoaded", () => {
 function switchLanguage() {
     const currentURL = window.location.href; // Full URL
     const url = new URL(currentURL); // Parse the URL
-    const path = url.pathname; // Extract the path (e.g., /About.html or /ar_About.html)
-    const fileName = path.split('/').pop(); // Get the file name (e.g., About.html or ar_About.html)
+    const path = url.pathname; // Extract the path (e.g., /index.html or /About.html)
+    const fileName = path.split('/').pop(); // Get the file name (e.g., index.html or About.html)
+    const isHomepage = fileName === "" || fileName === "index.html"; // Check if it's the homepage
     const isArabic = fileName.startsWith('ar_'); // Check if the file is Arabic
 
     let newFileName;
 
-    if (isArabic) {
-        // If Arabic, switch to English by removing 'ar_' from the file name
-        newFileName = fileName.replace('ar_', '');
+    if (isHomepage) {
+        // Special case: handle homepage separately
+        newFileName = isArabic ? "index.html" : "ar_index.html";
     } else {
-        // If English, switch to Arabic by adding 'ar_' to the file name
-        newFileName = `ar_${fileName}`;
+        // Handle other pages normally
+        if (isArabic) {
+            // Switch to English
+            newFileName = fileName.replace('ar_', '');
+        } else {
+            // Switch to Arabic
+            newFileName = `ar_${fileName}`;
+        }
     }
 
     // Build the new URL
