@@ -1245,4 +1245,103 @@ body.custom-modal-open {
   margin-bottom: 10px;
 }
 
+/* portfolio carousel logos homepage */
 
+        /* Portfolio Carousel Container */
+        .portfolio-carousel-container {
+          position: relative;
+          overflow: hidden;
+          width: 100%;
+          margin: 0 auto;
+      }
+
+      /* Portfolio Carousel Inner */
+      .portfolio-carousel-track {
+          display: flex;
+          transition: transform 0.5s ease;
+          gap: 100px; /* Increased gap between logos */
+          padding: 10px 0;
+      }
+
+      /* Logo Styling */
+      .portfolio-carousel-logo {
+          flex: 0 0 auto;
+          width: 10%; /* Fixed width for logos */
+          margin: 0 10px; /* Add horizontal margin */
+          text-align: center;
+      }
+
+      .portfolio-carousel-logo img {
+          max-width: 75%;
+          height: auto;
+          transition: transform 0.3s ease;
+      }
+
+      .portfolio-carousel-logo img:hover {
+          transform: scale(1.1);
+      }
+
+      /* Navigation Buttons */
+      .portfolio-carousel-button {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: rgba(0, 0, 0, 0.5);
+          border: none;
+          color: white;
+          font-size: 20px;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+
+      .portfolio-carousel-button.prev {
+          left: 10px;
+      }
+
+      .portfolio-carousel-button.next {
+          right: 10px;
+      }
+
+      .oc-item {
+        width: 100px;
+      }
+
+      @media (max-width: 576px) {
+        #oc-clients .oc-item {
+            width: 60% !important; /* Half of the container width for two logos */
+            margin: 10px 0; /* Add some space between items */
+        }
+    
+        #oc-clients img {
+            width: 100%; /* Reduce logo size slightly for smaller screens */
+        }
+    }
+
+    @media (max-width: 576px) {
+      /* Specific adjustments for mobile screens */
+  
+      .mobile-ermc img {
+          width: 150px; /* Smaller size for mobile */
+      }
+  
+      .mobile-medcap img {
+          width: 250px; /* Smaller size for mobile */
+      }
+  
+      .mobile-spirit img {
+          width: 100px; /* Smaller size for mobile */
+      }
+  
+      .mobile-tiac img {
+          width: 110px; /* Smaller size for mobile */
+      }
+  
+      .mobile-natmed img {
+          width: 90px; /* Smaller size for mobile */
+      }
+  }
