@@ -1301,3 +1301,9 @@ footer i {
 .case-study a {
   font-size: 1rem; /* Ensures links within the case-study section follow the same size */
 }
+
+@media screen and (max-width: 768px) {
+  #oc-clients .owl-item img {
+    width: 150px !important; /* Example: Adjust for mobile view */
+  }
+}

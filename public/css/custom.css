@@ -1312,37 +1312,40 @@ body.custom-modal-open {
       }
 
      /* Override the width for specific logos */
-#oc-clients .owl-item.logo-abyan img {
-  width: 130px !important;
-}
+      #oc-clients .owl-item.logo-abyan img {
+        width: 130px !important;
+      }
 
-#oc-clients .owl-item.logo-eradat img {
-  width: 183px !important;
-}
+      #oc-clients .owl-item.logo-eradat img {
+        width: 183px !important;
+      }
 
-#oc-clients .owl-item.logo-ermc img {
-  width: 130px !important;
-}
+      #oc-clients .owl-item.logo-ermc img {
+        width: 130px !important;
+      }
 
-#oc-clients .owl-item.logo-medcap img {
-  width: 200px !important;
-}
+      #oc-clients .owl-item.logo-medcap img {
+        width: 200px !important;
+      }
 
-#oc-clients .owl-item.logo-spirit img {
-  width: 200px !important;
-}
+      #oc-clients .owl-item.logo-spirit img {
+        width: 200px !important;
+      }
 
-#oc-clients .owl-item.logo-tiac img {
-  width: 200px !important;
-}
+      #oc-clients .owl-item.logo-tiac img {
+        width: 200px !important;
+      }
 
-#oc-clients .owl-item.logo-natmed img {
-  width: 250px !important;
-}
+      #oc-clients .owl-item.logo-natmed img {
+        width: 200px !important;
+      }
 
-/* Add media query for mobile adjustments */
-@media screen and (max-width: 768px) {
-  #oc-clients .owl-item img {
-    width: 100px !important; /* Example: Adjust for mobile view */
-  }
-}
+      /* Add media query for mobile adjustments */
+      @media screen and (max-width: 768px) {
+        #oc-clients .owl-item img {
+          width: 150px !important; /* Example: Adjust for mobile view */
+        }
+        #oc-clients .owl-item.logo-eradat img {
+          width: 170px !important;
+        }
+      }
