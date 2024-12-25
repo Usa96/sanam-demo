@@ -230,8 +230,12 @@ function switchLanguage() {
         }
     }
 
+    // Ensure the path starts with a slash
+    const newPath = path.replace(fileName, newFileName).startsWith('/')
+        ? path.replace(fileName, newFileName)
+        : `/${path.replace(fileName, newFileName)}`;
+
     // Build the new URL
-    const newPath = path.replace(fileName, newFileName); // Replace the old file name with the new one
     const newURL = `${url.origin}${newPath}`; // Construct the full new URL
     window.location.href = newURL; // Redirect to the new URL
 }
