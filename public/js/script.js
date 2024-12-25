@@ -209,18 +209,18 @@ document.addEventListener("DOMContentLoaded", () => {
 function switchLanguage() {
     const currentURL = window.location.href; // Full URL
     const url = new URL(currentURL); // Parse the URL
-    const path = url.pathname; // Extract the path (e.g., /index.html or /About.html)
-    const fileName = path.split('/').pop(); // Get the file name (e.g., index.html or About.html)
+    const path = url.pathname; // Extract the path (e.g., /index.html or /ar_index.html)
+    const fileName = path.split('/').pop(); // Get the file name (e.g., index.html or ar_index.html)
     const isHomepage = fileName === "" || fileName === "index.html"; // Check if it's the homepage
-    const isArabic = fileName.startsWith('ar_'); // Check if the file is Arabic
+    const isArabic = fileName.toLowerCase().startsWith('ar_'); // Check if the file is Arabic
 
     let newFileName;
 
     if (isHomepage) {
-        // Special case: handle homepage separately
+        // Handle homepage (index page)
         newFileName = isArabic ? "index.html" : "ar_index.html";
     } else {
-        // Handle other pages normally
+        // Handle subpages
         if (isArabic) {
             // Switch to English
             newFileName = fileName.replace('ar_', '');
@@ -230,18 +230,9 @@ function switchLanguage() {
         }
     }
 
-    // Ensure the path starts with a slash
-    const newPath = path.replace(fileName, newFileName).startsWith('/')
-        ? path.replace(fileName, newFileName)
-        : `/${path.replace(fileName, newFileName)}`;
-
-    // Build the new URL
-    const newURL = `${url.origin}${newPath}`; // Construct the full new URL
+    // Construct the new URL without adding a trailing slash
+    const newPath = path.replace(fileName, newFileName).replace(/\/$/, ''); // Ensure no trailing slash
+    const newURL = `${url.origin}${newPath}`;
+    console.log('Redirecting to:', newURL); // Debugging
     window.location.href = newURL; // Redirect to the new URL
-}
-
-// Add event listener to the language toggle button
-const languageToggle = document.getElementById('language-toggle');
-if (languageToggle) {
-    languageToggle.addEventListener('click', switchLanguage);
 }
