@@ -206,33 +206,37 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Function to switch language
-function switchLanguage() {
-    const currentURL = window.location.href; // Full URL
-    const url = new URL(currentURL); // Parse the URL
-    const path = url.pathname; // Extract the path (e.g., /index.html or /ar_index.html)
-    const fileName = path.split('/').pop(); // Get the file name (e.g., index.html or ar_index.html)
-    const isHomepage = fileName === "" || fileName === "index.html"; // Check if it's the homepage
-    const isArabic = fileName.toLowerCase().startsWith('ar_'); // Check if the file is Arabic
-
-    let newFileName;
-
-    if (isHomepage) {
-        // Handle homepage (index page)
-        newFileName = isArabic ? "index.html" : "ar_index.html";
-    } else {
-        // Handle subpages
-        if (isArabic) {
-            // Switch to English
-            newFileName = fileName.replace('ar_', '');
-        } else {
-            // Switch to Arabic
-            newFileName = `ar_${fileName}`;
-        }
+    const languageToggle = document.getElementById('language-toggle');
+    if (languageToggle) {
+        languageToggle.addEventListener('click', switchLanguage);
     }
 
-    // Construct the new URL without adding a trailing slash
-    const newPath = path.replace(fileName, newFileName).replace(/\/$/, ''); // Ensure no trailing slash
-    const newURL = `${url.origin}${newPath}`;
-    console.log('Redirecting to:', newURL); // Debugging
-    window.location.href = newURL; // Redirect to the new URL
-}
+    function switchLanguage() {
+        // Get the current URL
+        const currentUrl = window.location.href;
+
+        // Parse the URL
+        const url = new URL(currentUrl);
+        const path = url.pathname;
+        const fileName = path.split('/').pop(); // Get the file name
+        const directory = path.replace(fileName, ''); // Get the directory
+
+        // Check if the file is already in Arabic
+        const isArabic = fileName.startsWith('ar_');
+        let newFileName;
+
+        // Toggle the language
+        if (isArabic) {
+            // Remove 'ar_' prefix for the default language
+            newFileName = fileName.replace('ar_', '');
+        } else {
+            // Add 'ar_' prefix for Arabic
+            newFileName = 'ar_' + fileName;
+        }
+
+        // Construct the new URL
+        const newUrl = url.origin + directory + newFileName;
+
+        // Redirect to the new URL
+        window.location.href = newUrl;
+    }
