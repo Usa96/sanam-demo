@@ -208,30 +208,25 @@ document.addEventListener("DOMContentLoaded", () => {
 // Function to switch language
 function switchLanguage() {
     const currentURL = window.location.href; // Full URL
-    const isLocal = currentURL.includes('file://') || currentURL.includes('C:/'); // Check if local environment
-    const url = new URL(currentURL, window.location.origin); // Parse URL (adjust for local)
-    const path = url.pathname; // Extract path
-    const isArabic = path.includes('/ar_') || path.includes('ar/'); // Detect Arabic path
+    const url = new URL(currentURL); // Parse the URL
+    const path = url.pathname; // Extract the path (e.g., /About.html or /ar_About.html)
+    const fileName = path.split('/').pop(); // Get the file name (e.g., About.html or ar_About.html)
+    const isArabic = fileName.startsWith('ar_'); // Check if the file is Arabic
 
-    let newPath;
+    let newFileName;
 
     if (isArabic) {
-        // If Arabic, switch to English
-        newPath = path.replace('/ar_', '/').replace('ar/', ''); // Handle both formats
+        // If Arabic, switch to English by removing 'ar_' from the file name
+        newFileName = fileName.replace('ar_', '');
     } else {
-        // If English, switch to Arabic
-        const fileName = path.split('/').pop(); // Get file name
-        if (isLocal) {
-            // Local: add 'ar_' to the file name
-            newPath = path.replace(fileName, `ar_${fileName}`);
-        } else {
-            // Online: add '/ar/' in the path
-            newPath = `/ar${path}`;
-        }
+        // If English, switch to Arabic by adding 'ar_' to the file name
+        newFileName = `ar_${fileName}`;
     }
 
-    const newURL = isLocal ? `file://${newPath}` : `${url.origin}${newPath}`; // Build new URL
-    window.location.href = newURL; // Redirect
+    // Build the new URL
+    const newPath = path.replace(fileName, newFileName); // Replace the old file name with the new one
+    const newURL = `${url.origin}${newPath}`; // Construct the full new URL
+    window.location.href = newURL; // Redirect to the new URL
 }
 
 // Add event listener to the language toggle button
