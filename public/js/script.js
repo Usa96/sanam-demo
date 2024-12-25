@@ -206,37 +206,31 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Function to switch language
-    const languageToggle = document.getElementById('language-toggle');
-    if (languageToggle) {
-        languageToggle.addEventListener('click', switchLanguage);
+const languageToggle = document.getElementById('language-toggle');
+if (languageToggle) {
+    languageToggle.addEventListener('click', switchLanguage);
+}
+
+function switchLanguage() {
+    const currentUrl = window.location.href;
+    const url = new URL(currentUrl);
+    const path = url.pathname;
+    const fileName = path.split('/').pop() || 'index'; // Default to 'index' if no file name is present
+    const directory = path.replace(fileName, ''); // Get the directory
+
+    let newFileName;
+
+    if (fileName === 'index') {
+        // Special case: Home page
+        newFileName = 'ar_index';
+    } else if (fileName.startsWith('ar_')) {
+        // Remove 'ar_' prefix to revert to default language
+        newFileName = fileName.replace('ar_', '');
+    } else {
+        // Add 'ar_' prefix for Arabic
+        newFileName = 'ar_' + fileName;
     }
 
-    function switchLanguage() {
-        // Get the current URL
-        const currentUrl = window.location.href;
-
-        // Parse the URL
-        const url = new URL(currentUrl);
-        const path = url.pathname;
-        const fileName = path.split('/').pop(); // Get the file name
-        const directory = path.replace(fileName, ''); // Get the directory
-
-        // Check if the file is already in Arabic
-        const isArabic = fileName.startsWith('ar_');
-        let newFileName;
-
-        // Toggle the language
-        if (isArabic) {
-            // Remove 'ar_' prefix for the default language
-            newFileName = fileName.replace('ar_', '');
-        } else {
-            // Add 'ar_' prefix for Arabic
-            newFileName = 'ar_' + fileName;
-        }
-
-        // Construct the new URL
-        const newUrl = url.origin + directory + newFileName;
-
-        // Redirect to the new URL
-        window.location.href = newUrl;
-    }
+    const newUrl = url.origin + directory + newFileName;
+    window.location.href = newUrl;
+}
