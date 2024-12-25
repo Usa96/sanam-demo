@@ -1311,37 +1311,38 @@ body.custom-modal-open {
         width: 100px;
       }
 
-      @media (max-width: 576px) {
-        #oc-clients .oc-item {
-            width: 60% !important; /* Half of the container width for two logos */
-            margin: 10px 0; /* Add some space between items */
-        }
-    
-        #oc-clients img {
-            width: 100%; /* Reduce logo size slightly for smaller screens */
-        }
-    }
+     /* Override the width for specific logos */
+#oc-clients .owl-item.logo-abyan img {
+  width: 130px !important;
+}
 
-    @media (max-width: 576px) {
-      /* Specific adjustments for mobile screens */
-  
-      .mobile-ermc img {
-          width: 150px; /* Smaller size for mobile */
-      }
-  
-      .mobile-medcap img {
-          width: 250px; /* Smaller size for mobile */
-      }
-  
-      .mobile-spirit img {
-          width: 100px; /* Smaller size for mobile */
-      }
-  
-      .mobile-tiac img {
-          width: 110px; /* Smaller size for mobile */
-      }
-  
-      .mobile-natmed img {
-          width: 90px; /* Smaller size for mobile */
-      }
+#oc-clients .owl-item.logo-eradat img {
+  width: 183px !important;
+}
+
+#oc-clients .owl-item.logo-ermc img {
+  width: 130px !important;
+}
+
+#oc-clients .owl-item.logo-medcap img {
+  width: 200px !important;
+}
+
+#oc-clients .owl-item.logo-spirit img {
+  width: 200px !important;
+}
+
+#oc-clients .owl-item.logo-tiac img {
+  width: 200px !important;
+}
+
+#oc-clients .owl-item.logo-natmed img {
+  width: 250px !important;
+}
+
+/* Add media query for mobile adjustments */
+@media screen and (max-width: 768px) {
+  #oc-clients .owl-item img {
+    width: 100px !important; /* Example: Adjust for mobile view */
   }
+}
