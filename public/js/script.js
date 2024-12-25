@@ -231,6 +231,9 @@ function switchLanguage() {
         newFileName = 'ar_' + fileName;
     }
 
+    // Check if the file actually exists (optional if necessary)
     const newUrl = url.origin + directory + newFileName;
+    
+    // Redirect to the new URL
     window.location.href = newUrl;
 }
