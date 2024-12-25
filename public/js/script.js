@@ -207,26 +207,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Function to switch language
 function switchLanguage() {
-    const currentURL = window.location.href; // Get the current page URL
-    const isArabic = currentURL.includes('ar_'); // Check if the page is Arabic
-  
-    let newURL;
-  
+    const currentURL = window.location.href; // Full URL
+    const isLocal = currentURL.includes('file://') || currentURL.includes('C:/'); // Check if local environment
+    const url = new URL(currentURL, window.location.origin); // Parse URL (adjust for local)
+    const path = url.pathname; // Extract path
+    const isArabic = path.includes('/ar_') || path.includes('ar/'); // Detect Arabic path
+
+    let newPath;
+
     if (isArabic) {
-      // If Arabic, switch to English
-      newURL = currentURL.replace('ar_', ''); // Remove 'ar_' from the file name
+        // If Arabic, switch to English
+        newPath = path.replace('/ar_', '/').replace('ar/', ''); // Handle both formats
     } else {
-      // If English, switch to Arabic
-      const path = currentURL.split('/').pop(); // Get the file name
-      newURL = currentURL.replace(path, `ar_${path}`); // Add 'ar_' to the file name
+        // If English, switch to Arabic
+        const fileName = path.split('/').pop(); // Get file name
+        if (isLocal) {
+            // Local: add 'ar_' to the file name
+            newPath = path.replace(fileName, `ar_${fileName}`);
+        } else {
+            // Online: add '/ar/' in the path
+            newPath = `/ar${path}`;
+        }
     }
-  
-    window.location.href = newURL; // Redirect to the new URL
-  }
-  
-  // Add event listener to the language toggle button
-  const languageToggle = document.getElementById('language-toggle');
-  if (languageToggle) {
+
+    const newURL = isLocal ? `file://${newPath}` : `${url.origin}${newPath}`; // Build new URL
+    window.location.href = newURL; // Redirect
+}
+
+// Add event listener to the language toggle button
+const languageToggle = document.getElementById('language-toggle');
+if (languageToggle) {
     languageToggle.addEventListener('click', switchLanguage);
-  }
-  
+}
+
+
