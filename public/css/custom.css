@@ -1345,7 +1345,4 @@ body.custom-modal-open {
         #oc-clients .owl-item img {
           width: 150px !important; /* Example: Adjust for mobile view */
         }
-        #oc-clients .owl-item.logo-eradat img {
-          width: 170px !important;
-        }
       }
