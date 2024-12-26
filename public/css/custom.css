@@ -1346,3 +1346,26 @@ body.custom-modal-open {
           width: 150px !important; /* Example: Adjust for mobile view */
         }
       }
+
+      .homepage-news-image {
+        object-fit: cover; /* Ensures the image fills the entire container */
+        object-position: center center; /* Centers the visible portion */
+        width: 100%; /* Full width of the container */
+        height: 100%; /* Full height of the box */
+        border-radius: 5px; /* Optional: Keeps rounded corners */
+    }
+
+    .homepage-news-border {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      border-radius: 10px; /* Optional: Rounded corners */
+      overflow: hidden; /* Ensures no overflow beyond the border */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow for better appearance */
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .homepage-news-border:hover {
+      transform: translateY(-5px); /* Slightly lifts the item on hover */
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Adds a deeper shadow on hover */
+  }
