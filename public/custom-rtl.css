@@ -943,6 +943,7 @@ footer i {
     font-weight: bold;
     transition: background-color 0.3s ease, color 0.3s ease;
     font-size: 1rem;
+    font-family: "Font Awesome 5 Free";
   }
   
   .custom-pitch-button i {
@@ -1306,4 +1307,10 @@ footer i {
   #oc-clients .owl-item img {
     width: 150px !important; /* Example: Adjust for mobile view */
   }
+}
+
+.fas.fa-arrow-right {
+  font-family: "Font Awesome 5 Free" !important; /* Ensure the correct font is applied */
+  font-weight: 900; /* Required for solid icons */
+  font-style: normal; /* Avoid any inherited styles like italic */
 }
