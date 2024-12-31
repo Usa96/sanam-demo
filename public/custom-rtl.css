@@ -695,13 +695,13 @@ footer i {
   
   /* File name and size */
   .file-name {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     margin-bottom: 20px;
     color: #333;
   }
   
   .file-size {
-    font-size: 0.9em;
+    font-size: 1rem;
     margin-bottom: 20px;
     color: #777;
   }
@@ -1341,13 +1341,6 @@ footer i {
   margin-bottom: 10px;
 }
 
-/* File name and size */
-.file-name {
-  font-size: 1em;
-  margin-bottom: 20px;
-  color: #333;
-}
-
 /* Download button */
 .download-btn {
   background-color: #8C6A4F;
@@ -1357,6 +1350,7 @@ footer i {
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 1rem;
 }
 
 .download-btn:hover {
@@ -1384,4 +1378,8 @@ transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 .homepage-news-border:hover {
 transform: translateY(-5px); /* Slightly lifts the item on hover */
 box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Adds a deeper shadow on hover */
+}
+
+.fa-classic, .fa-regular, .fa-solid, .far, .fas {
+  font-family: "Font Awesome 6 Free" !important;
 }
