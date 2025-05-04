@@ -1303,11 +1303,29 @@ footer i {
   font-size: 1rem; /* Ensures links within the case-study section follow the same size */
 }
 
-@media screen and (max-width: 768px) {
-  #oc-clients .owl-item img {
-    width: 100px !important; /* Example: Adjust for mobile view */
+@media (max-width: 768px) {
+  #oc-clients .oc-item {
+    padding: 0 10px;         /* Horizontal spacing */
+    text-align: center;
+    width: auto !important;  /* Prevent inline width override */
+  }
+
+  #oc-clients .oc-item img {
+    max-width: 100px;
+    height: auto;
+    display: inline-block;
+  }
+
+  /* Larger logos */
+  #oc-clients .mobile-natmed img,
+  #oc-clients .mobile-tiac img,
+  #oc-clients .mobile-spirit img,
+  #oc-clients .mobile-medcap img {
+    max-width: 130px;
   }
 }
+
+
 
 .fas.fa-arrow-right {
   font-family: "Font Awesome 5 Free" !important; /* Ensure the correct font is applied */

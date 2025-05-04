@@ -35258,15 +35258,23 @@ body.dark {
 }
 
 @media (max-width: 768px) {
-  #oc-clients .oc-item img {
-    max-width: 100px;   /* Shrinks the logo */
-    height: auto;      /* Maintain aspect ratio */
-    margin: 0 auto;    /* Center if needed */
-    display: block;    /* Ensures centering works */
+  #oc-clients .oc-item {
+    padding: 0 10px;         /* Horizontal spacing */
+    text-align: center;
+    width: auto !important;  /* Prevent inline width override */
   }
 
-  /* Optional: Reduce padding/margins */
-  #oc-clients .oc-item {
-    padding: 5px;
+  #oc-clients .oc-item img {
+    max-width: 100px;
+    height: auto;
+    display: inline-block;
+  }
+
+  /* Larger logos */
+  #oc-clients .mobile-natmed img,
+  #oc-clients .mobile-tiac img,
+  #oc-clients .mobile-spirit img,
+  #oc-clients .mobile-medcap img {
+    max-width: 130px;
   }
 }
