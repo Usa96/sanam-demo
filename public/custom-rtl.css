@@ -1305,7 +1305,7 @@ footer i {
 
 @media screen and (max-width: 768px) {
   #oc-clients .owl-item img {
-    width: 150px !important; /* Example: Adjust for mobile view */
+    width: 100px !important; /* Example: Adjust for mobile view */
   }
 }
 

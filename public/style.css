@@ -35257,3 +35257,16 @@ body.dark {
   font-size: 0.9rem;
 }
 
+@media (max-width: 768px) {
+  #oc-clients .oc-item img {
+    max-width: 100px;   /* Shrinks the logo */
+    height: auto;      /* Maintain aspect ratio */
+    margin: 0 auto;    /* Center if needed */
+    display: block;    /* Ensures centering works */
+  }
+
+  /* Optional: Reduce padding/margins */
+  #oc-clients .oc-item {
+    padding: 5px;
+  }
+}
