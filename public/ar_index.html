@@ -54,12 +54,15 @@
 						<!-- الشعار -->
 						<div id="logo">
 							<a href="ar_index.html">
-								<img class="logo-default" srcset="logo/sanam_logo_v2.png, logo/sanam_logo_v2.png" src="logo/sanam_logo_v2.png" alt="شعار سنام">
-								<img class="logo-dark" srcset="logo/sanam_logo_v2.png, logo/sanam_logo_v2.png" src="logo/sanam_logo_v2.png" alt="شعار مجموعة سنام القابضة">
-								<img class="logo-sticky" srcset="logo/sanam_logo_v2.png, logo/sanam_logo_v2.png" src="logo/sanam_logo_v2.png" alt="شعار مجموعة سنام القابضة">
-								<img class="logo-mobile" srcset="logo/sanam_logo_v2.png, logo/sanam_logo_v2.png" src="logo/sanam_logo_v2.png" alt="شعار مجموعة سنام القابضة">
+								<img class="logo" src="logo/sanam_logo_v2.webp"
+									alt="شعار مجموعة سنام القابضة"
+									loading="eager"
+									fetchpriority="high"
+									width="200"
+									height="auto"
+									decoding="async">
 							</a>
-						</div><!-- #الشعار end -->
+						</div>
 		
 						<div class="primary-menu-trigger">
 							<button class="cnvs-hamburger" type="button" title="فتح قائمة الجوال">
@@ -152,12 +155,19 @@
 					</div>
 				</div>
 
-				<div class="video-wrap no-placeholder" style="z-index: 1;">
-					<video poster="images/videos/Kuwait_city_video.mp4" style="left: 0;" preload="auto" loop autoplay muted playsinline>
-						<source src='images/videos/Kuwait_city_video.mp4' type='video/mp4'>
-					</video>
-					<div class="video-overlay" style="background-color: rgba(0,0,0,0.45);"></div>
+				<div class="video-wrap no-placeholder" style="position: relative; z-index: 1; width: 100%; height: 100vh; overflow: hidden;">
+
+					<!-- Background Video -->
+					<video id="hero-video" preload="none" autoplay muted loop playsinline poster="images/videos/Kuwait_city_image.webp" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;">
+						<source src="images/videos/Kuwait_city_video.webm" type="video/webm">
+						<source src="images/videos/Kuwait_city_video.mp4" type="video/mp4">
+					</video>				
+					<!-- Dark Overlay -->
+					<div class="video-overlay"
+						style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.45); z-index: 2;">
+					</div>
 				</div>
+
 
 			</div>
 		</section>
@@ -233,7 +243,7 @@
 												<a href="ar_Our_Businesses.html" class="button button-border button-rounded button-large button-light ms-0">المزيد</a>
 											</div>
 											<div class="col-md-6 text-center text-md-start">
-												<img src="images/pe.jpg" class="d-block w-100" alt="صورة الملكية الخاصة">
+												<img src="images/pe.webp" class="d-block w-100" alt="صورة الملكية الخاصة">
 											</div>
 										</div>
 									</div>
@@ -296,7 +306,7 @@
 											<h5 class="card-title">تطوير تربية الأحياء المائية المستدامة.</h5>
 											<a href="ar_case_study_tiac.html" class="btn btn-link text-dark ps-0">عرض التقرير &rarr;</a>
 										</div>
-										<img src="images/case studies/aquafarm_case_study.jpg" class="card-img-bottom" alt="الزراعة المائية تكامل تكنولوجيا الاستدامة المزارع الراس النظام">
+										<img src="images/case studies/aquafarm_case_study.webp" class="card-img-bottom" alt="الزراعة المائية تكامل تكنولوجيا الاستدامة المزارع الراس النظام">
 									</div>
 								</div>
 								<!-- Second Card -->
@@ -306,7 +316,7 @@
 											<h5 class="card-title">ثورة البناء باستخدام الطباعة ثلاثية الأبعاد.</h5>
 											<a href="ar_case_study_abyan.html" class="btn btn-link text-dark ps-0">عرض التقرير &rarr;</a>
 										</div>
-										<img src="images/abyan-case-study.JPG" class="card-img-bottom" alt="طباعة ثلاثية الأبعاد البناء الكويت أبيان أول">
+										<img src="images/abyan-case-study.webp" class="card-img-bottom" alt="طباعة ثلاثية الأبعاد البناء الكويت أبيان أول">
 									</div>
 								</div>
 							</div>
@@ -323,7 +333,7 @@
 							<div class="row" data-animate="fadeIn">
 								<!-- Image Section -->
 								<div class="col-md-4 text-md-start text-center mb-4 mb-md-0">
-									<img src="images/Dr._Sulaiman_Pic-removebg.png" class="img-fluid rounded-circle" alt="الدكتور سليمان طارق الجادر">
+									<img src="images/Dr._Sulaiman_Pic-removebg.webp" class="img-fluid rounded-circle" alt="الدكتور سليمان طارق الجادر">
 								</div>
 								<!-- Quote Section -->
 								<div class="col-md-8">

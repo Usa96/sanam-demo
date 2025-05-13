@@ -1,64 +1,58 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
-	
 	<!-- Charset & Compatibility -->
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	
-	<!-- Mobile Responsive -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	<!-- SEO Description -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+	<!-- Responsive Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<!-- SEO Meta -->
 	<meta name="description" content="SANAM Group is a Kuwait-based alternative investment platform specializing in growth capital, private equity, and high-yield real estate assets across the GCC and MENA region.">
-	
-	<!-- SEO Keywords (optional but can help) -->
 	<meta name="keywords" content="Sanam Group, Alternative Investment, Growth Capital, Private Equity, Real Estate Investment, Kuwait, MENA Investments">
-	
-	<!-- Author (optional) -->
-	<meta name="author" content="Sanam Group">
-	
-	<!-- Open Graph Tags (for social media sharing) -->
+	<meta name="author" content="Sanam Group">	
+	<!-- Open Graph -->
 	<meta property="og:title" content="SANAM Group – Leading Responsible Investing in Frontier Markets">
 	<meta property="og:description" content="A responsible alternative investment firm investing in high-potential companies and real estate across the frontier developing markets.">
-	<meta property="og:image" content="logo/sanam_logo_v2.webp"> <!-- Replace with actual image -->
+	<meta property="og:image" content="logo/sanam_logo_v2.webp">
 	<meta property="og:url" content="https://sanam.com/">
-	<meta property="og:type" content="website">
-
-	<!-- Font Imports -->
+	<meta property="og:type" content="website">	
+	<!-- Favicon -->
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">	
+	<!-- Font Preconnect & Preload -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Rubik:wght@400;600&family=Lora:ital@0;1&display=swap" rel="stylesheet">
-
-	<!-- Core Style -->
-	<link rel="stylesheet" href="style.css">
-
-	<!-- Font Icons -->
-	<link rel="stylesheet" href="css/font-icons.css">
-	<link rel="stylesheet" href="demos/real-estate/css/font-icons.css">
-
-	<!-- Plugins/Components CSS -->
-	<link rel="stylesheet" href="css/components/bs-select.css">
-	<link rel="stylesheet" href="css/components/bs-switches.css">
-	<link rel="stylesheet" href="css/components/ion.rangeslider.css">
-
-	<!-- Niche Demos -->
-	<link rel="stylesheet" href="demos/real-estate/real-estate.css">
-
-	<!-- Custom CSS -->
-	<link rel="stylesheet" href="css/custom.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
-
-	<link rel="preload" as="image" href="logo/sanam_logo_v2.webp" fetchpriority="high">
-
-
-	<!-- Document Title
-	============================================= -->
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Rubik:wght@400;600&family=Lora:ital@0;1&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Rubik:wght@400;600&family=Lora:ital@0;1&display=swap"></noscript>	
+	<!-- Preload Logo for LCP -->
+	<link rel="preload" as="image" href="logo/sanam_logo_v2.webp" fetchpriority="high">	
+	<!-- Inline Critical Logo Style -->		
+	<style>		
+	.logo {	position: relative;			
+			z-index: 10000;			
+			visibility: visible !important;			
+			opacity: 1 !important;}		
+	</style>	
+	<!-- Core Critical CSS (First Paint) -->
+	<link rel="stylesheet" href="style.css">	
+	<!-- Deferred CSS Stylesheets -->
+	<link rel="preload" as="style" href="css/font-icons.css" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="css/font-icons.css"></noscript>	
+	<link rel="preload" as="style" href="demos/real-estate/css/font-icons.css" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="demos/real-estate/css/font-icons.css"></noscript>	
+	<link rel="preload" as="style" href="css/components/bs-select.css" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="css/components/bs-select.css"></noscript>	
+	<link rel="preload" as="style" href="css/components/bs-switches.css" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="css/components/bs-switches.css"></noscript>	
+	<link rel="preload" as="style" href="css/components/ion.rangeslider.css" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="css/components/ion.rangeslider.css"></noscript>	
+	<link rel="preload" as="style" href="demos/real-estate/real-estate.css" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="demos/real-estate/real-estate.css"></noscript>	
+	<link rel="preload" as="style" href="css/custom.css" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="css/custom.css"></noscript>	
+	<!-- Document Title -->
 	<title>SANAM Group</title>
-
 </head>
+
 
 <body class="stretched">
 
@@ -76,13 +70,11 @@
 						<!-- Logo -->
 						<div id="logo">
 							<a href="index.html">
-								<img class="logo-default" srcset="logo/sanam_logo_v2.png, logo/sanam_logo_v2.png" src="logo/sanam_logo_v2.webp" alt="Sanam Logo" >
-								<img class="logo-dark" srcset="logo/sanam_logo_v2.png, logo/sanam_logo_v2.png" src="logo/sanam_logo_v2.webp" alt="Sanam Group Holdings Logo" >
-								<img class="logo-sticky" srcset="logo/sanam_logo_v2.png, logo/sanam_logo_v2.png" src="logo/sanam_logo_v2.webp" alt="Sanam Group Holdings Logo" >
-								<img class="logo-mobile" srcset="logo/sanam_logo_v2.png, logo/sanam_logo_v2.png" src="logo/sanam_logo_v2.webp" alt="Sanam Group Holdings Logo" >
+								<img class="logo" src="logo/sanam_logo_v2.webp" alt="Sanam Group Holdings Logo" loading="eager" fetchpriority="high" width="200" height="auto" decoding="async">
 							</a>
-						</div><!-- #logo end -->
-		
+						</div>
+
+
 						<div class="primary-menu-trigger">
 							<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
 								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
@@ -176,15 +168,14 @@
 				</div>
 
 				<div class="video-wrap no-placeholder" style="z-index: 1;">
-					<video preload="none" loop autoplay muted playsinline>
-						<source src='images/videos/Kuwait_city_video.webm' type='video/webm'>
+					<video id="hero-video" preload="none" loop muted playsinline poster="images/videos/Kuwait_city_image.webp">
+						<source src="images/videos/Kuwait_city_video.webm" type="video/webm">
 					</video>
 					<div class="video-overlay" style="background-color: rgba(0,0,0,0.45);"></div>
 				</div>
 
 			</div>
 		</section>
-		
 
 		<!-- Content
 		============================================= -->
@@ -256,7 +247,7 @@
 												<a href="Our_Businesses.html" class="button button-border button-rounded button-large button-light ms-0">Learn more</a>
 											</div>
 											<div class="col-md-6 text-center text-md-start">
-												<img src="images/pe.jpg" class="d-block w-100" alt="Slide 2 Image">
+												<img src="images/pe.webp" class="d-block w-100" alt="Slide 2 Image">
 											</div>
 										</div>
 									</div>
@@ -321,7 +312,7 @@
 											<h5 class="card-title">Advancing Sustainable Aquaculture in Kuwait. </h5>
 											<a href="case_study_tiac.html" class="btn btn-link text-dark ps-0">View Report &rarr;</a>
 										</div>
-										<img src="images/case studies/aquafarm_case_study.jpg" class="card-img-bottom" alt="Technical integrated Aquaculture Saliyah Fish Salyah Fish RAS system recirculaing systems advances farms">
+										<img src="images/case studies/aquafarm_case_study.webp" class="card-img-bottom" alt="Technical integrated Aquaculture Saliyah Fish Salyah Fish RAS system recirculaing systems advances farms">
 									</div>
 								</div>
 								<!-- Second Card -->
@@ -331,7 +322,7 @@
 											<h5 class="card-title">Revolutionizing Construction with 3D Printing. </h5>
 											<a href="case_study_abyan.html" class="btn btn-link text-dark ps-0">View Report &rarr;</a>
 										</div>
-										<img src="images/abyan-case-study.JPG" class="card-img-bottom" alt="3D printing construction Kuwaits First 3D printing construction Abyan building construction">
+										<img src="images/abyan-case-study.webp" class="card-img-bottom" alt="3D printing construction Kuwaits First 3D printing construction Abyan building construction">
 									</div>
 								</div>
 							</div>
@@ -348,7 +339,7 @@
 							<div class="row" data-animate="fadeIn">
 								<!-- Image Section -->
 								<div class="col-md-4 text-md-start text-center mb-4 mb-md-0">
-									<img src="images/Dr._Sulaiman_Pic-removebg.png" class="img-fluid rounded-circle" alt="Dr. Sulaiman Tareq Al Abdul Jader">
+									<img src="images/Dr._Sulaiman_Pic-removebg.webp" class="img-fluid rounded-circle" alt="Dr. Sulaiman Tareq Al Abdul Jader">
 								</div>
 								<!-- Quote Section -->
 								<div class="col-md-8">
@@ -562,6 +553,14 @@
 
 	<!-- Range Slider Plugin -->
 	<script src="js/components/rangeslider.min.js"></script>
+
+<script>
+	window.addEventListener('DOMContentLoaded', () => {
+		const vid = document.getElementById('hero-video');
+		setTimeout(() => vid.play(), 100); // slight delay to let poster render
+	});
+</script>
+
 
 	<!-- Owl Carousel CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
