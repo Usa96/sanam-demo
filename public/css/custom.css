@@ -1369,3 +1369,5 @@ body.custom-modal-open {
       transform: translateY(-5px); /* Slightly lifts the item on hover */
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Adds a deeper shadow on hover */
   }
+
+  

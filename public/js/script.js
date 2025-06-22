@@ -237,3 +237,4 @@ function switchLanguage() {
     // Redirect to the new URL
     window.location.href = newUrl;
 }
+
