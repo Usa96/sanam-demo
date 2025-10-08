@@ -77,11 +77,11 @@ const teamData = {
         description: "Saad Nasser Al Muneefi, Vice President of Assets Management at Kuwait Real Estate Company, possesses over 20 years of experience in the field. He leads the management of local properties, investments, and developments while fostering strong investor relations. Mr. Al Muneefis responsibilities encompass identifying new local opportunities, conducting financial feasibility studies, and formulating best-use scenarios for projects. He focuses on optimizing returns for existing properties, analyzing performance, and providing third-party real estate portfolio advisory. Additionally, he keeps investors and investment managers updated on the companys strategy, business activities, and results. With his extensive expertise, Mr. Al Muneefi plays a vital role in driving the success of Kuwait Real Estate Company.",
         image: "images/BOD/Mr. Saad Al Muneefi - Member.png",
     },
-    sulaimanFuraih: {
-        name: "Mr. Sulaiman M. Al Furaih",
+    bader: {
+        name: "Mr. Bader Al Hajeri",
         position: "Board Member",
-        description: "Member of the Audit Committee and Member of the Risk Committee in Sanam Real Estate Company. Mr. Al Furaih is Senior Vice President for Wafra International Investment Company in Kuwait, where he has risen through the ranks over a distinguished 17 years career with the firm. He also serves as the Chairman of the Board of Directors for Marbil Yapi Construction -Turkey and Board member for First Bahrain Real Estate Development Company. Mr. Al Furaih holds a Bachelor of Science degree in Accounting and Auditing from Kuwait University",
-        image: "images/BOD/Mr. Sulaiman Al Furaih - Member.png",
+        description: "Mr. Bader Al Hajeri is a Vice President in the Real Estate Department at Kuwait Real Estate Company, with over 16 years of experience in real estate and public relations. Known for his strong network and reputation across the industry, he plays a pivotal role in managing the company’s investments and strengthening its stakeholder relationships.",
+        image: "images/BOD/bader.webp",
     },
     bandar: {
         name: "Mr. Bandar S. Al Jarallah",
@@ -109,11 +109,11 @@ const membersData = {
         description: "السيد سعد ناصر المنيفي، نائب رئيس إدارة الأصول في شركة عقارات الكويت ، يتمتع بخبرة تتجاوز 20 عامًا في قطاع العقارات والاستثمارات. يقود إدارة الممتلكات المحلية والمشاريع التطويرية، ويركز على تحديد الفرص الجديدة، ودراسات الجدوى المالية، وتحسين عوائد الممتلكات الحالية .يشمل عمله تعزيز علاقات المستثمرين، تقديم تقارير الأداء، وإبقاء شركاء الاستثمار على اطلاع باستراتيجيات الشركة ونتائجها. بخبرته الواسعة، يلعب السيد المنيفي دورًا رئيسيًا في تعزيز نجاح شركة عقارات الكويت.",
         image: "images/BOD/Mr. Saad Al Muneefi - Member.png",
     },
-    sulaimanFuraih: {
-        name: "سليمان محمد الفريح",
+    bader: {
+        name: "بدر الهاجري",
         position: "عضو مجلس الإدارة",
-        description: "يشغل السيد سليمان الفريح منصب عضو لجنة التدقيق ولجنة المخاطر في شركة سنام العقارية. يعمل كنائب الرئيس الأول في شركة وفرة للاستثمار الدولي منذ أكثر من 17 عامًا.كما يرأس مجلس إدارة شركة ماربل يابي للإنشاءات في تركيا، وعضو مجلس إدارة شركة البحرين الأولى للتطوير العقاري. السيد الفريح حاصل على درجة البكالوريوس في المحاسبة والتدقيق من جامعة الكويت، ويتميز بخبرة عميقة في الإدارة المالية والاستثمارات.",
-        image: "images/BOD/Mr. Sulaiman Al Furaih - Member.png",
+        description: "السيد بدر الهاجري نائب رئيس إدارة العقار بشركة عقارات الكويت ، ويتمتع بأكثر من 16 عامًا من الخبرة في العقار والعلاقات العامة. وبفضل شبكته القوية وسمعته في القطاع، يلعب دورًا محوريًا في إدارة استثمارات الشركة وتعزيز علاقاتها.",
+        image: "images/BOD/bader.webp",
     },
     bandar: {
         name: "بندر سليمان الجار الله",
