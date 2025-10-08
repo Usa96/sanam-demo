@@ -238,3 +238,105 @@ function switchLanguage() {
     window.location.href = newUrl;
 }
 
+// ESG section
+
+    (function () {
+        const link = document.getElementById('esg-download');
+        const sizeEl = document.getElementById('esg-filesize');
+
+        // If your PDF is cross-origin, remove the `download` attribute so it opens in the browser.
+        try {
+        const url = new URL(link.href, location.origin);
+        if (url.origin !== location.origin) link.removeAttribute('download');
+        } catch (e) { /* ignore */ }
+
+        // OPTIONAL: Set size dynamically if you know it at runtime
+        // sizeEl.textContent = '18.4';
+    })();
+
+    (function(){
+    // ===== الإعدادات =====
+    const pdfUrl   = '/downloads/ESG_Report_2023.pdf'; // مسار ملف PDF
+    const pagesToShow = 3;     // عدد الصفحات المطلوبة
+    const targetW  = 750;      // عرض الصورة الناتجة (بكسل CSS)
+    const grid     = document.getElementById('esg-thumb-grid-ar');
+
+    if (!grid) return;
+
+    // عامل PDF.js
+    if (window['pdfjsLib']) {
+      pdfjsLib.GlobalWorkerOptions.workerSrc =
+        'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.4.168/build/pdf.worker.min.js';
+    }
+
+    async function renderPageToImage(pdf, pageNum){
+      const page = await pdf.getPage(pageNum);
+      const viewport = page.getViewport({ scale: 1 });
+      const scale = targetW / viewport.width;
+      const scaledViewport = page.getViewport({ scale });
+
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d', { willReadFrequently: false });
+
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width  = Math.floor(scaledViewport.width * dpr);
+      canvas.height = Math.floor(scaledViewport.height * dpr);
+      canvas.style.width  = Math.floor(scaledViewport.width) + 'px';
+      canvas.style.height = Math.floor(scaledViewport.height) + 'px';
+
+      const renderContext = {
+        canvasContext: ctx,
+        viewport: scaledViewport,
+        transform: [dpr, 0, 0, dpr, 0, 0]
+      };
+
+      await page.render(renderContext).promise;
+
+      const dataUrl = canvas.toDataURL('image/png');
+
+      const fig = document.createElement('div');
+      fig.className = 'esg-thumb';
+
+      const img = document.createElement('img');
+      img.alt = 'صفحة ' + pageNum + ' من التقرير';
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      img.src = dataUrl;
+
+      const badge = document.createElement('span');
+      badge.className = 'esg-thumb-badge';
+      badge.textContent = 'ص.' + pageNum;
+
+      fig.appendChild(img);
+      fig.appendChild(badge);
+      return fig;
+    }
+
+    async function init(){
+      try{
+        const loadingTask = pdfjsLib.getDocument(pdfUrl);
+        const pdf = await loadingTask.promise;
+
+        // إزالة الهياكل المؤقتة
+        grid.querySelectorAll('.esg-thumb-skel').forEach(el => el.remove());
+
+        const total = Math.min(pdf.numPages, pagesToShow);
+        for (let i = 1; i <= total; i++){
+          const thumbEl = await renderPageToImage(pdf, i);
+          grid.appendChild(thumbEl);
+        }
+      }catch(err){
+        console.error('فشل تحميل معاينة PDF:', err);
+        grid.innerHTML = '<img class="esg-cover" src="/images/reports/esg-2023-cover.jpg" alt="غلاف تقرير الأثر">';
+      }
+    }
+
+    init();
+
+    // سلوك زر التنزيل (إزالة download إذا كان المصدر خارجي)
+    const link = document.getElementById('esg-download-ar');
+    try {
+      const url = new URL(link.href, location.origin);
+      if (url.origin !== location.origin) link.removeAttribute('download');
+    } catch (e) {}
+  })();

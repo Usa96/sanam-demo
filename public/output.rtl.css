@@ -35237,3 +35237,129 @@ body.dark {
 .fa-solid {
     font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Pro', FontAwesome, sans-serif !important;
 }
+
+  /* ===== ESG RTL block (isolated) ===== */
+  .esg-section {
+    --esg-bg-start: #f4fbf7;
+    --esg-bg-end: #eff3ff;
+    --esg-card-bg: #ffffff;
+    --esg-text: #0f172a;
+    --esg-muted: #4b5563;
+    --esg-green: #76DB97;         /* brand */
+    --esg-green-strong: #2e9f59;
+    --esg-blue: #6089FB;          /* brand */
+    --esg-ring: #6089FB;
+    --esg-radius: 20px;
+
+    color: var(--esg-text);
+    background: linear-gradient(135deg, var(--esg-bg-start), var(--esg-bg-end));
+    padding: clamp(3rem, 5vw, 6rem) 1rem;
+  }
+  .esg-container {
+    max-width: 1200px;
+    margin-inline: auto;
+    display: grid;
+    gap: clamp(2rem, 4vw, 4rem);
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+  }
+  @media (max-width: 960px){ .esg-container { grid-template-columns: 1fr; } }
+
+  .esg-copy { max-width: 640px; text-align: right; }
+  .esg-chip {
+    display: inline-block;
+    background: #e8f7ee;
+    color: #1b7c41;
+    font-weight: 600;
+    padding: .35rem .75rem;
+    border-radius: 999px;
+    font-size: .85rem;
+  }
+  .esg-title {
+    margin: .75rem 0 .5rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: -.02em;
+    font-weight: 800;
+  }
+  .esg-title-accent { color: var(--esg-black); }
+  .esg-title-dim { opacity: .9; margin-inline-start: .25rem; }
+  .esg-sub { color: var(--esg-muted); max-width: 56ch; line-height: 1.75; margin: .5rem 0 1.25rem; }
+
+  .esg-cta-row {
+    display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+    justify-content: flex-start; 
+  }
+  .esg-btn {
+    display: inline-flex; align-items: center; gap: .5rem;
+    background: var(--esg-green); color: #0b1b14;
+    padding: .9rem 1.25rem; border-radius: .75rem;
+    font-weight: 500; text-decoration: none;
+    box-shadow: 0 6px 0 #2a7f51, 0 12px 24px rgba(96,137,251,.15);
+    transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+  }
+  .esg-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 0 #2a7f51, 0 18px 28px rgba(96,137,251,.2); }
+  .esg-btn:active { transform: translateY(0); box-shadow: 0 4px 0 #2a7f51, 0 8px 18px rgba(96,137,251,.15); }
+  .esg-btn:focus-visible { outline: none; box-shadow: 0 0 0 3px #fff, 0 0 0 6px var(--esg-ring); }
+  .esg-filemeta { color: var(--esg-muted); font-size: .95rem; }
+
+  .esg-highlights { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 2rem; margin-top: 1.25rem; }
+  @media (max-width: 460px){ .esg-highlights { grid-template-columns: 1fr; } }
+  .esg-highlight { display: flex; align-items: center; gap: .75rem; justify-content: flex-end; text-align: right; }
+  .esg-highlight-ic {
+    width: 36px; height: 36px; border-radius: 999px;
+    background: #e8fff1; color: var(--esg-green-strong);
+    display: inline-flex; align-items: center; justify-content: center;
+    box-shadow: inset 0 0 0 1px rgba(22,163,74,.15);
+  }
+  .esg-highlight-text { display: grid; gap: 2px; }
+  .esg-highlight-value { font-weight: 800; font-size: 1.1rem; }
+  .esg-highlight-label { color: var(--esg-muted); font-size: .95rem; }
+
+  /* بطاقة المعاينة */
+  .esg-card {
+    position: relative; background: var(--esg-card-bg);
+    border-radius: var(--esg-radius); padding: 1.25rem;
+    box-shadow: 0 25px 50px rgba(16, 24, 40, 0.08);
+    transform: rotate(.5deg);
+  }
+  .esg-badge {
+    position: absolute; top: .75rem; left: .75rem; /* في RTL على اليسار */
+    background: var(--esg-green-strong); color: #fff; font-weight: 800;
+    font-size: .8rem; padding: .25rem .5rem; border-radius: .5rem;
+  }
+
+  /* شبكة المصغرات */
+  .esg-thumb-grid{
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  @media (max-width: 960px){ .esg-thumb-grid{ grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px){ .esg-thumb-grid{ grid-template-columns: 1fr; } }
+
+  .esg-thumb{
+    position: relative; background: #fff; border-radius: 14px;
+    box-shadow: 0 10px 24px rgba(0,0,0,.07); overflow: hidden;
+    transform: rotate(.2deg);
+  }
+  .esg-thumb img{
+    display:block; width:100%; height:auto;
+    aspect-ratio: 3 / 4; object-fit: cover;
+  }
+  .esg-thumb-badge{
+    position: absolute; top: 8px; right: 8px;   /* RTL: يمين */
+    background: rgba(0,0,0,.6); color:#fff; font-weight: 700; font-size: .75rem;
+    padding: .15rem .4rem; border-radius: .4rem;
+  }
+
+  /* هياكل التحميل */
+  .esg-thumb-skel{
+    height: 0; padding-bottom: calc(4 / 3 * 100%);
+    border-radius: 14px;
+    background: linear-gradient(90deg,#eef2f7 25%,#e5eaf2 37%,#eef2f7 63%);
+    background-size: 400% 100%;
+    animation: esg-shimmer 1.2s infinite linear;
+  }
+  @keyframes esg-shimmer { 0%{background-position:0 0} 100%{background-position:100% 0} }
+
+  @media (prefers-reduced-motion: reduce) { .esg-btn { transition: none; } }
