@@ -1,0 +1,6 @@
+User-agent: *
+Disallow:
+# Allow all pages to be crawled
+Allow: /
+# Sitemap location
+Sitemap: https://www.sanam.com/sitemap.xml
