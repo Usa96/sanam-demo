@@ -53,7 +53,7 @@
 	<!-- Document Wrapper
 	============================================= -->
 	<div id="wrapper">
-
+		
 		<!-- Header
 		============================================= -->
 		<header id="header" class="full-header header-size-sm" data-sticky-shrink="true" data-sticky-class="not-dark" data-sticky-offset="full" data-sticky-offset-negative="auto">
@@ -168,8 +168,8 @@
 
 			</div>
 		</section>
-		
 
+		
 		<!-- Content
 		============================================= -->
 		<section id="content">
@@ -519,7 +519,40 @@
 				</div>
 			</div>
 		</footer>
-	</div>
+
+		<!-- Modal Wrapper -->
+			<div id="sanamModal" class="sanam-modal" aria-hidden="true">
+				<div class="sanam-modal-backdrop"></div>
+			
+				<div class="sanam-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="sanamModalTitle">
+					<button type="button" class="sanam-modal-close" id="sanamModalClose" aria-label="إغلاق النافذة">
+						&times;
+					</button>
+				
+					<div class="sanam-modal-content">
+						<div class="sanam-modal-tag">إعلان الشركة</div>
+					
+						<h2 id="sanamModalTitle" class="sanam-modal-title">
+							فتح باب الترشح لعضوية مجلس الإدارة – 2026–2028
+						</h2>
+					
+						<p class="sanam-modal-text">
+							تعلن شركة مجموعة سنام القابضة (ش.م.ك.ع.) عن فتح باب الترشح لعضوية مجلس الإدارة للدورة القادمة لمدة ثلاث سنوات (2026–2028).
+						</p>
+					
+						<p class="sanam-modal-text">
+							تبدأ فترة الترشح في <strong>16 مارس 2026</strong> وتنتهي في <strong>16 أبريل 2026</strong>.
+							ويجوز للراغبين في الترشح ممن تنطبق عليهم الشروط والمتطلبات النظامية تقديم طلبات الترشح مرفقة بالمستندات المطلوبة إلى مكتب أمين سر مجلس الإدارة في المقر الرئيسي للشركة خلال أيام العمل الرسمية.
+						</p>
+					
+						<div class="sanam-modal-actions">
+							<a href="ar_News.html" class="btn btn-brown sanam-modal-btn">
+								قراءة الإعلان الكامل
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
 	<!-- #wrapper end -->
 
 	<!-- JavaScripts
@@ -536,7 +569,50 @@
 
 	<!-- Range Slider Plugin -->
 	<script src="js/components/rangeslider.min.js"></script>
+	<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		console.log('Arabic modal script loaded');
 
+		const modal = document.getElementById('sanamModal');
+		const closeBtn = document.getElementById('sanamModalClose');
+		const backdrop = modal ? modal.querySelector('.sanam-modal-backdrop') : null;
+
+		console.log('modal:', modal);
+		console.log('closeBtn:', closeBtn);
+
+		if (!modal || !closeBtn) {
+			console.log('Modal elements not found');
+			return;
+		}
+
+		function openModal() {
+			console.log('Opening modal');
+			modal.classList.add('is-active');
+			modal.setAttribute('aria-hidden', 'false');
+			document.body.classList.add('modal-open');
+		}
+
+		function closeModal() {
+			modal.classList.remove('is-active');
+			modal.setAttribute('aria-hidden', 'true');
+			document.body.classList.remove('modal-open');
+		}
+
+		setTimeout(openModal, 1200);
+
+		closeBtn.addEventListener('click', closeModal);
+
+		if (backdrop) {
+			backdrop.addEventListener('click', closeModal);
+		}
+
+		document.addEventListener('keydown', function (e) {
+			if (e.key === 'Escape' && modal.classList.contains('is-active')) {
+				closeModal();
+			}
+		});
+	});
+</script>
 	<!-- Owl Carousel CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">

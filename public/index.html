@@ -60,6 +60,43 @@
 	<title>SANAM Group</title>
 </head>
 
+<script>
+	window.addEventListener('DOMContentLoaded', function () {
+		const modal = document.getElementById('sanamModal');
+		const closeBtn = document.getElementById('sanamModalClose');
+		const backdrop = modal ? modal.querySelector('.sanam-modal-backdrop') : null;
+
+		if (!modal || !closeBtn) return;
+
+		function openModal() {
+			modal.classList.add('is-active');
+			modal.setAttribute('aria-hidden', 'false');
+			document.body.classList.add('modal-open');
+		}
+
+		function closeModal() {
+			modal.classList.remove('is-active');
+			modal.setAttribute('aria-hidden', 'true');
+			document.body.classList.remove('modal-open');
+		}
+
+		setTimeout(function () {
+			openModal();
+		}, 1200);
+
+		closeBtn.addEventListener('click', closeModal);
+
+		if (backdrop) {
+			backdrop.addEventListener('click', closeModal);
+		}
+
+		document.addEventListener('keydown', function (e) {
+			if (e.key === 'Escape' && modal.classList.contains('is-active')) {
+				closeModal();
+			}
+		});
+	});
+</script>
 
 <body class="stretched">
 	<!-- Google Tag Manager (noscript) -->
@@ -547,7 +584,37 @@
 	<!-- #wrapper end -->
 
 	<!-- Modal Wrapper -->
+	<div id="sanamModal" class="sanam-modal" aria-hidden="true">
+	<div class="sanam-modal-backdrop"></div>
 
+	<div class="sanam-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="sanamModalTitle">
+		<button type="button" class="sanam-modal-close" id="sanamModalClose" aria-label="Close modal">
+			&times;
+		</button>
+
+		<div class="sanam-modal-content">
+			<div class="sanam-modal-tag">Corporate Announcement</div>
+
+			<h2 id="sanamModalTitle" class="sanam-modal-title">
+				Board of Directors Nomination Period - 2026 - 2028
+			</h2>
+
+			<p class="sanam-modal-text">
+				SANAM Group Holding Company (K.P.S.C.) announces the opening of the nomination period for membership of the Board of Directors for the upcoming three-year term (2026–2028).
+			</p>
+
+			<p class="sanam-modal-text">
+				The nomination period begins on 16 March 2026 and will close on 16 April 2026. Candidates who meet the nomination requirements under the applicable regulations of the Capital Markets Authority, the Companies Law, and the Company’s Articles of Association may submit their nomination applications together with the required supporting documents to the Office of the Board Secretary at the Company’s headquarters during official working days.
+			</p>
+
+			<div class="sanam-modal-actions">
+				<a href="Investor_relations.html" class="btn btn-brown sanam-modal-btn">
+					Read Full Announcement
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
 
 
 	<!-- JavaScripts
