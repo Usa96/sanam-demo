@@ -1491,7 +1491,8 @@ body.custom-modal-open {
    SANAM Homepage Modal
    ========================= */
 
-.sanam-modal {
+/* CSS */
+#sanamModal {
 	position: fixed;
 	inset: 0;
 	z-index: 99999;
@@ -1503,15 +1504,16 @@ body.custom-modal-open {
 	visibility: hidden;
 	pointer-events: none;
 	transition: opacity 0.35s ease, visibility 0.35s ease;
+	margin: 0;
 }
 
-.sanam-modal.is-active {
+#sanamModal.is-active {
 	opacity: 1;
 	visibility: visible;
 	pointer-events: auto;
 }
 
-.sanam-modal-backdrop {
+#sanamModal .sanam-modal-backdrop {
 	position: absolute;
 	inset: 0;
 	background: rgba(0, 0, 0, 0.72);
@@ -1519,28 +1521,50 @@ body.custom-modal-open {
 	-webkit-backdrop-filter: blur(3px);
 }
 
-.sanam-modal-dialog {
+#sanamModal .sanam-modal-dialog {
 	position: relative;
 	z-index: 2;
 	width: 100%;
-	max-width: 680px;
+	max-width: 1180px;
 	background: #ffffff;
 	border-radius: 20px;
 	box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
 	transform: translateY(30px) scale(0.98);
 	transition: transform 0.35s ease;
 	overflow: hidden;
+	max-height: calc(100vh - 48px);
+	display: flex;
+	flex-direction: column;
 }
 
-.sanam-modal.is-active .sanam-modal-dialog {
+#sanamModal.is-active .sanam-modal-dialog {
 	transform: translateY(0) scale(1);
 }
 
-.sanam-modal-content {
+#sanamModal .sanam-modal-content {
 	padding: 42px 36px;
+	overflow-y: auto;
+	background: #fff;
 }
 
-.sanam-modal-tag {
+#sanamModal .sanam-modal-row {
+	display: flex;
+	gap: 24px;
+	align-items: stretch;
+}
+
+#sanamModal .sanam-announcement-card {
+	flex: 1 1 0;
+	background: #fff;
+	border: 1px solid rgba(96, 63, 38, 0.10);
+	border-radius: 18px;
+	padding: 28px 24px;
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+}
+
+#sanamModal .sanam-modal-tag {
 	display: inline-block;
 	margin-bottom: 18px;
 	padding: 8px 14px;
@@ -1554,7 +1578,7 @@ body.custom-modal-open {
 	border-radius: 999px;
 }
 
-.sanam-modal-title {
+#sanamModal .sanam-modal-title {
 	margin: 0 0 16px;
 	font-size: 2rem;
 	line-height: 1.2;
@@ -1562,28 +1586,28 @@ body.custom-modal-open {
 	color: #1f1f1f;
 }
 
-.sanam-modal-text {
-	margin: 0 0 16px;
+#sanamModal .sanam-modal-text {
+	margin: 0 0 14px;
 	font-size: 1rem;
 	line-height: 1.75;
 	color: #555;
 	text-align: justify;
 }
 
-.sanam-modal-actions {
+#sanamModal .sanam-modal-actions {
 	display: flex;
-	flex-wrap: wrap;
 	gap: 12px;
-	margin-top: 28px;
+	margin-top: auto;
+	padding-top: 18px;
 }
 
-.sanam-modal-btn,
-.sanam-modal-btn-secondary {
+#sanamModal .sanam-modal-btn,
+#sanamModal .sanam-modal-btn-secondary {
 	min-width: 170px;
 	text-align: center;
 }
 
-.sanam-modal-close {
+#sanamModal .sanam-modal-close {
 	position: absolute;
 	top: 14px;
 	right: 16px;
@@ -1600,7 +1624,7 @@ body.custom-modal-open {
 	z-index: 5;
 }
 
-.sanam-modal-close:hover {
+#sanamModal .sanam-modal-close:hover {
 	background: rgba(0, 0, 0, 0.10);
 	transform: scale(1.05);
 }
@@ -1609,30 +1633,45 @@ body.modal-open {
 	overflow: hidden;
 }
 
+@media (max-width: 991px) {
+	#sanamModal .sanam-modal-row {
+		flex-direction: column;
+	}
+}
+
 @media (max-width: 767px) {
-	.sanam-modal {
+	#sanamModal {
 		padding: 16px;
 	}
 
-	.sanam-modal-content {
+	#sanamModal .sanam-modal-dialog {
+		max-height: calc(100vh - 32px);
+		border-radius: 16px;
+	}
+
+	#sanamModal .sanam-modal-content {
 		padding: 30px 22px;
 	}
 
-	.sanam-modal-title {
-		font-size: 1.6rem;
+	#sanamModal .sanam-announcement-card {
+		padding: 22px 18px;
 	}
 
-	.sanam-modal-text {
+	#sanamModal .sanam-modal-title {
+		font-size: 1.5rem;
+	}
+
+	#sanamModal .sanam-modal-text {
 		font-size: 0.95rem;
 		line-height: 1.65;
 	}
 
-	.sanam-modal-actions {
+	#sanamModal .sanam-modal-actions {
 		flex-direction: column;
 	}
 
-	.sanam-modal-btn,
-	.sanam-modal-btn-secondary {
+	#sanamModal .sanam-modal-btn,
+	#sanamModal .sanam-modal-btn-secondary {
 		width: 100%;
 	}
 }

@@ -65,3 +65,230 @@ html[dir="rtl"] .primary-menu-trigger {
     }
 }
 
+.sanam-modal {
+	position: fixed;
+	inset: 0;
+	z-index: 99999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 24px;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.sanam-modal.is-active {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+}
+
+.sanam-modal-backdrop {
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.72);
+	backdrop-filter: blur(3px);
+	-webkit-backdrop-filter: blur(3px);
+}
+
+.sanam-modal-dialog {
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	max-width: 680px;
+	background: #ffffff;
+	border-radius: 20px;
+	box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+	transform: translateY(30px) scale(0.98);
+	transition: transform 0.35s ease;
+	overflow: hidden;
+	max-height: calc(100vh - 48px);
+	display: flex;
+	flex-direction: column;
+	direction: rtl;
+	text-align: right;
+}
+
+.sanam-modal.is-active .sanam-modal-dialog {
+	transform: translateY(0) scale(1);
+}
+
+.sanam-modal-content {
+	padding: 42px 36px;
+	overflow-y: auto;
+}
+
+.sanam-modal-tag {
+	display: inline-block;
+	margin-bottom: 18px;
+	padding: 8px 14px;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0;
+	text-transform: none;
+	color: #603F26;
+	background: rgba(200, 180, 118, 0.18);
+	border: 1px solid rgba(96, 63, 38, 0.12);
+	border-radius: 999px;
+}
+
+.sanam-modal-title {
+	margin: 0 0 16px;
+	font-size: 2rem;
+	line-height: 1.35;
+	font-weight: 700;
+	color: #1f1f1f;
+	text-align: right;
+}
+
+.sanam-modal-text {
+	margin: 0 0 16px;
+	font-size: 1rem;
+	line-height: 1.95;
+	color: #555;
+	text-align: justify;
+}
+
+.sanam-modal-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	margin-top: 28px;
+}
+
+.sanam-modal-btn,
+.sanam-modal-btn-secondary {
+	min-width: 170px;
+	text-align: center;
+}
+
+.sanam-modal-close {
+	position: absolute;
+	top: 14px;
+	left: 16px;
+	right: auto;
+	width: 42px;
+	height: 42px;
+	border: 0;
+	border-radius: 50%;
+	background: rgba(0, 0, 0, 0.05);
+	color: #222;
+	font-size: 28px;
+	line-height: 1;
+	cursor: pointer;
+	transition: background 0.2s ease, transform 0.2s ease;
+	z-index: 5;
+}
+
+.sanam-modal-close:hover {
+	background: rgba(0, 0, 0, 0.10);
+	transform: scale(1.05);
+}
+
+body.modal-open {
+	overflow: hidden;
+}
+
+.sanam-modal-switcher {
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+	margin-bottom: 28px;
+	padding-left: 52px;
+	padding-right: 0;
+}
+
+.sanam-switch-btn {
+	border: 1px solid rgba(96, 63, 38, 0.18);
+	background: #ffffff;
+	color: #603F26;
+	padding: 10px 16px;
+	border-radius: 999px;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1.4;
+	cursor: pointer;
+	transition: all 0.25s ease;
+}
+
+.sanam-switch-btn:hover {
+	background: rgba(200, 180, 118, 0.12);
+	border-color: rgba(96, 63, 38, 0.28);
+}
+
+.sanam-switch-btn.active {
+	background: #603F26;
+	color: #ffffff;
+	border-color: #603F26;
+}
+
+.sanam-switch-btn:focus-visible {
+	outline: 2px solid rgba(96, 63, 38, 0.35);
+	outline-offset: 2px;
+}
+
+.sanam-announcement-panel {
+	display: none;
+	animation: sanamFadeUp 0.3s ease;
+}
+
+.sanam-announcement-panel.active {
+	display: block;
+}
+
+@keyframes sanamFadeUp {
+	from {
+		opacity: 0;
+		transform: translateY(8px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@media (max-width: 767px) {
+	.sanam-modal {
+		padding: 16px;
+	}
+
+	.sanam-modal-dialog {
+		max-height: calc(100vh - 32px);
+		border-radius: 16px;
+	}
+
+	.sanam-modal-content {
+		padding: 30px 22px;
+	}
+
+	.sanam-modal-title {
+		font-size: 1.45rem;
+		line-height: 1.45;
+	}
+
+	.sanam-modal-text {
+		font-size: 0.95rem;
+		line-height: 1.85;
+	}
+
+	.sanam-modal-actions {
+		flex-direction: column;
+	}
+
+	.sanam-modal-btn,
+	.sanam-modal-btn-secondary {
+		width: 100%;
+	}
+
+	.sanam-modal-switcher {
+		padding-left: 42px;
+		margin-bottom: 22px;
+	}
+
+	.sanam-switch-btn {
+		width: 100%;
+		text-align: center;
+	}
+}

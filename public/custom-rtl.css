@@ -1447,7 +1447,8 @@ box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Adds a deeper shadow on hover */
    SANAM Homepage Modal
    ========================= */
 
-.sanam-modal {
+/* CSS (Arabic RTL) */
+#sanamModal {
 	position: fixed;
 	inset: 0;
 	z-index: 99999;
@@ -1459,15 +1460,16 @@ box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Adds a deeper shadow on hover */
 	visibility: hidden;
 	pointer-events: none;
 	transition: opacity 0.35s ease, visibility 0.35s ease;
+	margin: 0;
 }
 
-.sanam-modal.is-active {
+#sanamModal.is-active {
 	opacity: 1;
 	visibility: visible;
 	pointer-events: auto;
 }
 
-.sanam-modal-backdrop {
+#sanamModal .sanam-modal-backdrop {
 	position: absolute;
 	inset: 0;
 	background: rgba(0, 0, 0, 0.72);
@@ -1475,74 +1477,101 @@ box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Adds a deeper shadow on hover */
 	-webkit-backdrop-filter: blur(3px);
 }
 
-.sanam-modal-dialog {
+#sanamModal .sanam-modal-dialog {
 	position: relative;
 	z-index: 2;
 	width: 100%;
-	max-width: 680px;
+	max-width: 1180px;
 	background: #ffffff;
 	border-radius: 20px;
 	box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
 	transform: translateY(30px) scale(0.98);
 	transition: transform 0.35s ease;
 	overflow: hidden;
+	max-height: calc(100vh - 48px);
+	display: flex;
+	flex-direction: column;
+	direction: rtl;
+	text-align: right;
 }
 
-.sanam-modal.is-active .sanam-modal-dialog {
+#sanamModal.is-active .sanam-modal-dialog {
 	transform: translateY(0) scale(1);
 }
 
-.sanam-modal-content {
+#sanamModal .sanam-modal-content {
 	padding: 42px 36px;
+	overflow-y: auto;
+	background: #fff;
 }
 
-.sanam-modal-tag {
+#sanamModal .sanam-modal-row {
+	display: flex;
+	gap: 24px;
+	align-items: stretch;
+}
+
+#sanamModal .sanam-announcement-card {
+	flex: 1 1 0;
+	background: #fff;
+	border: 1px solid rgba(96, 63, 38, 0.10);
+	border-radius: 18px;
+	padding: 28px 24px;
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	text-align: right;
+}
+
+#sanamModal .sanam-modal-tag {
 	display: inline-block;
 	margin-bottom: 18px;
 	padding: 8px 14px;
 	font-size: 12px;
 	font-weight: 600;
-	letter-spacing: 0.08em;
-	text-transform: uppercase;
+	letter-spacing: 0;
+	text-transform: none;
 	color: #603F26;
 	background: rgba(200, 180, 118, 0.18);
 	border: 1px solid rgba(96, 63, 38, 0.12);
 	border-radius: 999px;
 }
 
-.sanam-modal-title {
+#sanamModal .sanam-modal-title {
 	margin: 0 0 16px;
 	font-size: 2rem;
-	line-height: 1.2;
+	line-height: 1.35;
 	font-weight: 700;
 	color: #1f1f1f;
+	text-align: right;
 }
 
-.sanam-modal-text {
-	margin: 0 0 16px;
+#sanamModal .sanam-modal-text {
+	margin: 0 0 14px;
 	font-size: 1rem;
-	line-height: 1.75;
+	line-height: 1.9;
 	color: #555;
 	text-align: justify;
 }
 
-.sanam-modal-actions {
+#sanamModal .sanam-modal-actions {
 	display: flex;
-	flex-wrap: wrap;
 	gap: 12px;
-	margin-top: 28px;
+	margin-top: auto;
+	padding-top: 18px;
 }
 
-.sanam-modal-btn,
-.sanam-modal-btn-secondary {
+#sanamModal .sanam-modal-btn,
+#sanamModal .sanam-modal-btn-secondary {
 	min-width: 170px;
 	text-align: center;
 }
 
-.sanam-modal-close {
+#sanamModal .sanam-modal-close {
 	position: absolute;
 	top: 14px;
-	right: 16px;
+	left: 16px;
+	right: auto;
 	width: 42px;
 	height: 42px;
 	border: 0;
@@ -1552,43 +1581,52 @@ box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Adds a deeper shadow on hover */
 	font-size: 28px;
 	line-height: 1;
 	cursor: pointer;
-	transition: background 0.2s ease, transform 0.2s ease;
 	z-index: 5;
-}
-
-.sanam-modal-close:hover {
-	background: rgba(0, 0, 0, 0.10);
-	transform: scale(1.05);
 }
 
 body.modal-open {
 	overflow: hidden;
 }
 
+@media (max-width: 991px) {
+	#sanamModal .sanam-modal-row {
+		flex-direction: column;
+	}
+}
+
 @media (max-width: 767px) {
-	.sanam-modal {
+	#sanamModal {
 		padding: 16px;
 	}
 
-	.sanam-modal-content {
+	#sanamModal .sanam-modal-dialog {
+		max-height: calc(100vh - 32px);
+		border-radius: 16px;
+	}
+
+	#sanamModal .sanam-modal-content {
 		padding: 30px 22px;
 	}
 
-	.sanam-modal-title {
-		font-size: 1.6rem;
+	#sanamModal .sanam-announcement-card {
+		padding: 22px 18px;
 	}
 
-	.sanam-modal-text {
+	#sanamModal .sanam-modal-title {
+		font-size: 1.5rem;
+	}
+
+	#sanamModal .sanam-modal-text {
 		font-size: 0.95rem;
-		line-height: 1.65;
+		line-height: 1.8;
 	}
 
-	.sanam-modal-actions {
+	#sanamModal .sanam-modal-actions {
 		flex-direction: column;
 	}
 
-	.sanam-modal-btn,
-	.sanam-modal-btn-secondary {
+	#sanamModal .sanam-modal-btn,
+	#sanamModal .sanam-modal-btn-secondary {
 		width: 100%;
 	}
 }

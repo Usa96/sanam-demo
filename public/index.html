@@ -61,41 +61,42 @@
 </head>
 
 <script>
-	window.addEventListener('DOMContentLoaded', function () {
-		const modal = document.getElementById('sanamModal');
-		const closeBtn = document.getElementById('sanamModalClose');
-		const backdrop = modal ? modal.querySelector('.sanam-modal-backdrop') : null;
+/* JS */
+document.addEventListener('DOMContentLoaded', function () {
+	const modal = document.getElementById('sanamModal');
+	const closeBtn = document.getElementById('sanamModalClose');
+	const backdrop = modal ? modal.querySelector('.sanam-modal-backdrop') : null;
 
-		if (!modal || !closeBtn) return;
+	if (!modal || !closeBtn) return;
 
-		function openModal() {
-			modal.classList.add('is-active');
-			modal.setAttribute('aria-hidden', 'false');
-			document.body.classList.add('modal-open');
+	function openModal() {
+		modal.classList.add('is-active');
+		modal.setAttribute('aria-hidden', 'false');
+		document.body.classList.add('modal-open');
+	}
+
+	function closeModal() {
+		modal.classList.remove('is-active');
+		modal.setAttribute('aria-hidden', 'true');
+		document.body.classList.remove('modal-open');
+	}
+
+	setTimeout(function () {
+		openModal();
+	}, 1200);
+
+	closeBtn.addEventListener('click', closeModal);
+
+	if (backdrop) {
+		backdrop.addEventListener('click', closeModal);
+	}
+
+	document.addEventListener('keydown', function (e) {
+		if (e.key === 'Escape' && modal.classList.contains('is-active')) {
+			closeModal();
 		}
-
-		function closeModal() {
-			modal.classList.remove('is-active');
-			modal.setAttribute('aria-hidden', 'true');
-			document.body.classList.remove('modal-open');
-		}
-
-		setTimeout(function () {
-			openModal();
-		}, 1200);
-
-		closeBtn.addEventListener('click', closeModal);
-
-		if (backdrop) {
-			backdrop.addEventListener('click', closeModal);
-		}
-
-		document.addEventListener('keydown', function (e) {
-			if (e.key === 'Escape' && modal.classList.contains('is-active')) {
-				closeModal();
-			}
-		});
 	});
+});
 </script>
 
 <body class="stretched">
@@ -438,7 +439,29 @@
 							</div>
 							<div class="news-grid">
 
-							<a href="News.html" class="homepage-news-border">
+							<a href="News.html" target="_blank" class="homepage-news-border block overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+								<div class="news-item relative" style="height: 25rem;">
+									<img src="images/news/invitation_banner.jpeg"
+										alt="Invitation to Attend the Annual and Extraordinary General Assembly of SANAM Group Holding Company"
+										class="homepage-news-image w-full h-full object-cover">
+								</div>
+							
+								<div class="news-content bg-white p-4">
+									<span class="news-category block text-sm font-semibold text-[#6089FB] mb-1">
+										Announcement
+									</span>
+								
+									<span class="news-date block text-xs text-gray-500 mb-2">
+										April 23, 2026
+									</span>
+								
+									<h3 class="news-title text-lg font-bold text-gray-800 leading-snug">
+										Invitation to Attend the Annual & Extraordinary General Assembly
+									</h3>
+								</div>
+							</a>
+							
+								<a href="News.html" class="homepage-news-border">
 								<div class="news-item" style="height: 25rem;">
 									<img src="images/news/extension_nomination.jpg"
 										alt="SANAM Board of Directors Nomination Extension"
@@ -461,23 +484,7 @@
 										SANAM Group Earns KD 2 Million for 2025
 									</h3>
 								</div>
-							</a>
-							
-							<a href="News.html" class="homepage-news-border block overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-								<div class="news-item relative" style="height: 25rem;">
-								<img src="images/news/germania.png"
-									alt="SANAM contributes to Germania Medical Center and enters into a strategic partnership with Al Jarallah German Medical Center Company"
-										class="homepage-news-image w-full h-full object-cover">
-								</div>
-								<div class="news-content bg-white p-4">
-								<span class="news-category block text-sm font-semibold text-[#6089FB] mb-1">Announcement</span>
-								<span class="news-date block text-xs text-gray-500 mb-2">March 26, 2026</span>
-								<h3 class="news-title text-lg font-bold text-gray-800 leading-snug">
-									SANAM contributes to Germania Medical Center and enters into a strategic partnership with Al Jarallah German Medical Center Company
-								</h3>
-								</div>
-							</a>
-							
+							</a>							
 
 							</div>
 						</div>
@@ -582,42 +589,66 @@
 	<!-- #wrapper end -->
 
 	<!-- Modal Wrapper -->
-	<div id="sanamModal" class="sanam-modal" aria-hidden="true">
-	<div class="sanam-modal-backdrop"></div>
-
-	<div class="sanam-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="sanamModalTitle">
-	<button type="button" class="sanam-modal-close" id="sanamModalClose" aria-label="Close modal">
-		&times;
-	</button>
-
-	<div class="sanam-modal-content">
-		<div class="sanam-modal-tag">Corporate Announcement</div>
-
-		<h2 id="sanamModalTitle" class="sanam-modal-title">
-			Board of Directors Nomination Period - 2026 - 2028
-		</h2>
-
-		<p class="sanam-modal-text">
-			SANAM Group Holding Company (K.P.S.C.) announces the opening of the nomination period for membership of the Board of Directors for the upcoming three-year term (2026–2028).
-		</p>
-
-		<p class="sanam-modal-text">
-			The nomination period begins on 16 March 2026 and will close on <s>16 April 2026</s> <strong>14 May 2026</strong>. Candidates who meet the nomination requirements under the applicable regulations of the Capital Markets Authority, the Companies Law, and the Company's Articles of Association may submit their nomination applications together with the required supporting documents to the Office of the Board Secretary at the Company's headquarters during official working days.
-		</p>
-
-		<p class="sanam-modal-text">
-			<strong>Update:</strong> With reference to its previous disclosure, SANAM Group Holding Company announces the extension of the candidacy application period for an additional one month, ending on Thursday, 14 May 2026.
-		</p>
-
-		<div class="sanam-modal-actions">
-			<a href="News.html" class="btn btn-brown sanam-modal-btn">
-				Read Full Announcement
-			</a>
-		</div>
-	</div>
-</div>
-</div>
-
+			<div id="sanamModal" class="sanam-modal" aria-hidden="true">
+				<div class="sanam-modal-backdrop"></div>
+			
+				<div class="sanam-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="sanamModalTitle">
+					<button type="button" class="sanam-modal-close" id="sanamModalClose" aria-label="Close modal">
+						&times;
+					</button>
+				
+					<div class="sanam-modal-content">
+						<div class="sanam-modal-row">
+						
+							<div class="sanam-announcement-card">
+								<div class="sanam-modal-tag">Corporate Announcement</div>
+							
+								<h2 id="sanamModalTitle" class="sanam-modal-title">
+									Board of Directors Nomination Period - 2026 - 2028
+								</h2>
+							
+								<p class="sanam-modal-text">
+									SANAM Group Holding Company (K.P.S.C.) announces the opening of the nomination period for membership of the Board of Directors for the upcoming three-year term (2026–2028).
+								</p>
+							
+								<p class="sanam-modal-text">
+									The nomination period begins on 16 March 2026 and will close on <s>16 April 2026</s> <strong>14 May 2026</strong>. Candidates who meet the nomination requirements under the applicable regulations of the Capital Markets Authority, the Companies Law, and the Company's Articles of Association may submit their nomination applications together with the required supporting documents to the Office of the Board Secretary at the Company's headquarters during official working days.
+								</p>
+							
+								<p class="sanam-modal-text">
+									<strong>Update:</strong> With reference to its previous disclosure, SANAM Group Holding Company announces the extension of the candidacy application period for an additional one month, ending on Thursday, 14 May 2026.
+								</p>
+							
+								<div class="sanam-modal-actions">
+									<a href="News.html" class="btn btn-brown sanam-modal-btn">
+										Read Full Announcement
+									</a>
+								</div>
+							</div>
+						
+							<div class="sanam-announcement-card">
+								<div class="sanam-modal-tag">Corporate Announcement</div>
+							
+								<h2 class="sanam-modal-title">
+									Invitation to Attend the Annual & Extraordinary General Assembly
+								</h2>
+							
+								<p class="sanam-modal-text">
+									The Board of Directors of SANAM Group Holding Company (KPSC) is pleased to invite its valued shareholders to attend the Annual General Assembly and the Extraordinary General Assembly meetings, scheduled to be held consecutively at 12:00 PM and 12:30 PM on Sunday, 3 May 2026, at the Company’s headquarters located in Kuwait – Al Salhiya area, Mohammed Thunayan Al Ghanem Street, Al Salhiya Complex, Entrance (1), Fifth Floor.
+								</p>
+							
+								<div class="sanam-modal-actions">
+									<a href="images/news/invitation.jpeg" target="_blank" class="btn btn-brown sanam-modal-btn">
+										Read Full Announcement
+									</a>
+								</div>
+							</div>
+						
+						</div>
+					</div>
+				</div>
+			</div>
+		
 
 	<!-- JavaScripts
 	============================================= -->
